@@ -35,7 +35,7 @@ interface Player {
 }
 
 const formation: Player[] = [
-  { id: 1, role: "DEF", top: 80, left: 65 },
+  { id: 1, role: "DEF", top: 83, left: 65 },
   { id: 2, role: "DEF", top: 80, left: 35 },
   { id: 3, role: "LAT", top: 77, left: 10 },
   { id: 4, role: "LAT", top: 68, left: 92 },
