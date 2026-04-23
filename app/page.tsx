@@ -31,22 +31,22 @@ type Role = "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
 interface Player {
   id: number;
   role: Role;
-  top: number; 
-  left: number; 
+  top: number;
+  left: number;
 }
 
 // FORMACIÓN MEZCLADA (Simulando partido en movimiento)
 const formation: Player[] = [
-  { id: 1, role: "DEF", top: 82, left: 45 }, 
-  { id: 2, role: "DEF", top: 75, left: 25 },
-  { id: 3, role: "LAT", top: 65, left: 10 }, 
-  { id: 4, role: "LAT", top: 60, left: 92 },
-  { id: 5, role: "5", top: 50, left: 48 },
-  { id: 6, role: "VOL", top: 45, left: 30 }, 
-  { id: 7, role: "VOL", top: 40, left: 75 },
-  { id: 8, role: "EXT", top: 25, left: 15 }, 
-  { id: 9, role: "EXT", top: 20, left: 85 },
-  { id: 10, role: "9", top: 15, left: 52 },
+  { id: 1, role: "DEF", top: 80, left: 65 },
+  { id: 2, role: "DEF", top: 80, left: 35 },
+  { id: 3, role: "LAT", top: 77, left: 10 },
+  { id: 4, role: "LAT", top: 68, left: 92 },
+  { id: 5, role: "5", top: 63, left: 55 },
+  { id: 6, role: "VOL", top: 45, left: 30 },
+  { id: 7, role: "VOL", top: 43, left: 75 },
+  { id: 8, role: "EXT", top: 35, left: 15 },
+  { id: 9, role: "EXT", top: 23, left: 85 },
+  { id: 10, role: "9", top: 21, left: 52 },
 ];
 
 const QUESTIONS_DB = [
@@ -98,7 +98,7 @@ export default function SoccerQuiz() {
   };
 
   const pickQuestion = (team1: string, team2: string) => {
-    const pool = QUESTIONS_DB.filter(q => 
+    const pool = QUESTIONS_DB.filter(q =>
       [team1, team2, "Argentina", "Fútbol General"].includes(q.country)
     );
     setCurrentQ(pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)] : QUESTIONS_DB[0]);
@@ -109,7 +109,7 @@ export default function SoccerQuiz() {
     setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
     setScore(prev => ({ ...prev, [possession.team]: prev[possession.team] + 1 }));
     setUserInput("");
-    
+
     setTimeout(() => {
       setPossession({ team: possession.team === 'blue' ? 'red' : 'blue', role: '5' });
       setFeedback("");
@@ -138,14 +138,14 @@ export default function SoccerQuiz() {
         handleGoal();
         return;
       }
-      
+
       playRandomSound(PASS_SOUNDS);
       setPossession({ team: currentTeam, role: nextRole });
       setFeedback("¡Pase quirúrgico! ✅");
     } else {
       const audioErr = new Audio(INCORRECT_SOUND);
-      audioErr.play().catch(() => {});
-      
+      audioErr.play().catch(() => { });
+
       let recoveryRole: Role = "5";
       if (possession.role === "DEF") recoveryRole = "9";
       else if (possession.role === "LAT") recoveryRole = "EXT";
@@ -185,7 +185,7 @@ export default function SoccerQuiz() {
     <div className="flex flex-col lg:flex-row min-h-screen bg-zinc-100 dark:bg-zinc-950">
       <div className="flex-[1.3] p-6 md:p-10 flex flex-col items-center justify-center border-r border-zinc-200 dark:border-zinc-800">
         <div className="w-full max-w-2xl bg-white dark:bg-zinc-900 p-12 md:p-14 rounded-[3rem] shadow-2xl border border-zinc-100 dark:border-zinc-800 flex flex-col gap-10">
-          
+
           <div className="flex justify-between items-center bg-zinc-50 dark:bg-zinc-800 p-8 rounded-[2rem] shadow-inner border border-zinc-200 dark:border-zinc-700">
             <div className="text-center flex-1">
               <p className="text-7xl mb-1">{BANDERAS[teams.blue]}</p>
@@ -219,7 +219,7 @@ export default function SoccerQuiz() {
               </div>
             ) : (
               <div className="flex flex-col gap-4">
-                <input 
+                <input
                   type="text" value={userInput} onChange={e => setUserInput(e.target.value)}
                   placeholder="Respuesta exacta..."
                   className="h-24 text-3xl border-4 rounded-3xl px-8 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white focus:border-green-500 font-bold text-center outline-none shadow-inner"
@@ -234,7 +234,7 @@ export default function SoccerQuiz() {
               Cambiar a {isMultipleChoice ? "Pase Largo" : "Pase Corto (Opciones)"}
             </button>
           </div>
-          
+
           {feedback && (
             <div className="p-5 bg-zinc-950 dark:bg-zinc-100 rounded-2xl text-center animate-bounce shadow-2xl">
               <p className="text-2xl font-black text-green-400 dark:text-green-700 uppercase tracking-tighter">{feedback}</p>
@@ -243,20 +243,60 @@ export default function SoccerQuiz() {
         </div>
       </div>
 
-      <div className="flex-1 bg-green-900 p-6 md:p-10 flex items-center justify-center overflow-hidden">
-        <div className="relative w-full max-w-[550px] aspect-[3/4] bg-green-600 border-[6px] border-white/80 rounded-sm shadow-2xl
-          bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.08)_50%)] bg-[length:100%_9.0909%]">
-          
-          <div className="absolute top-1/2 w-full h-[4px] bg-white/70 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-32 h-32 border-4 border-white/70 rounded-full -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-36 border-b-4 border-l-4 border-r-4 border-white/70" /> 
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-36 border-t-4 border-l-4 border-r-4 border-white/70" /> 
+      {/* --- CONTENEDOR DEL ESTADIO --- */}
+      {/* --- CONTENEDOR DEL ESTADIO "LA BOMBONERA" REAL --- */}
+      <div className="flex-1 bg-black p-4 md:p-8 flex items-center justify-center overflow-hidden relative border-l-4 border-zinc-800">
 
+        <div
+          className="absolute inset-0 z-0 bg-no-repeat bg-center opacity-60 transition-all duration-700"
+          style={{
+            backgroundImage: "url('/bombonera.webp')",
+            backgroundSize: "180%", // <--- Ajustá este porcentaje para el ZOOM (100% es tamaño normal, 200% es mucho zoom)
+            backgroundPosition: "60% 50%" // <--- El segundo valor sube o baja la imagen (ej: 60% para ver más pasto)
+          }}
+        >
+          {/* Overlay para que no compita con los jugadores */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
+        </div>
+
+        {/* La Cancha (Ahora transparente para que se vea el pasto de la foto) */}
+        <div className="relative z-10 w-full max-w-[500px] aspect-[3/4] border-[4px] border-white/30 rounded-sm shadow-[0_0_100px_rgba(0,0,0,0.8)]">
+
+          {/* Líneas de la cancha (Blanco sutil para no tapar la foto) */}
+          <div className="absolute inset-0 border-2 border-white/20 m-1" /> {/* Perímetro */}
+          <div className="absolute top-1/2 w-full h-[2px] bg-white/20 -translate-y-1/2" /> {/* Mitad */}
+          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" /> {/* Círculo */}
+
+          {/* --- ARCO SUPERIOR --- */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 border-x-2 border-b-2 border-white/60 z-10">
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]"
+              style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
+          </div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-28 border-x-2 border-b-2 border-white/20" />
+
+          {/* --- ARCO INFERIOR --- */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-6 border-x-2 border-t-2 border-white/60 z-10">
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]"
+              style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
+          </div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-28 border-x-2 border-t-2 border-white/20" />
+
+          {/* --- JUGADORES (Se mantienen igual) --- */}
           {formation.map(p => (
-            <PlayerMarker key={`blue-${p.id}`} pos={p} color="bg-blue-600" hasPossession={possession.team === 'blue' && p.id === activePlayerId} />
+            <PlayerMarker
+              key={`blue-${p.id}`}
+              pos={p}
+              color="bg-blue-600"
+              hasPossession={possession.team === 'blue' && p.id === activePlayerId}
+            />
           ))}
           {formation.map(p => (
-            <PlayerMarker key={`red-${p.id}`} pos={{...p, top: 100 - p.top}} color="bg-red-600" hasPossession={possession.team === 'red' && p.id === activePlayerId} />
+            <PlayerMarker
+              key={`red-${p.id}`}
+              pos={{ ...p, top: 100 - p.top }}
+              color="bg-red-600"
+              hasPossession={possession.team === 'red' && p.id === activePlayerId}
+            />
           ))}
         </div>
       </div>
