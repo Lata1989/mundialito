@@ -48,19 +48,65 @@ const formation: Player[] = [
 ];
 
 const QUESTIONS_DB = [
-  { country: "España", question: "¿Qué equipo de fútbol es conocido como 'Los Colchoneros'?", answer: "atlético de madrid", options: ["Real Madrid", "FC Barcelona", "Atlético de Madrid", "Sevilla FC"] },
-  { country: "España", question: "¿Cuál es el postre español famoso que es como crema frita?", answer: "leche frita", options: ["Churros", "Flan", "Leche Frita", "Turrón"] },
-  { country: "España", question: "¿En qué año ganó España su primer Mundial?", answer: "2010", options: ["2006", "2010", "2014", "1998"] },
-  { country: "España", question: "¿Cuál es la capital de España?", answer: "madrid", options: ["Barcelona", "Sevilla", "Valencia", "Madrid"] },
-  { country: "España", question: "¿Cómo se llama el estadio del Real Madrid?", answer: "santiago bernabéu", options: ["Camp Nou", "Santiago Bernabéu", "Metropolitano", "Mestalla"] },
-  { country: "Japón", question: "¿Cuál es la capital de Japón?", answer: "tokio", options: ["Kioto", "Osaka", "Hiroshima", "Tokio"] },
-  { country: "Japón", question: "¿Qué plato consiste en pescado crudo sobre arroz con vinagre?", answer: "sushi", options: ["Ramen", "Tempura", "Sushi", "Sashimi"] },
-  { country: "Japón", question: "¿Cuál es la montaña más alta de Japón?", answer: "monte fuji", options: ["Monte Fuji", "Monte Aso", "Monte Kita", "Monte Ontake"] },
-  { country: "Japón", question: "¿Cuál es la moneda de Japón?", answer: "yen", options: ["Dólar", "Euro", "Yen", "Yuan"] },
-  { country: "Japón", question: "¿Cómo se llaman los guerreros sombra de Japón?", answer: "ninja", options: ["Samurái", "Ninja", "Ronin", "Shogun"] },
-  { country: "Argentina", question: "¿En qué estadio juega Boca Juniors?", answer: "la bombonera", options: ["El Monumental", "La Bombonera", "El Cilindro", "El Nuevo Gasómetro"] },
-  { country: "Argentina", question: "¿Cuál es el postre clásico argentino hecho con leche y azúcar?", answer: "dulce de leche", options: ["Flan", "Arroz con leche", "Dulce de leche", "Torta Frita"] },
-  { country: "Fútbol General", question: "¿Máximo goleador histórico de la Champions League?", answer: "cristiano ronaldo", options: ["Lionel Messi", "Cristiano Ronaldo", "Lewandowski", "Benzema"] },
+  // Preguntas de España
+  { country: "España", question: "¿Quién pintó 'Las Meninas'?", answer: "diego velazquez", options: ["Francisco de Goya", "Diego Velazquez", "El Greco", "Pablo Picasso"] },
+  { country: "España", question: "¿Qué escritor español ganó el Premio Nobel de Literatura en 1956?", answer: "juan ramón jiménez", options: ["Federico García Lorca", "Camilo José Cela", "Juan Ramón Jiménez", "Miguel de Cervantes"] },
+  { country: "España", question: "¿En qué ciudad se celebra la famosa fiesta de los Sanfermines?", answer: "pamplona", options: ["Madrid", "Barcelona", "Sevilla", "Pamplona"] },
+  { country: "España", question: "¿Quién es el futbolista español que ganó el Mundial de 2010 y la Eurocopa de 2008 y 2012?", answer: "xavi hernández", options: ["Andrés Iniesta", "David Villa", "Xavi Hernández", "Sergio Ramos"] },
+  { country: "España", question: "¿Quién pintó 'El Jardín de las Delicias'?", answer: "hieronymus bosch", options: ["El Greco", "Hieronymus Bosch", "Salvador Dalí", "Francisco de Goya"] },
+  { country: "España", question: "¿Quién fue el primer rey de la democracia española tras la dictadura de Franco?", answer: "juan carlos i", options: ["Felipe VI", "Juan Carlos I", "Carlos I", "Alfonso XIII"] },
+  { country: "España", question: "¿En qué ciudad se celebra la famosa Feria de Abril?", answer: "sevilla", options: ["Madrid", "Sevilla", "Valencia", "Zaragoza"] },
+  
+  // Preguntas de Japón
+  { country: "Japón", question: "¿Qué famoso escritor japonés escribió 'Norwegian Wood'?", answer: "haruki murakami", options: ["Yukio Mishima", "Haruki Murakami", "Kenzaburō Ōe", "Ryu Murakami"] },
+  { country: "Japón", question: "¿Cómo se llama el tradicional teatro japonés de marionetas?", answer: "bunraku", options: ["Kabuki", "Bunraku", "Noh", "Kyogen"] },
+  { country: "Japón", question: "¿En qué año se lanzó la consola PlayStation 1?", answer: "1994", options: ["1989", "1994", "1998", "2000"] },
+  { country: "Japón", question: "¿Qué deporte es el más popular en Japón?", answer: "béisbol", options: ["Fútbol", "Sumo", "Béisbol", "Baloncesto"] },
+  { country: "Japón", question: "¿Cuál es la famosa ceremonia japonesa del té?", answer: "chanoyu", options: ["Sado", "Chanoyu", "Ikebana", "Kintsugi"] },
+  { country: "Japón", question: "¿Cuál es la famosa montaña en Japón que es un ícono nacional?", answer: "monte fuji", options: ["Monte Fuji", "Monte Aso", "Monte Kita", "Monte Ontake"] },
+  { country: "Japón", question: "¿Qué famoso festival de flores de cerezo se celebra en Japón?", answer: "hanami", options: ["Tanabata", "Hanami", "Obon", "Setsubun"] },
+
+  // Preguntas de Argentina
+  { country: "Argentina", question: "¿Quién es conocido como 'La Pulga' en el fútbol?", answer: "lionel messi", options: ["Diego Maradona", "Lionel Messi", "Sergio Agüero", "Carlos Tévez"] },
+  { country: "Argentina", question: "¿Qué famoso tango argentino fue compuesto por Carlos Gardel?", answer: "el día que me quieras", options: ["Mi Buenos Aires Querido", "Adiós Muchachos", "El Día Que Me Quieras", "La Cumparsita"] },
+  { country: "Argentina", question: "¿En qué ciudad se encuentra el famoso Obelisco?", answer: "buenos aires", options: ["Mendoza", "Córdoba", "Buenos Aires", "Rosario"] },
+  { country: "Argentina", question: "¿En qué año Argentina ganó su primer Mundial de Fútbol?", answer: "1978", options: ["1974", "1978", "1986", "1990"] },
+  { country: "Argentina", question: "¿Quién fue el primer presidente de Argentina?", answer: "bernardino rivadavia", options: ["Juan Domingo Perón", "Bernardino Rivadavia", "Hipólito Yrigoyen", "Raúl Alfonsín"] },
+  { country: "Argentina", question: "¿Qué jugador argentino es conocido como 'El Diego'?", answer: "diego maradona", options: ["Lionel Messi", "Diego Maradona", "Carlos Tévez", "Sergio Agüero"] },
+  { country: "Argentina", question: "¿Qué famoso escritor argentino ganó el Premio Nobel de Literatura en 1970?", answer: "mario vargas llosa", options: ["Jorge Luis Borges", "Mario Vargas Llosa", "Carlos Fuentes", "Gabriel García Márquez"] },
+  
+  // Preguntas de Brasil
+  { country: "Brasil", question: "¿Qué ciudad es la capital de Brasil?", answer: "brasília", options: ["Río de Janeiro", "São Paulo", "Brasília", "Salvador"] },
+  { country: "Brasil", question: "¿Cuál es el carnaval más famoso de Brasil?", answer: "carnaval de río", options: ["Carnaval de Salvador", "Carnaval de Olinda", "Carnaval de Río", "Carnaval de Recife"] },
+  { country: "Brasil", question: "¿Qué jugador brasileño es considerado uno de los mejores de la historia y conocido como 'El Rey'?", answer: "pelé", options: ["Romário", "Ronaldo Nazário", "Pelé", "Zico"] },
+  { country: "Brasil", question: "¿Qué tipo de música popular nació en Brasil y es conocida por su ritmo rápido y contagioso?", answer: "samba", options: ["Salsa", "Samba", "Bossa Nova", "Forró"] },
+  { country: "Brasil", question: "¿En qué ciudad brasileña se celebró el Mundial de Fútbol de 2014?", answer: "rio de janeiro", options: ["São Paulo", "Río de Janeiro", "Salvador", "Brasília"] },
+  { country: "Brasil", question: "¿En qué año Brasil ganó su primer Mundial de Fútbol?", answer: "1958", options: ["1954", "1962", "1958", "1970"] },
+  { country: "Brasil", question: "¿Qué famoso escritor brasileño escribió 'Cien años de soledad'?", answer: "gabriel garcia marquez", options: ["Mario Vargas Llosa", "Gabriel García Márquez", "Jorge Luis Borges", "Carlos Fuentes"] },
+
+  // Preguntas de Francia
+  { country: "Francia", question: "¿Quién fue el emperador francés que conquistó gran parte de Europa?", answer: "napoleón bonaparte", options: ["Luis XIV", "Napoleón Bonaparte", "Carlos I", "Luis XVI"] },
+  { country: "Francia", question: "¿En qué año ganó Francia su primer Mundial de Fútbol?", answer: "1998", options: ["1994", "1998", "2006", "2018"] },
+  { country: "Francia", question: "¿Qué pintor francés es famoso por su estilo impresionista?", answer: "claude monet", options: ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Edgar Degas"] },
+  { country: "Francia", question: "¿Qué famosa torre está situada en París?", answer: "torre eiffel", options: ["Torre CN", "Torre Pisa", "Torre Eiffel", "Torre de Londres"] },
+  
+  // Preguntas de Inglaterra
+  { country: "Inglaterra", question: "¿Quién escribió las obras de teatro 'Hamlet' y 'Romeo y Julieta'?", answer: "william shakespeare", options: ["Christopher Marlowe", "William Shakespeare", "Charles Dickens", "Jane Austen"] },
+  { country: "Inglaterra", question: "¿Qué ciudad es conocida como la capital de la moda en Inglaterra?", answer: "londres", options: ["Manchester", "Liverpool", "Birmingham", "Londres"] },
+  { country: "Inglaterra", question: "¿Qué jugador inglés es famoso por su paso por el Manchester United y la selección inglesa?", answer: "david beckham", options: ["Wayne Rooney", "David Beckham", "Steven Gerrard", "John Terry"] },
+  { country: "Inglaterra", question: "¿Qué famoso torneo de tenis se celebra anualmente en Inglaterra?", answer: "wimbledon", options: ["Roland Garros", "US Open", "Australian Open", "Wimbledon"] },
+
+  // Preguntas de Colombia
+  { country: "Colombia", question: "¿Quién es el famoso cantante de salsa conocido como 'El Caballero de la Salsa'?", answer: "hector lavoe", options: ["Marc Anthony", "Willie Colón", "Héctor Lavoe", "Gilberto Santa Rosa"] },
+  { country: "Colombia", question: "¿Cuál es la ciudad colombiana famosa por su Carnaval y el Museo del Oro?", answer: "bogotá", options: ["Cali", "Barranquilla", "Medellín", "Bogotá"] },
+  { country: "Colombia", question: "¿En qué año Colombia fue sede del Mundial de Fútbol?", answer: "1986", options: ["1986", "1994", "2014", "2018"] },
+  { country: "Colombia", question: "¿Qué famoso escritor colombiano ganó el Premio Nobel de Literatura en 1982?", answer: "gabriel garcia marquez", options: ["Mario Vargas Llosa", "Carlos Fuentes", "Gabriel García Márquez", "Jorge Luis Borges"] },
+
+  // Preguntas de Estados Unidos
+  { country: "EEUU", question: "¿Qué famoso parque nacional de EEUU es conocido por sus géiseres y vida salvaje?", answer: "yellowstone", options: ["Yosemite", "Yellowstone", "Grand Canyon", "Zion"] },
+  { country: "EEUU", question: "¿Qué ciudad de EEUU es conocida por su Estatua de la Libertad?", answer: "nueva york", options: ["Los Ángeles", "Chicago", "Nueva York", "Miami"] },
+  { country: "EEUU", question: "¿Quién fue el presidente de los EEUU durante la Guerra Civil?", answer: "abraham lincoln", options: ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "Andrew Jackson"] },
+  { country: "EEUU", question: "¿En qué año ganó EEUU su primer Mundial de Fútbol?", answer: "1930", options: ["1920", "1930", "1950", "1994"] }
 ];
 
 export default function SoccerQuiz() {
