@@ -10,7 +10,6 @@ const BANDERAS: Record<string, string> = {
   "Argentina": "🇦🇷"
 };
 
-// --- LISTAS DE AUDIOS (Según tu carpeta public) ---
 const PASS_SOUNDS = [
   "/PASE CORTO.m4a", "/PASE CORTO CENTURION (1).m4a", "/PASE CORTO MARADONA.m4a",
   "/PASE LARGO.m4a", "/PASE LARGO INVENTE.m4a", "/PASE LARGO MARADONA .m4a",
@@ -35,7 +34,6 @@ interface Player {
   left: number;
 }
 
-// FORMACIÓN MEZCLADA (Simulando partido en movimiento)
 const formation: Player[] = [
   { id: 1, role: "DEF", top: 80, left: 65 },
   { id: 2, role: "DEF", top: 80, left: 35 },
@@ -50,19 +48,16 @@ const formation: Player[] = [
 ];
 
 const QUESTIONS_DB = [
-  // --- ESPAÑA 🇪🇸 ---
   { country: "España", question: "¿Qué equipo de fútbol es conocido como 'Los Colchoneros'?", answer: "atlético de madrid", options: ["Real Madrid", "FC Barcelona", "Atlético de Madrid", "Sevilla FC"] },
   { country: "España", question: "¿Cuál es el postre español famoso que es como crema frita?", answer: "leche frita", options: ["Churros", "Flan", "Leche Frita", "Turrón"] },
   { country: "España", question: "¿En qué año ganó España su primer Mundial?", answer: "2010", options: ["2006", "2010", "2014", "1998"] },
   { country: "España", question: "¿Cuál es la capital de España?", answer: "madrid", options: ["Barcelona", "Sevilla", "Valencia", "Madrid"] },
   { country: "España", question: "¿Cómo se llama el estadio del Real Madrid?", answer: "santiago bernabéu", options: ["Camp Nou", "Santiago Bernabéu", "Metropolitano", "Mestalla"] },
-  // --- JAPÓN 🇯🇵 ---
   { country: "Japón", question: "¿Cuál es la capital de Japón?", answer: "tokio", options: ["Kioto", "Osaka", "Hiroshima", "Tokio"] },
   { country: "Japón", question: "¿Qué plato consiste en pescado crudo sobre arroz con vinagre?", answer: "sushi", options: ["Ramen", "Tempura", "Sushi", "Sashimi"] },
   { country: "Japón", question: "¿Cuál es la montaña más alta de Japón?", answer: "monte fuji", options: ["Monte Fuji", "Monte Aso", "Monte Kita", "Monte Ontake"] },
   { country: "Japón", question: "¿Cuál es la moneda de Japón?", answer: "yen", options: ["Dólar", "Euro", "Yen", "Yuan"] },
   { country: "Japón", question: "¿Cómo se llaman los guerreros sombra de Japón?", answer: "ninja", options: ["Samurái", "Ninja", "Ronin", "Shogun"] },
-  // --- ARGENTINA / FÚTBOL ---
   { country: "Argentina", question: "¿En qué estadio juega Boca Juniors?", answer: "la bombonera", options: ["El Monumental", "La Bombonera", "El Cilindro", "El Nuevo Gasómetro"] },
   { country: "Argentina", question: "¿Cuál es el postre clásico argentino hecho con leche y azúcar?", answer: "dulce de leche", options: ["Flan", "Arroz con leche", "Dulce de leche", "Torta Frita"] },
   { country: "Fútbol General", question: "¿Máximo goleador histórico de la Champions League?", answer: "cristiano ronaldo", options: ["Lionel Messi", "Cristiano Ronaldo", "Lewandowski", "Benzema"] },
@@ -84,9 +79,8 @@ export default function SoccerQuiz() {
   }, [possession.role, possession.team]);
 
   const playRandomSound = (sounds: string[]) => {
-    const sound = sounds[Math.floor(Math.random() * sounds.length)];
-    const audio = new Audio(sound);
-    audio.play().catch(e => console.log("Audio play blocked", e));
+    const audio = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
+    audio.play().catch(() => {});
   };
 
   const selectTeam = (name: string) => {
@@ -98,18 +92,20 @@ export default function SoccerQuiz() {
   };
 
   const pickQuestion = (team1: string, team2: string) => {
-    const pool = QUESTIONS_DB.filter(q =>
-      [team1, team2, "Argentina", "Fútbol General"].includes(q.country)
-    );
+    const pool = QUESTIONS_DB.filter(q => [team1, team2, "Argentina", "Fútbol General"].includes(q.country));
     setCurrentQ(pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)] : QUESTIONS_DB[0]);
+  };
+
+  const resetAfterAction = () => {
+    setUserInput("");
+    setIsMultipleChoice(false); // Siempre vuelve a Pase Largo por defecto
   };
 
   const handleGoal = () => {
     playRandomSound(GOAL_SOUNDS);
     setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
     setScore(prev => ({ ...prev, [possession.team]: prev[possession.team] + 1 }));
-    setUserInput("");
-
+    resetAfterAction();
     setTimeout(() => {
       setPossession({ team: possession.team === 'blue' ? 'red' : 'blue', role: '5' });
       setFeedback("");
@@ -126,7 +122,6 @@ export default function SoccerQuiz() {
       const mode = isMultipleChoice ? "corto" : "largo";
       let nextRole: Role = possession.role;
 
-      // Lógica de ataque completa
       if (possession.role === "DEF") nextRole = mode === "corto" ? "LAT" : "5";
       else if (possession.role === "LAT") nextRole = mode === "corto" ? "5" : "VOL";
       else if (possession.role === "5") nextRole = mode === "corto" ? "VOL" : "EXT";
@@ -138,14 +133,11 @@ export default function SoccerQuiz() {
         handleGoal();
         return;
       }
-
       playRandomSound(PASS_SOUNDS);
       setPossession({ team: currentTeam, role: nextRole });
       setFeedback("¡Pase quirúrgico! ✅");
     } else {
-      const audioErr = new Audio(INCORRECT_SOUND);
-      audioErr.play().catch(() => { });
-
+      new Audio(INCORRECT_SOUND).play().catch(() => {});
       let recoveryRole: Role = "5";
       if (possession.role === "DEF") recoveryRole = "9";
       else if (possession.role === "LAT") recoveryRole = "EXT";
@@ -153,11 +145,10 @@ export default function SoccerQuiz() {
       else if (possession.role === "VOL") recoveryRole = "5";
       else if (possession.role === "EXT") recoveryRole = "LAT";
       else if (possession.role === "9") recoveryRole = "DEF";
-
       setPossession({ team: otherTeam, role: recoveryRole });
       setFeedback("¡Error! Recuperación rival ❌");
     }
-    setUserInput("");
+    resetAfterAction();
     pickQuestion(teams!.blue, teams!.red);
   };
 
@@ -182,106 +173,125 @@ export default function SoccerQuiz() {
   const isShootingRole = possession.role === "EXT" || possession.role === "9";
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-zinc-100 dark:bg-zinc-950">
-      <div className="flex-[1.3] p-6 md:p-10 flex flex-col items-center justify-center border-r border-zinc-200 dark:border-zinc-800">
-        <div className="w-full max-w-2xl bg-white dark:bg-zinc-900 p-12 md:p-14 rounded-[3rem] shadow-2xl border border-zinc-100 dark:border-zinc-800 flex flex-col gap-10">
-
-          <div className="flex justify-between items-center bg-zinc-50 dark:bg-zinc-800 p-8 rounded-[2rem] shadow-inner border border-zinc-200 dark:border-zinc-700">
-            <div className="text-center flex-1">
-              <p className="text-7xl mb-1">{BANDERAS[teams.blue]}</p>
-              <p className="text-6xl font-black text-blue-600">{score.blue}</p>
-            </div>
-            <div className="text-3xl font-black text-zinc-300 px-6">VS</div>
-            <div className="text-center flex-1">
-              <p className="text-7xl mb-1">{BANDERAS[teams.red]}</p>
-              <p className="text-6xl font-black text-red-600">{score.red}</p>
+    <div className="flex flex-col lg:flex-row min-h-screen bg-white dark:bg-zinc-950 font-sans">
+      {/* PANEL DE JUEGO (IZQUIERDA) */}
+      <div className="flex-[1.1] p-4 md:p-8 flex flex-col h-full lg:min-h-screen">
+        
+        {/* Marcador Minimalista Estilo TV */}
+        <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-6 mb-8">
+          <div className="flex items-center gap-4">
+            <span className="text-4xl">{BANDERAS[teams.blue]}</span>
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-black text-zinc-400">Local</p>
+              <p className="text-3xl font-black text-blue-600 leading-none">{score.blue}</p>
             </div>
           </div>
-
-          <div className="text-center flex flex-col items-center gap-5">
-            <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest ${possession.team === 'blue' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}`}>
-              <span className={`h-2.5 w-2.5 rounded-full ${possession.team === 'blue' ? 'bg-blue-600' : 'bg-red-600'} animate-pulse`}></span>
-              Turno: {possession.team === 'blue' ? teams.blue : teams.red} ({possession.role})
+          <div className="text-zinc-300 font-black italic text-xl uppercase tracking-tighter">Mundialito</div>
+          <div className="flex items-center gap-4 text-right">
+            <div>
+              <p className="text-[10px] uppercase tracking-widest font-black text-zinc-400">Visitante</p>
+              <p className="text-3xl font-black text-red-600 leading-none">{score.red}</p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tight text-zinc-900 dark:text-white uppercase tracking-tighter">
+            <span className="text-4xl">{BANDERAS[teams.red]}</span>
+          </div>
+        </div>
+
+        {/* Turno y Pregunta */}
+        <div className="flex-1 flex flex-col justify-center max-w-xl mx-auto w-full">
+          <div className="mb-8">
+            <div className={`inline-block mb-4 px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] ${possession.team === 'blue' ? 'bg-blue-600 text-white' : 'bg-red-600 text-white'}`}>
+              En posesión: {possession.team === 'blue' ? teams.blue : teams.red} — {possession.role}
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black leading-[1.1] tracking-tighter text-zinc-900 dark:text-white uppercase italic">
               {currentQ.question}
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {isMultipleChoice ? (
-              <div className="grid grid-cols-2 gap-4">
+              /* MODO PASE CORTO (SOLO OPCIONES) */
+              <div className="grid grid-cols-1 gap-2">
                 {currentQ.options.map(opt => (
-                  <button key={opt} onClick={() => processAnswer(opt)} className="h-24 text-2xl border-2 rounded-2xl font-bold hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/20 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white active:scale-95 shadow-lg flex items-center justify-center p-4 transition-all">
-                    {opt}
+                  <button
+                    key={opt}
+                    onClick={() => processAnswer(opt)}
+                    className="group flex justify-between items-center p-5 text-lg border border-zinc-200 dark:border-zinc-800 rounded-lg font-bold hover:bg-zinc-950 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all active:scale-[0.98]"
+                  >
+                    <span className="uppercase tracking-tight">{opt}</span>
+                    <span>→</span>
                   </button>
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col gap-4">
+              /* MODO PASE LARGO / DISPARO (DEFAULT) */
+              <div className="flex flex-col gap-3">
                 <input
-                  type="text" value={userInput} onChange={e => setUserInput(e.target.value)}
-                  placeholder="Respuesta exacta..."
-                  className="h-24 text-3xl border-4 rounded-3xl px-8 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white focus:border-green-500 font-bold text-center outline-none shadow-inner"
+                  type="text"
+                  value={userInput}
+                  onChange={e => setUserInput(e.target.value)}
+                  placeholder="ESCRIBÍ LA RESPUESTA EXACTA..."
+                  className="w-full bg-zinc-50 dark:bg-zinc-900 border-b-4 border-zinc-200 dark:border-zinc-800 p-6 text-2xl font-black uppercase outline-none focus:border-blue-500 transition-colors"
                   onKeyDown={(e) => e.key === 'Enter' && processAnswer(userInput)}
                 />
-                <button onClick={() => processAnswer(userInput)} className="h-24 bg-zinc-950 dark:bg-white text-white dark:text-black rounded-3xl text-3xl font-extrabold uppercase hover:scale-[1.03] transition-all shadow-xl">
-                  {isShootingRole ? "¡TIRAR A PUERTA! ⚽🚀" : "Ejecutar Pase Largo"}
-                </button>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <button
+                    onClick={() => processAnswer(userInput)}
+                    className={`p-6 text-xl font-black uppercase tracking-tighter transition-all active:scale-95 shadow-xl ${isShootingRole ? 'bg-green-500 hover:bg-green-600 text-white' : 'bg-zinc-950 dark:bg-white text-white dark:text-black'}`}
+                  >
+                    {isShootingRole ? "¡MANDALA A GUARDAR! ⚽🚀" : "DAR PASE LARGO 👟"}
+                  </button>
+                  <button
+                    onClick={() => setIsMultipleChoice(true)}
+                    className="p-6 text-xl font-black uppercase tracking-tighter border-2 border-zinc-950 dark:border-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95"
+                  >
+                    BUSCAR PASE CORTO 🙋‍♂️
+                  </button>
+                </div>
               </div>
             )}
-            <button onClick={() => setIsMultipleChoice(!isMultipleChoice)} className="w-full text-sm font-bold text-zinc-400 uppercase tracking-wider hover:text-zinc-700 py-3">
-              Cambiar a {isMultipleChoice ? "Pase Largo" : "Pase Corto (Opciones)"}
-            </button>
           </div>
 
           {feedback && (
-            <div className="p-5 bg-zinc-950 dark:bg-zinc-100 rounded-2xl text-center animate-bounce shadow-2xl">
-              <p className="text-2xl font-black text-green-400 dark:text-green-700 uppercase tracking-tighter">{feedback}</p>
+            <div className="mt-8 border-l-8 border-green-500 bg-zinc-100 dark:bg-zinc-800 p-4 animate-pulse">
+              <p className="text-xl font-black italic uppercase tracking-tighter text-zinc-900 dark:text-white">
+                {feedback}
+              </p>
             </div>
           )}
         </div>
       </div>
 
-      {/* --- CONTENEDOR DEL ESTADIO --- */}
-      {/* --- CONTENEDOR DEL ESTADIO "LA BOMBONERA" REAL --- */}
+      {/* --- EL ESTADIO (LA BOMBONERA) --- */}
       <div className="flex-1 bg-black p-4 md:p-8 flex items-center justify-center overflow-hidden relative border-l-4 border-zinc-800">
-
         <div
-          className="absolute inset-0 z-0 bg-no-repeat bg-center opacity-60 transition-all duration-700"
+          className="absolute inset-0 z-0 bg-no-repeat bg-center opacity-60"
           style={{
             backgroundImage: "url('/bombonera.webp')",
-            backgroundSize: "180%", // <--- Ajustá este porcentaje para el ZOOM (100% es tamaño normal, 200% es mucho zoom)
-            backgroundPosition: "60% 50%" // <--- El segundo valor sube o baja la imagen (ej: 60% para ver más pasto)
+            backgroundSize: "140%",
+            backgroundPosition: "80% 50%"
           }}
         >
-          {/* Overlay para que no compita con los jugadores */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent"></div>
         </div>
 
-        {/* La Cancha (Ahora transparente para que se vea el pasto de la foto) */}
-        <div className="relative z-10 w-full max-w-[500px] aspect-[3/4] border-[4px] border-white/30 rounded-sm shadow-[0_0_100px_rgba(0,0,0,0.8)]">
+        <div className="relative z-10 w-full max-w-[400px] aspect-[3/4] border-[4px] border-white/30 rounded-sm shadow-[0_0_100px_rgba(0,0,0,0.8)]">
+          <div className="absolute inset-0 border-2 border-white/20 m-1" />
+          <div className="absolute top-1/2 w-full h-[2px] bg-white/20 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
-          {/* Líneas de la cancha (Blanco sutil para no tapar la foto) */}
-          <div className="absolute inset-0 border-2 border-white/20 m-1" /> {/* Perímetro */}
-          <div className="absolute top-1/2 w-full h-[2px] bg-white/20 -translate-y-1/2" /> {/* Mitad */}
-          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" /> {/* Círculo */}
-
-          {/* --- ARCO SUPERIOR --- */}
+          {/* ARCO SUPERIOR */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 border-x-2 border-b-2 border-white/60 z-10">
-            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]"
-              style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
           </div>
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-28 border-x-2 border-b-2 border-white/20" />
 
-          {/* --- ARCO INFERIOR --- */}
+          {/* ARCO INFERIOR */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-6 border-x-2 border-t-2 border-white/60 z-10">
-            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]"
-              style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
+            <div className="absolute inset-0 bg-white/5 backdrop-blur-[0.5px]" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '4px 4px', opacity: 0.3 }}></div>
           </div>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 h-28 border-x-2 border-t-2 border-white/20" />
 
-          {/* --- JUGADORES (Se mantienen igual) --- */}
+          {/* JUGADORES */}
           {formation.map(p => (
             <PlayerMarker
               key={`blue-${p.id}`}
