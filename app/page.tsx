@@ -895,23 +895,41 @@ export default function SoccerQuiz() {
         </div>
 
         {/* Marcador */}
-        <div className="flex items-center justify-between bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-sm mb-8 mt-2 border border-zinc-200 dark:border-zinc-800">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">{BANDERAS[teams.blue]}</span>
-            <span className="text-2xl font-black text-blue-600">
+        <div className="flex items-center justify-between bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl shadow-xl mb-10 mt-2 border-2 border-zinc-200 dark:border-zinc-800">
+          {/* Equipo Azul */}
+          <div className="flex items-center gap-4 md:gap-6">
+            <span className="text-5xl md:text-6xl drop-shadow-sm">
+              {BANDERAS[teams.blue]}
+            </span>
+            <span className="text-4xl md:text-6xl font-black text-blue-600 tabular-nums">
               {score.blue}
             </span>
           </div>
-          <div
-            className={`px-4 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-xl font-mono font-bold ${timeLeft < 10 ? "text-red-500 animate-pulse" : "text-zinc-600 dark:text-zinc-300"}`}
-          >
-            0:{timeLeft.toString().padStart(2, "0")}
+
+          {/* Cronómetro Central */}
+          <div className="flex flex-col items-center">
+            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-1">
+              Tiempo
+            </div>
+            <div
+              className={`px-6 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-3xl md:text-4xl font-mono font-black shadow-inner border border-zinc-200 dark:border-zinc-700 ${
+                timeLeft < 10
+                  ? "text-red-500 animate-pulse"
+                  : "text-zinc-700 dark:text-zinc-200"
+              }`}
+            >
+              0:{timeLeft.toString().padStart(2, "0")}
+            </div>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-2xl font-black text-red-600">
+
+          {/* Equipo Rojo */}
+          <div className="flex items-center gap-4 md:gap-6">
+            <span className="text-4xl md:text-6xl font-black text-red-600 tabular-nums">
               {score.red}
             </span>
-            <span className="text-3xl">{BANDERAS[teams.red]}</span>
+            <span className="text-5xl md:text-6xl drop-shadow-sm">
+              {BANDERAS[teams.red]}
+            </span>
           </div>
         </div>
 
@@ -985,9 +1003,7 @@ export default function SoccerQuiz() {
               onClick={handleManualError}
               className={`w-full p-4 mt-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 font-black uppercase text-sm rounded hover:bg-red-100 hover:text-red-600 transition-all ${isShowingOptions ? "hidden" : ""}`}
             >
-              {isShootingRole
-                ? "Perderla 🏳️"
-                : "Perder la pelota!!!!🏳️"}
+              {isShootingRole ? "Perderla 🏳️" : "Perder la pelota!!!!🏳️"}
             </button>
           </div>
 
@@ -1005,12 +1021,12 @@ export default function SoccerQuiz() {
           className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: "url('/bombonera.webp')",
-            backgroundSize: "cover",
+            backgroundSize: "120%",
             backgroundPosition: "center",
           }}
         ></div>
 
-        <div className="relative left-20 w-full max-w-[370px] aspect-[3/4] border-4 border-white/20 rounded">
+        <div className="relative left-20 w-full max-w-[370px] aspect-[2.6/3.8] border-4 border-white/20 rounded">
           <div className="absolute top-1/2 w-full h-0.5 bg-white/20 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
