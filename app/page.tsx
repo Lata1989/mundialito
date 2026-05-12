@@ -27,7 +27,6 @@ const BANDERAS: Record<string, string> = {
   Escocia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
   Portugal: "🇵🇹",
   Noruega: "🇳🇴",
-  Argentina: "🇦🇷",
 };
 
 // --- CONFIGURACIÓN DE SONIDOS ---
@@ -879,11 +878,15 @@ export default function SoccerQuiz() {
     );
   }
 
-  const isShootingRole = possession.role === "EXT" || possession.role === "9";
+  // Optimizamos las constantes de rol
+  const isStriker = possession.role === "9";
+  const isWinger = possession.role === "EXT";
+  const isShootingRole = isStriker || isWinger;
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans overflow-hidden">
       <div className="flex-[1.2] p-4 md:p-8 flex flex-col relative">
+        {/* Barra de Tiempo */}
         <div className="absolute top-0 left-0 w-full h-1.5 bg-zinc-800">
           <div
             className={`h-full transition-all duration-1000 ${timeLeft < 10 ? "bg-red-500" : "bg-blue-500"}`}
@@ -891,6 +894,7 @@ export default function SoccerQuiz() {
           />
         </div>
 
+        {/* Marcador */}
         <div className="flex items-center justify-between bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-sm mb-8 mt-2 border border-zinc-200 dark:border-zinc-800">
           <div className="flex items-center gap-3">
             <span className="text-3xl">{BANDERAS[teams.blue]}</span>
@@ -931,13 +935,19 @@ export default function SoccerQuiz() {
                   onClick={() => handleManualAction("largo")}
                   className={`p-10 text-2xl font-black uppercase italic transition-all active:scale-95 shadow-xl ${isShootingRole ? "bg-green-600 text-white" : "bg-zinc-900 dark:bg-white text-white dark:text-black"}`}
                 >
-                  {isShootingRole ? "¡Tirar! ⚽" : "Pase Largo 🚀"}
+                  {/* El 9 fusila, el Extremo remata, los demás pasan largo */}
+                  {isStriker
+                    ? "Rematar Fuerte 🚀"
+                    : isWinger
+                      ? "Rematar 🚀"
+                      : "Pase Largo 🚀"}
                 </button>
                 <button
                   onClick={() => setIsShowingOptions(true)}
                   className="p-10 text-2xl font-black uppercase italic border-4 border-zinc-900 dark:border-white dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95"
                 >
-                  Pase Corto 🙋‍♂️
+                  {/* El 9 elige colocarla, el resto hace pase corto */}
+                  {isStriker ? "Tirar a colocar ⚽" : "Pase Corto 🙋‍♂️"}
                 </button>
               </div>
             ) : (
@@ -957,13 +967,15 @@ export default function SoccerQuiz() {
                     onClick={() => handleManualAction("corto")}
                     className="p-8 bg-green-500 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
                   >
-                    Pase Correcto ✅
+                    {/* Feedback visual de éxito */}
+                    {isStriker ? "¡GOOOOL! ✅" : "Pase Correcto ✅"}
                   </button>
                   <button
                     onClick={handleManualError}
                     className="p-8 bg-red-600 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
                   >
-                    Pase Incorrecto ❌
+                    {/* Feedback visual de fallo */}
+                    {isStriker ? "¡La tiró afuera! ❌" : "Pase Incorrecto ❌"}
                   </button>
                 </div>
               </div>
@@ -973,7 +985,9 @@ export default function SoccerQuiz() {
               onClick={handleManualError}
               className={`w-full p-4 mt-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 font-black uppercase text-sm rounded hover:bg-red-100 hover:text-red-600 transition-all ${isShowingOptions ? "hidden" : ""}`}
             >
-              Perder la pelota 🏳️
+              {isShootingRole
+                ? "Perder la oportunidad 🏳️"
+                : "Perder la pelota 🏳️"}
             </button>
           </div>
 
@@ -985,39 +999,26 @@ export default function SoccerQuiz() {
         </div>
       </div>
 
-      {/* --- CONTENEDOR PRINCIPAL DE LA CANCHA --- */}
+      {/* --- CONTENEDOR DE LA CANCHA --- */}
       <div className="flex-1 bg-zinc-900 relative border-l-4 border-zinc-800 hidden lg:flex items-center justify-center p-8">
-        {/* Imagen de fondo (La Bombonera). Opacity controla qué tan fuerte se ve el pasto */}
         <div
           className="absolute inset-0 opacity-40"
           style={{
             backgroundImage: "url('/bombonera.webp')",
-            backgroundSize: "120%",
+            backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         ></div>
 
-        {/* El "Rectángulo" de la cancha. 
-      - max-w-[330px]: Controla el ancho total de la cancha.
-      - aspect-[3/4]: Mantiene la proporción fútbolística. 
-      - border-white/20: Son las líneas laterales y de fondo. */}
         <div className="relative left-20 w-full max-w-[370px] aspect-[3/4] border-4 border-white/20 rounded">
-          {/* Línea de mitad de cancha */}
           <div className="absolute top-1/2 w-full h-0.5 bg-white/20 -translate-y-1/2" />
-
-          {/* Círculo central */}
           <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
-          {/* 
-          DIBUJO DE JUGADORES 
-          Nota: Los jugadores se ubican según el array 'formation' definido arriba.
-      */}
-
-          {/* JUGADORES EQUIPO AZUL (Atacan hacia arriba) */}
+          {/* JUGADORES EQUIPO AZUL */}
           {formation.map((p) => (
             <PlayerMarker
               key={`blue-${p.id}`}
-              pos={p} // Usa top/left tal cual están en el array formation
+              pos={p}
               color="bg-blue-600"
               hasPossession={
                 possession.team === "blue" && p.id === activePlayerId
@@ -1025,12 +1026,10 @@ export default function SoccerQuiz() {
             />
           ))}
 
-          {/* JUGADORES EQUIPO ROJO (Espejo del azul - Atacan hacia abajo) */}
+          {/* JUGADORES EQUIPO ROJO */}
           {formation.map((p) => (
             <PlayerMarker
               key={`red-${p.id}`}
-              // '100 - p.top' invierte la posición para que queden enfrentados
-              // Si el azul está en top: 80 (abajo), el rojo queda en top: 20 (arriba)
               pos={{ ...p, top: 100 - p.top }}
               color="bg-red-600"
               hasPossession={
