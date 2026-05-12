@@ -968,14 +968,14 @@ export default function SoccerQuiz() {
                     className="p-8 bg-green-500 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
                   >
                     {/* Feedback visual de éxito */}
-                    {isStriker ? "¡GOOOOL! ✅" : "Pase Correcto ✅"}
+                    {isStriker ? "¡GOOOOL! ✅" : "Pase correcto ✅"}
                   </button>
                   <button
                     onClick={handleManualError}
                     className="p-8 bg-red-600 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
                   >
                     {/* Feedback visual de fallo */}
-                    {isStriker ? "¡La tiró afuera! ❌" : "Pase Incorrecto ❌"}
+                    {isStriker ? "¡La tiró afuera! ❌" : "Pase incorrecto ❌"}
                   </button>
                 </div>
               </div>
@@ -986,8 +986,8 @@ export default function SoccerQuiz() {
               className={`w-full p-4 mt-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 font-black uppercase text-sm rounded hover:bg-red-100 hover:text-red-600 transition-all ${isShowingOptions ? "hidden" : ""}`}
             >
               {isShootingRole
-                ? "Perder la oportunidad 🏳️"
-                : "Perder la pelota 🏳️"}
+                ? "Perderla 🏳️"
+                : "Perder la pelota!!!!🏳️"}
             </button>
           </div>
 
