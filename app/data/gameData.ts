@@ -1,10 +1,22 @@
-"use client";
-import { useState, useMemo, useEffect } from "react";
+export type Role = "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
 
-// --- CONFIGURACIÓN DE BANDERAS ---
-const BANDERAS: Record<string, string> = {
+export interface Player {
+  id: number;
+  role: Role;
+  top: number;
+  left: number;
+}
+
+export interface Question {
+  country: string;
+  question: string;
+  answer: string;
+  options: string[];
+}
+
+export const BANDERAS: Record<string, string> = {
   Japón: "🇯🇵",
-  Inglaterra: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  Inglaterra: "🏴",
   Colombia: "🇨🇴",
   Francia: "🇫🇷",
   Canadá: "🇨🇦",
@@ -24,13 +36,12 @@ const BANDERAS: Record<string, string> = {
   Suiza: "🇨🇭",
   Austria: "🇦🇹",
   Egipto: "🇪🇬",
-  Escocia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  Escocia: "🏴",
   Portugal: "🇵🇹",
   Noruega: "🇳🇴",
 };
 
-// --- CONFIGURACIÓN DE SONIDOS ---
-const SOUNDS = {
+export const SOUNDS = {
   SHORT_PASS: [
     "/PASE CORTO.m4a",
     "/PASE CORTO CENTURION (1).m4a",
@@ -81,15 +92,7 @@ const SOUNDS = {
   ],
 };
 
-type Role = "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
-interface Player {
-  id: number;
-  role: Role;
-  top: number;
-  left: number;
-}
-
-const formation: Player[] = [
+export const formation: Player[] = [
   { id: 1, role: "DEF", top: 83, left: 65 },
   { id: 2, role: "DEF", top: 80, left: 35 },
   { id: 3, role: "LAT", top: 77, left: 10 },
@@ -102,11 +105,10 @@ const formation: Player[] = [
   { id: 10, role: "9", top: 21, left: 52 },
 ];
 
-const QUESTIONS_DB = [
+export const QUESTIONS_DB: Question[] = [
   // =========================
   // ESPAÑA
   // =========================
-
   {
     country: "España",
     question: "ESP-1 | ¿Quién pintó 'Las Meninas'?",
@@ -118,7 +120,6 @@ const QUESTIONS_DB = [
       "Pablo Picasso",
     ],
   },
-
   {
     country: "España",
     question:
@@ -131,7 +132,6 @@ const QUESTIONS_DB = [
       "Miguel de Cervantes",
     ],
   },
-
   {
     country: "España",
     question:
@@ -139,7 +139,6 @@ const QUESTIONS_DB = [
     answer: "pamplona",
     options: ["Madrid", "Barcelona", "Sevilla", "Pamplona"],
   },
-
   {
     country: "España",
     question:
@@ -152,7 +151,6 @@ const QUESTIONS_DB = [
       "Sergio Ramos",
     ],
   },
-
   {
     country: "España",
     question: "ESP-5 | ¿Quién pintó 'El Jardín de las Delicias'?",
@@ -164,7 +162,6 @@ const QUESTIONS_DB = [
       "Francisco de Goya",
     ],
   },
-
   {
     country: "España",
     question:
@@ -172,18 +169,15 @@ const QUESTIONS_DB = [
     answer: "juan carlos i",
     options: ["Felipe VI", "Juan Carlos I", "Carlos I", "Alfonso XIII"],
   },
-
   {
     country: "España",
     question: "ESP-7 | ¿En qué ciudad se celebra la famosa Feria de Abril?",
     answer: "sevilla",
     options: ["Madrid", "Sevilla", "Valencia", "Zaragoza"],
   },
-
   // =========================
   // JAPÓN
   // =========================
-
   {
     country: "Japón",
     question: "JAP-1 | ¿Qué famoso escritor japonés escribió 'Norwegian Wood'?",
@@ -195,7 +189,6 @@ const QUESTIONS_DB = [
       "Ryu Murakami",
     ],
   },
-
   {
     country: "Japón",
     question:
@@ -203,28 +196,24 @@ const QUESTIONS_DB = [
     answer: "bunraku",
     options: ["Kabuki", "Bunraku", "Noh", "Kyogen"],
   },
-
   {
     country: "Japón",
     question: "JAP-3 | ¿En qué año se lanzó la consola PlayStation 1?",
     answer: "1994",
     options: ["1989", "1994", "1998", "2000"],
   },
-
   {
     country: "Japón",
     question: "JAP-4 | ¿Qué deporte es el más popular en Japón?",
     answer: "béisbol",
     options: ["Fútbol", "Sumo", "Béisbol", "Baloncesto"],
   },
-
   {
     country: "Japón",
     question: "JAP-5 | ¿Cuál es la famosa ceremonia japonesa del té?",
     answer: "chanoyu",
     options: ["Sado", "Chanoyu", "Ikebana", "Kintsugi"],
   },
-
   {
     country: "Japón",
     question:
@@ -232,7 +221,6 @@ const QUESTIONS_DB = [
     answer: "monte fuji",
     options: ["Monte Fuji", "Monte Aso", "Monte Kita", "Monte Ontake"],
   },
-
   {
     country: "Japón",
     question:
@@ -240,11 +228,9 @@ const QUESTIONS_DB = [
     answer: "hanami",
     options: ["Tanabata", "Hanami", "Obon", "Setsubun"],
   },
-
   // =========================
   // ARGENTINA
   // =========================
-
   {
     country: "Argentina",
     question: "ARG-1 | ¿Quién es conocido como 'La Pulga' en el fútbol?",
@@ -256,7 +242,6 @@ const QUESTIONS_DB = [
       "Carlos Tévez",
     ],
   },
-
   {
     country: "Argentina",
     question:
@@ -269,21 +254,18 @@ const QUESTIONS_DB = [
       "La Cumparsita",
     ],
   },
-
   {
     country: "Argentina",
     question: "ARG-3 | ¿En qué ciudad se encuentra el famoso Obelisco?",
     answer: "buenos aires",
     options: ["Mendoza", "Córdoba", "Buenos Aires", "Rosario"],
   },
-
   {
     country: "Argentina",
     question: "ARG-4 | ¿En qué año Argentina ganó su primer Mundial de Fútbol?",
     answer: "1978",
     options: ["1974", "1978", "1986", "1990"],
   },
-
   {
     country: "Argentina",
     question: "ARG-5 | ¿Quién fue el primer presidente de Argentina?",
@@ -295,7 +277,6 @@ const QUESTIONS_DB = [
       "Raúl Alfonsín",
     ],
   },
-
   {
     country: "Argentina",
     question: "ARG-6 | ¿Qué jugador argentino es conocido como 'El Diego'?",
@@ -307,7 +288,6 @@ const QUESTIONS_DB = [
       "Sergio Agüero",
     ],
   },
-
   {
     country: "Argentina",
     question:
@@ -320,18 +300,15 @@ const QUESTIONS_DB = [
       "Gabriel García Márquez",
     ],
   },
-
   // =========================
   // BRASIL
   // =========================
-
   {
     country: "Brasil",
     question: "BRA-1 | ¿Qué ciudad es la capital de Brasil?",
     answer: "brasília",
     options: ["Río de Janeiro", "São Paulo", "Brasília", "Salvador"],
   },
-
   {
     country: "Brasil",
     question: "BRA-2 | ¿Cuál es el carnaval más famoso de Brasil?",
@@ -343,7 +320,6 @@ const QUESTIONS_DB = [
       "Carnaval de Recife",
     ],
   },
-
   {
     country: "Brasil",
     question:
@@ -351,7 +327,6 @@ const QUESTIONS_DB = [
     answer: "pelé",
     options: ["Romário", "Ronaldo Nazário", "Pelé", "Zico"],
   },
-
   {
     country: "Brasil",
     question:
@@ -359,7 +334,6 @@ const QUESTIONS_DB = [
     answer: "samba",
     options: ["Salsa", "Samba", "Bossa Nova", "Forró"],
   },
-
   {
     country: "Brasil",
     question:
@@ -367,14 +341,12 @@ const QUESTIONS_DB = [
     answer: "rio de janeiro",
     options: ["São Paulo", "Río de Janeiro", "Salvador", "Brasília"],
   },
-
   {
     country: "Brasil",
     question: "BRA-6 | ¿En qué año Brasil ganó su primer Mundial de Fútbol?",
     answer: "1958",
     options: ["1954", "1962", "1958", "1970"],
   },
-
   {
     country: "Brasil",
     question:
@@ -387,11 +359,9 @@ const QUESTIONS_DB = [
       "Carlos Fuentes",
     ],
   },
-
   // =========================
   // ALEMANIA
   // =========================
-
   {
     country: "Alemania",
     question:
@@ -404,7 +374,6 @@ const QUESTIONS_DB = [
       "Copa América",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-2 | La selección de fútbol ha conseguido:",
@@ -416,7 +385,6 @@ const QUESTIONS_DB = [
       "5 copas mundiales",
     ],
   },
-
   {
     country: "Alemania",
     question:
@@ -429,14 +397,12 @@ const QUESTIONS_DB = [
       "Müller y Neuer",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-4 | ¿Cuántas veces fue sede de Mundiales de Fútbol?",
     answer: "dos",
     options: ["Una", "Dos", "Tres", "Cuatro"],
   },
-
   {
     country: "Alemania",
     question:
@@ -449,7 +415,6 @@ const QUESTIONS_DB = [
       "Michael Stich y Becker",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-6 | La fiesta típica de octubre en Münich se llama:",
@@ -461,7 +426,6 @@ const QUESTIONS_DB = [
       "Fiesta de Baviera",
     ],
   },
-
   {
     country: "Alemania",
     question:
@@ -469,7 +433,6 @@ const QUESTIONS_DB = [
     answer: "alemania",
     options: ["Argentina", "Alemania", "Empataron", "Italia"],
   },
-
   {
     country: "Alemania",
     question: "ALE-8 | Población de Alemania:",
@@ -481,14 +444,12 @@ const QUESTIONS_DB = [
       "100 millones de personas",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-9 | ¿Quién realizó la Reforma Protestante?",
     answer: "lutero",
     options: ["Calvino", "Lutero", "Zuinglio", "Erasmo"],
   },
-
   {
     country: "Alemania",
     question: "ALE-10 | Forma de gobierno:",
@@ -500,28 +461,30 @@ const QUESTIONS_DB = [
       "Imperio Federal",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-11 | Al ciudadano alemán también se le dice:",
     answer: "germano",
     options: ["Germano", "Eslavo", "Alamano", "Nórdico"],
   },
-
   {
     country: "Alemania",
-    question: "ALE-12 | La palabra hamburguesa viene de la ciudad de Hamburgo.",
+    question:
+      "ALE-12 | La palabra hamburguesa viene de la ciudad de Hamburgo.",
     answer: "verdadero",
-    options: ["Falso", "Verdadero", "Parcialmente verdadero", "No se sabe"],
+    options: [
+      "Falso",
+      "Verdadero",
+      "Parcialmente verdadero",
+      "No se sabe",
+    ],
   },
-
   {
     country: "Alemania",
     question: "ALE-13 | Moneda oficial:",
     answer: "euro",
     options: ["Dólar", "Euro", "Marco alemán", "Libra"],
   },
-
   {
     country: "Alemania",
     question: "ALE-14 | Clima:",
@@ -533,10 +496,10 @@ const QUESTIONS_DB = [
       "Tropical",
     ],
   },
-
   {
     country: "Alemania",
-    question: "ALE-15 | Después de la 2º Guerra Mundial, Alemania fue:",
+    question:
+      "ALE-15 | Después de la 2º Guerra Mundial, Alemania fue:",
     answer: "separada en dos estados",
     options: [
       "Separada en dos Estados",
@@ -545,14 +508,12 @@ const QUESTIONS_DB = [
       "Convertida en monarquía",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-16 | Capital:",
     answer: "berlín",
     options: ["Berlín", "Bonn", "Hamburgo", "Frankfurt"],
   },
-
   {
     country: "Alemania",
     question: "ALE-17 | Es reconocida como un país líder en:",
@@ -564,21 +525,19 @@ const QUESTIONS_DB = [
       "Sector Petrolero",
     ],
   },
-
   {
     country: "Alemania",
-    question: "ALE-18 | Hitler, llamado “El Führer”, en la Alemania Nazi fue:",
+    question:
+      "ALE-18 | Hitler, llamado “El Führer”, en la Alemania Nazi fue:",
     answer: "jefe de estado",
     options: ["Presidente", "Emperador", "Jefe de Estado", "Canciller Real"],
   },
-
   {
     country: "Alemania",
     question: "ALE-19 | Actual canciller:",
     answer: "angela merkel",
     options: ["Angela Merkel", "Mary Donalsson", "Paola Düssel", "Olaf Scholz"],
   },
-
   {
     country: "Alemania",
     question: "ALE-20 | Principales ciudades, después de su capital:",
@@ -590,14 +549,12 @@ const QUESTIONS_DB = [
       "París y Viena",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-21 | El Muro de Berlín se derrumbó en:",
     answer: "1989",
     options: ["1995", "1989", "1990", "1980"],
   },
-
   {
     country: "Alemania",
     question: "ALE-22 | Ríos más importantes:",
@@ -609,28 +566,26 @@ const QUESTIONS_DB = [
       "Volga, Sena y Támesis",
     ],
   },
-
   {
     country: "Alemania",
-    question: "ALE-23 | Es el país europeo que tiene el más grande mercado de:",
+    question:
+      "ALE-23 | Es el país europeo que tiene el más grande mercado de:",
     answer: "periódicos",
     options: ["Periódicos", "Televisión", "Radios", "Cine"],
   },
-
   {
     country: "Alemania",
     question: "ALE-24 | Religión mayoritaria:",
     answer: "cristianos",
     options: ["Cristianos", "Católicos romanos", "Islámicos", "Budistas"],
   },
-
   {
     country: "Alemania",
-    question: "ALE-25 | La escuela primaria alemana dura:",
+    question:
+      "ALE-25 | La escuela primaria alemana dura:",
     answer: "4 años",
     options: ["6 años", "5 años", "4 años", "7 años"],
   },
-
   {
     country: "Alemania",
     question: "ALE-26 | Alemania es conocida como:",
@@ -642,7 +597,6 @@ const QUESTIONS_DB = [
       "La nación del acero",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-27 | ¿Qué escribieron los Hermanos Grimm?",
@@ -654,7 +608,6 @@ const QUESTIONS_DB = [
       "La Odisea y La Ilíada",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-28 | Figuras Históricas alemanas:",
@@ -666,7 +619,6 @@ const QUESTIONS_DB = [
       "Napoleón, César y Platón",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-29 | Compositores y músicos más famosos:",
@@ -678,10 +630,10 @@ const QUESTIONS_DB = [
       "Mozart y Chopin",
     ],
   },
-
   {
     country: "Alemania",
-    question: "ALE-30 | El festival de Cine más famoso de Alemania se llama:",
+    question:
+      "ALE-30 | El festival de Cine más famoso de Alemania se llama:",
     answer: "festival de berlín",
     options: [
       "Festival de Edimburgo",
@@ -690,21 +642,18 @@ const QUESTIONS_DB = [
       "Festival de Cannes",
     ],
   },
-
   {
     country: "Alemania",
     question: "ALE-31 | En general, la carne se consume en forma de:",
     answer: "salchicha",
     options: ["Hamburguesa", "Salchicha", "Albóndiga", "Milanesa"],
   },
-
   {
     country: "Alemania",
     question: "ALE-32 | La bebida nacional de Alemania es:",
     answer: "cerveza",
     options: ["Cerveza", "Whisky", "Vodka", "Vino"],
   },
-
   {
     country: "Alemania",
     question:
@@ -718,367 +667,3 @@ const QUESTIONS_DB = [
     ],
   },
 ];
-
-export default function SoccerQuiz() {
-  const [teams, setTeams] = useState<{ blue: string; red: string } | null>(
-    null,
-  );
-  const [possession, setPossession] = useState<{
-    team: "blue" | "red";
-    role: Role;
-  }>({ team: "blue", role: "5" });
-  const [score, setScore] = useState({ blue: 0, red: 0 });
-  const [feedback, setFeedback] = useState("");
-  const [currentQ, setCurrentQ] = useState(QUESTIONS_DB[0]);
-  const [timeLeft, setTimeLeft] = useState(30);
-  const [isShowingOptions, setIsShowingOptions] = useState(false);
-
-  useEffect(() => {
-    if (!teams?.red || feedback !== "" || timeLeft === 0) {
-      if (timeLeft === 0 && feedback === "") handleManualError();
-      return;
-    }
-    const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
-    return () => clearInterval(timer);
-  }, [timeLeft, teams, feedback]);
-
-  const activePlayerId = useMemo(() => {
-    const playersInRole = formation.filter((p) => p.role === possession.role);
-    return playersInRole.length > 0
-      ? playersInRole[Math.floor(Math.random() * playersInRole.length)].id
-      : null;
-  }, [possession.role, possession.team]);
-
-  const playSfx = (audioArray: string[]) => {
-    const randomAudio =
-      audioArray[Math.floor(Math.random() * audioArray.length)];
-    const audio = new Audio(randomAudio);
-    audio.play().catch((e) => console.log("Audio play blocked", e));
-  };
-
-  const selectTeam = (name: string) => {
-    if (!teams) setTeams({ blue: name, red: "" });
-    else if (!teams.red) {
-      setTeams({ ...teams, red: name });
-      pickQuestion(teams.blue, name);
-    }
-  };
-
-  const pickQuestion = (teamBlue: string, teamRed: string) => {
-    const pool = QUESTIONS_DB.filter((q) =>
-      [teamBlue, teamRed, "Argentina"].includes(q.country),
-    );
-    const finalPool = pool.length > 0 ? pool : QUESTIONS_DB;
-    setCurrentQ(finalPool[Math.floor(Math.random() * finalPool.length)]);
-    setTimeLeft(30);
-    setIsShowingOptions(false);
-  };
-
-  const handleManualAction = (mode: "corto" | "largo") => {
-    const currentTeam = possession.team;
-    let nextRole: Role = possession.role;
-
-    if (possession.role === "DEF") nextRole = mode === "corto" ? "LAT" : "5";
-    else if (possession.role === "LAT")
-      nextRole = mode === "corto" ? "5" : "VOL";
-    else if (possession.role === "5")
-      nextRole = mode === "corto" ? "VOL" : "EXT";
-    else if (possession.role === "VOL")
-      nextRole = mode === "corto" ? "EXT" : "9";
-    else if (possession.role === "EXT") {
-      if (mode === "largo") {
-        handleGoal();
-        return;
-      }
-      nextRole = "9";
-    } else if (possession.role === "9") {
-      handleGoal();
-      return;
-    }
-
-    playSfx(mode === "corto" ? SOUNDS.SHORT_PASS : SOUNDS.LONG_PASS);
-    setPossession({ team: currentTeam, role: nextRole });
-    setFeedback(
-      mode === "corto"
-        ? "¡Pase corto completado! ✅"
-        : "¡Pase largo exitoso! 🚀",
-    );
-    setTimeout(() => {
-      setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 1500);
-  };
-
-  const handleManualError = () => {
-    playSfx(SOUNDS.INCORRECT);
-    const otherTeam = possession.team === "blue" ? "red" : "blue";
-    let recoveryRole: Role = "5";
-
-    if (possession.role === "DEF") recoveryRole = "9";
-    else if (possession.role === "LAT") recoveryRole = "EXT";
-    else if (possession.role === "5") recoveryRole = "VOL";
-    else if (possession.role === "VOL") recoveryRole = "5";
-    else if (possession.role === "EXT") recoveryRole = "LAT";
-    else if (possession.role === "9") recoveryRole = "DEF";
-
-    setPossession({ team: otherTeam, role: recoveryRole });
-    setFeedback("¡Pérdida de balón! ❌");
-    setTimeout(() => {
-      setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 1500);
-  };
-
-  const handleGoal = () => {
-    playSfx(SOUNDS.GOAL);
-    setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
-    setScore((prev) => ({
-      ...prev,
-      [possession.team]: prev[possession.team] + 1,
-    }));
-    setTimeout(() => {
-      setPossession({
-        team: possession.team === "blue" ? "red" : "blue",
-        role: "5",
-      });
-      setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 3500);
-  };
-
-  if (!teams || !teams.red) {
-    return (
-      <div className="flex flex-col items-center justify-start min-h-screen bg-zinc-950 text-white p-6 md:p-12 text-center overflow-y-auto">
-        <div className="max-w-6xl w-full">
-          <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">
-            SELECCIONAR EQUIPO <br />
-            <span className={!teams ? "text-blue-500" : "text-red-500"}>
-              {!teams ? "AZUL" : "ROJO"}
-            </span>
-          </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mt-8">
-            {Object.entries(BANDERAS).map(([name, flag]) => (
-              <button
-                key={name}
-                onClick={() => selectTeam(name)}
-                className="group relative flex flex-col items-center justify-center p-8 bg-zinc-900/50 rounded-2xl hover:bg-zinc-800 transition-all border-2 border-zinc-800 hover:border-zinc-500 active:scale-95 overflow-hidden"
-              >
-                <span className="text-7xl md:text-8xl mb-4 transform group-hover:scale-110 transition-transform">
-                  {flag}
-                </span>
-                <p className="text-xs font-black uppercase tracking-widest text-zinc-400 group-hover:text-white">
-                  {name}
-                </p>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Optimizamos las constantes de rol
-  const isStriker = possession.role === "9";
-  const isWinger = possession.role === "EXT";
-  const isShootingRole = isStriker || isWinger;
-
-  return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans overflow-hidden">
-      <div className="flex-[1.2] p-4 md:p-8 flex flex-col relative">
-        {/* Barra de Tiempo */}
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-zinc-800">
-          <div
-            className={`h-full transition-all duration-1000 ${timeLeft < 10 ? "bg-red-500" : "bg-blue-500"}`}
-            style={{ width: `${(timeLeft / 30) * 100}%` }}
-          />
-        </div>
-
-        {/* Marcador */}
-        <div className="flex items-center justify-between bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl shadow-xl mb-10 mt-2 border-2 border-zinc-200 dark:border-zinc-800">
-          {/* Equipo Azul */}
-          <div className="flex items-center gap-4 md:gap-6">
-            <span className="text-5xl md:text-6xl drop-shadow-sm">
-              {BANDERAS[teams.blue]}
-            </span>
-            <span className="text-4xl md:text-6xl font-black text-blue-600 tabular-nums">
-              {score.blue}
-            </span>
-          </div>
-
-          {/* Cronómetro Central */}
-          <div className="flex flex-col items-center">
-            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-1">
-              Tiempo
-            </div>
-            <div
-              className={`px-6 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-3xl md:text-4xl font-mono font-black shadow-inner border border-zinc-200 dark:border-zinc-700 ${
-                timeLeft < 10
-                  ? "text-red-500 animate-pulse"
-                  : "text-zinc-700 dark:text-zinc-200"
-              }`}
-            >
-              0:{timeLeft.toString().padStart(2, "0")}
-            </div>
-          </div>
-
-          {/* Equipo Rojo */}
-          <div className="flex items-center gap-4 md:gap-6">
-            <span className="text-4xl md:text-6xl font-black text-red-600 tabular-nums">
-              {score.red}
-            </span>
-            <span className="text-5xl md:text-6xl drop-shadow-sm">
-              {BANDERAS[teams.red]}
-            </span>
-          </div>
-        </div>
-
-        <div className="flex-1 flex flex-col justify-center max-w-2xl mx-auto w-full">
-          <div className="mb-6">
-            <p
-              className={`inline-block px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded mb-4 ${possession.team === "blue" ? "bg-blue-600 text-white" : "bg-red-600 text-white"}`}
-            >
-              POSESIÓN: {possession.team === "blue" ? teams.blue : teams.red} (
-              {possession.role})
-            </p>
-            <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-none dark:text-white">
-              {currentQ.question}
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {!isShowingOptions ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button
-                  onClick={() => handleManualAction("largo")}
-                  className={`p-10 text-2xl font-black uppercase italic transition-all active:scale-95 shadow-xl ${isShootingRole ? "bg-green-600 text-white" : "bg-zinc-900 dark:bg-white text-white dark:text-black"}`}
-                >
-                  {/* El 9 fusila, el Extremo remata, los demás pasan largo */}
-                  {isStriker
-                    ? "Rematar Fuerte 🚀"
-                    : isWinger
-                      ? "Rematar 🚀"
-                      : "Pase Largo 🚀"}
-                </button>
-                <button
-                  onClick={() => setIsShowingOptions(true)}
-                  className="p-10 text-2xl font-black uppercase italic border-4 border-zinc-900 dark:border-white dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95"
-                >
-                  {/* El 9 elige colocarla, el resto hace pase corto */}
-                  {isStriker ? "Tirar a colocar ⚽" : "Pase Corto 🙋‍♂️"}
-                </button>
-              </div>
-            ) : (
-              <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
-                <div className="grid grid-cols-2 gap-2">
-                  {currentQ.options.map((opt, i) => (
-                    <div
-                      key={i}
-                      className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded border border-zinc-200 dark:border-zinc-700 text-sm font-bold uppercase dark:text-zinc-300"
-                    >
-                      {opt}
-                    </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <button
-                    onClick={() => handleManualAction("corto")}
-                    className="p-8 bg-green-500 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
-                  >
-                    {/* Feedback visual de éxito */}
-                    {isStriker ? "¡GOOOOL! ✅" : "Pase correcto ✅"}
-                  </button>
-                  <button
-                    onClick={handleManualError}
-                    className="p-8 bg-red-600 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
-                  >
-                    {/* Feedback visual de fallo */}
-                    {isStriker ? "¡La tiró afuera! ❌" : "Pase incorrecto ❌"}
-                  </button>
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={handleManualError}
-              className={`w-full p-4 mt-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 font-black uppercase text-sm rounded hover:bg-red-100 hover:text-red-600 transition-all ${isShowingOptions ? "hidden" : ""}`}
-            >
-              {isShootingRole ? "Perderla 🏳️" : "Perder la pelota!!!!🏳️"}
-            </button>
-          </div>
-
-          {feedback && (
-            <div className="mt-8 p-4 bg-yellow-400 text-black font-black uppercase italic text-center animate-bounce rounded shadow-xl border-2 border-black">
-              {feedback}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* --- CONTENEDOR DE LA CANCHA --- */}
-      <div className="flex-1 bg-zinc-900 relative border-l-4 border-zinc-800 hidden lg:flex items-center justify-center p-8">
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: "url('/bombonera.webp')",
-            backgroundSize: "120%",
-            backgroundPosition: "center",
-          }}
-        ></div>
-
-        <div className="relative left-20 w-full max-w-[370px] aspect-[2.6/3.8] border-4 border-white/20 rounded">
-          <div className="absolute top-1/2 w-full h-0.5 bg-white/20 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
-
-          {/* JUGADORES EQUIPO AZUL */}
-          {formation.map((p) => (
-            <PlayerMarker
-              key={`blue-${p.id}`}
-              pos={p}
-              color="bg-blue-600"
-              hasPossession={
-                possession.team === "blue" && p.id === activePlayerId
-              }
-            />
-          ))}
-
-          {/* JUGADORES EQUIPO ROJO */}
-          {formation.map((p) => (
-            <PlayerMarker
-              key={`red-${p.id}`}
-              pos={{ ...p, top: 100 - p.top }}
-              color="bg-red-600"
-              hasPossession={
-                possession.team === "red" && p.id === activePlayerId
-              }
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PlayerMarker({
-  pos,
-  color,
-  hasPossession,
-}: {
-  pos: Player;
-  color: string;
-  hasPossession: boolean;
-}) {
-  return (
-    <div
-      className={`absolute w-8 h-8 ${color} rounded-full border-2 border-white transition-all duration-700 flex items-center justify-center ${hasPossession ? "scale-[2.2] z-30 ring-4 ring-yellow-400 shadow-[0_0_30px_rgba(253,224,71,0.6)]" : "opacity-80"}`}
-      style={{
-        top: `${pos.top}%`,
-        left: `${pos.left}%`,
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      {hasPossession && (
-        <div className="w-2 h-2 bg-white rounded-full animate-ping" />
-      )}
-    </div>
-  );
-}
