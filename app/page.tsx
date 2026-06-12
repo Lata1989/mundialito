@@ -1,5 +1,7 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
+// 1. Importación real de tu base de datos de preguntas
+import { QUESTIONS_DB } from "./data/preguntas";
 
 // --- CONFIGURACIÓN DE BANDERAS ---
 const BANDERAS: Record<string, string> = {
@@ -81,738 +83,173 @@ const SOUNDS = {
   ],
 };
 
-type Role = "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
-interface Player {
-  id: number;
+type Role = "ARQ" | "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
+
+interface PositionTemplate {
   role: Role;
-  top: number;
-  left: number;
+  top: number;    
+  left: number;   
+  dorsal: string;
 }
 
-const formation: Player[] = [
-  { id: 1, role: "DEF", top: 83, left: 65 },
-  { id: 2, role: "DEF", top: 80, left: 35 },
-  { id: 3, role: "LAT", top: 77, left: 10 },
-  { id: 4, role: "LAT", top: 68, left: 92 },
-  { id: 5, role: "5", top: 63, left: 55 },
-  { id: 6, role: "VOL", top: 45, left: 30 },
-  { id: 7, role: "VOL", top: 43, left: 75 },
-  { id: 8, role: "EXT", top: 35, left: 15 },
-  { id: 9, role: "EXT", top: 23, left: 85 },
-  { id: 10, role: "9", top: 21, left: 52 },
-];
-
-const QUESTIONS_DB = [
-  // =========================
-  // ESPAÑA
-  // =========================
-
-  {
-    country: "España",
-    question: "ESP-1 | ¿Quién pintó 'Las Meninas'?",
-    answer: "diego velazquez",
-    options: [
-      "Francisco de Goya",
-      "Diego Velazquez",
-      "El Greco",
-      "Pablo Picasso",
-    ],
-  },
-
-  {
-    country: "España",
-    question:
-      "ESP-2 | ¿Qué escritor español ganó el Premio Nobel de Literatura en 1956?",
-    answer: "juan ramón jiménez",
-    options: [
-      "Federico García Lorca",
-      "Camilo José Cela",
-      "Juan Ramón Jiménez",
-      "Miguel de Cervantes",
-    ],
-  },
-
-  {
-    country: "España",
-    question:
-      "ESP-3 | ¿En qué ciudad se celebra la famosa fiesta de los Sanfermines?",
-    answer: "pamplona",
-    options: ["Madrid", "Barcelona", "Sevilla", "Pamplona"],
-  },
-
-  {
-    country: "España",
-    question:
-      "ESP-4 | ¿Quién es el futbolista español que ganó el Mundial de 2010 y la Eurocopa de 2008 y 2012?",
-    answer: "xavi hernández",
-    options: [
-      "Andrés Iniesta",
-      "David Villa",
-      "Xavi Hernández",
-      "Sergio Ramos",
-    ],
-  },
-
-  {
-    country: "España",
-    question: "ESP-5 | ¿Quién pintó 'El Jardín de las Delicias'?",
-    answer: "hieronymus bosch",
-    options: [
-      "El Greco",
-      "Hieronymus Bosch",
-      "Salvador Dalí",
-      "Francisco de Goya",
-    ],
-  },
-
-  {
-    country: "España",
-    question:
-      "ESP-6 | ¿Quién fue el primer rey de la democracia española tras la dictadura de Franco?",
-    answer: "juan carlos i",
-    options: ["Felipe VI", "Juan Carlos I", "Carlos I", "Alfonso XIII"],
-  },
-
-  {
-    country: "España",
-    question: "ESP-7 | ¿En qué ciudad se celebra la famosa Feria de Abril?",
-    answer: "sevilla",
-    options: ["Madrid", "Sevilla", "Valencia", "Zaragoza"],
-  },
-
-  // =========================
-  // JAPÓN
-  // =========================
-
-  {
-    country: "Japón",
-    question: "JAP-1 | ¿Qué famoso escritor japonés escribió 'Norwegian Wood'?",
-    answer: "haruki murakami",
-    options: [
-      "Yukio Mishima",
-      "Haruki Murakami",
-      "Kenzaburō Ōe",
-      "Ryu Murakami",
-    ],
-  },
-
-  {
-    country: "Japón",
-    question:
-      "JAP-2 | ¿Cómo se llama el tradicional teatro japonés de marionetas?",
-    answer: "bunraku",
-    options: ["Kabuki", "Bunraku", "Noh", "Kyogen"],
-  },
-
-  {
-    country: "Japón",
-    question: "JAP-3 | ¿En qué año se lanzó la consola PlayStation 1?",
-    answer: "1994",
-    options: ["1989", "1994", "1998", "2000"],
-  },
-
-  {
-    country: "Japón",
-    question: "JAP-4 | ¿Qué deporte es el más popular en Japón?",
-    answer: "béisbol",
-    options: ["Fútbol", "Sumo", "Béisbol", "Baloncesto"],
-  },
-
-  {
-    country: "Japón",
-    question: "JAP-5 | ¿Cuál es la famosa ceremonia japonesa del té?",
-    answer: "chanoyu",
-    options: ["Sado", "Chanoyu", "Ikebana", "Kintsugi"],
-  },
-
-  {
-    country: "Japón",
-    question:
-      "JAP-6 | ¿Cuál es la famosa montaña en Japón que es un ícono nacional?",
-    answer: "monte fuji",
-    options: ["Monte Fuji", "Monte Aso", "Monte Kita", "Monte Ontake"],
-  },
-
-  {
-    country: "Japón",
-    question:
-      "JAP-7 | ¿Qué famoso festival de flores de cerezo se celebra en Japón?",
-    answer: "hanami",
-    options: ["Tanabata", "Hanami", "Obon", "Setsubun"],
-  },
-
-  // =========================
-  // ARGENTINA
-  // =========================
-
-  {
-    country: "Argentina",
-    question: "ARG-1 | ¿Quién es conocido como 'La Pulga' en el fútbol?",
-    answer: "lionel messi",
-    options: [
-      "Diego Maradona",
-      "Lionel Messi",
-      "Sergio Agüero",
-      "Carlos Tévez",
-    ],
-  },
-
-  {
-    country: "Argentina",
-    question:
-      "ARG-2 | ¿Qué famoso tango argentino fue compuesto por Carlos Gardel?",
-    answer: "el día que me quieras",
-    options: [
-      "Mi Buenos Aires Querido",
-      "Adiós Muchachos",
-      "El Día Que Me Quieras",
-      "La Cumparsita",
-    ],
-  },
-
-  {
-    country: "Argentina",
-    question: "ARG-3 | ¿En qué ciudad se encuentra el famoso Obelisco?",
-    answer: "buenos aires",
-    options: ["Mendoza", "Córdoba", "Buenos Aires", "Rosario"],
-  },
-
-  {
-    country: "Argentina",
-    question: "ARG-4 | ¿En qué año Argentina ganó su primer Mundial de Fútbol?",
-    answer: "1978",
-    options: ["1974", "1978", "1986", "1990"],
-  },
-
-  {
-    country: "Argentina",
-    question: "ARG-5 | ¿Quién fue el primer presidente de Argentina?",
-    answer: "bernardino rivadavia",
-    options: [
-      "Juan Domingo Perón",
-      "Bernardino Rivadavia",
-      "Hipólito Yrigoyen",
-      "Raúl Alfonsín",
-    ],
-  },
-
-  {
-    country: "Argentina",
-    question: "ARG-6 | ¿Qué jugador argentino es conocido como 'El Diego'?",
-    answer: "diego maradona",
-    options: [
-      "Lionel Messi",
-      "Diego Maradona",
-      "Carlos Tévez",
-      "Sergio Agüero",
-    ],
-  },
-
-  {
-    country: "Argentina",
-    question:
-      "ARG-7 | ¿Qué famoso escritor argentino ganó el Premio Nobel de Literatura en 1970?",
-    answer: "mario vargas llosa",
-    options: [
-      "Jorge Luis Borges",
-      "Mario Vargas Llosa",
-      "Carlos Fuentes",
-      "Gabriel García Márquez",
-    ],
-  },
-
-  // =========================
-  // BRASIL
-  // =========================
-
-  {
-    country: "Brasil",
-    question: "BRA-1 | ¿Qué ciudad es la capital de Brasil?",
-    answer: "brasília",
-    options: ["Río de Janeiro", "São Paulo", "Brasília", "Salvador"],
-  },
-
-  {
-    country: "Brasil",
-    question: "BRA-2 | ¿Cuál es el carnaval más famoso de Brasil?",
-    answer: "carnaval de río",
-    options: [
-      "Carnaval de Salvador",
-      "Carnaval de Olinda",
-      "Carnaval de Río",
-      "Carnaval de Recife",
-    ],
-  },
-
-  {
-    country: "Brasil",
-    question:
-      "BRA-3 | ¿Qué jugador brasileño es considerado uno de los mejores de la historia y conocido como 'El Rey'?",
-    answer: "pelé",
-    options: ["Romário", "Ronaldo Nazário", "Pelé", "Zico"],
-  },
-
-  {
-    country: "Brasil",
-    question:
-      "BRA-4 | ¿Qué tipo de música popular nació en Brasil y es conocida por su ritmo rápido y contagioso?",
-    answer: "samba",
-    options: ["Salsa", "Samba", "Bossa Nova", "Forró"],
-  },
-
-  {
-    country: "Brasil",
-    question:
-      "BRA-5 | ¿En qué ciudad brasileña se celebró el Mundial de Fútbol de 2014?",
-    answer: "rio de janeiro",
-    options: ["São Paulo", "Río de Janeiro", "Salvador", "Brasília"],
-  },
-
-  {
-    country: "Brasil",
-    question: "BRA-6 | ¿En qué año Brasil ganó su primer Mundial de Fútbol?",
-    answer: "1958",
-    options: ["1954", "1962", "1958", "1970"],
-  },
-
-  {
-    country: "Brasil",
-    question:
-      "BRA-7 | ¿Qué famoso escritor brasileño escribió 'Cien años de soledad'?",
-    answer: "gabriel garcia marquez",
-    options: [
-      "Mario Vargas Llosa",
-      "Gabriel García Márquez",
-      "Jorge Luis Borges",
-      "Carlos Fuentes",
-    ],
-  },
-
-  // =========================
-  // ALEMANIA
-  // =========================
-
-  {
-    country: "Alemania",
-    question:
-      "ALE-1 | Históricamente, Alemania se destaca por sus mejores performances en:",
-    answer: "juegos olímpicos",
-    options: [
-      "Juegos Olímpicos",
-      "Eurocopa",
-      "Juegos de Invierno europeo",
-      "Copa América",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-2 | La selección de fútbol ha conseguido:",
-    answer: "4 copas mundiales",
-    options: [
-      "4 copas mundiales",
-      "2 copas mundiales",
-      "3 copas mundiales",
-      "5 copas mundiales",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question:
-      "ALE-3 | A lo largo de su historia, los mejores futbolistas han sido:",
-    answer: "beckenboer, rummenige y matheüs",
-    options: [
-      "Beckenboer, Rummenige y Matheüs",
-      "Max Cruse y Joachim Löw",
-      "Oliver Khan y Michael Ballack",
-      "Müller y Neuer",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-4 | ¿Cuántas veces fue sede de Mundiales de Fútbol?",
-    answer: "dos",
-    options: ["Una", "Dos", "Tres", "Cuatro"],
-  },
-
-  {
-    country: "Alemania",
-    question:
-      "ALE-5 | Los mejores tenistas de Alemania, a lo largo de su historia, son:",
-    answer: "boris becker y steffi graff",
-    options: [
-      "Boris Becker y Steffi Graff",
-      "Dieter Bauman y Kriesten Otto",
-      "Alexander Zverev y Tommy Haas",
-      "Michael Stich y Becker",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-6 | La fiesta típica de octubre en Münich se llama:",
-    answer: "oktoberfest",
-    options: [
-      "Oktoberfest",
-      "Carnaval de Düsseldorf",
-      "Festival de Mossela",
-      "Fiesta de Baviera",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question:
-      "ALE-7 | En 1990, mundial de fútbol en Italia, Alemania se enfrentó a Argentina. ¿Quién ganó?",
-    answer: "alemania",
-    options: ["Argentina", "Alemania", "Empataron", "Italia"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-8 | Población de Alemania:",
-    answer: "82 millones de personas",
-    options: [
-      "82 millones de personas",
-      "50 millones de personas",
-      "60 millones de personas",
-      "100 millones de personas",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-9 | ¿Quién realizó la Reforma Protestante?",
-    answer: "lutero",
-    options: ["Calvino", "Lutero", "Zuinglio", "Erasmo"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-10 | Forma de gobierno:",
-    answer: "república federal alemana",
-    options: [
-      "República federal Alemana",
-      "Monarquía parlamentaria",
-      "República Representativa",
-      "Imperio Federal",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-11 | Al ciudadano alemán también se le dice:",
-    answer: "germano",
-    options: ["Germano", "Eslavo", "Alamano", "Nórdico"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-12 | La palabra hamburguesa viene de la ciudad de Hamburgo.",
-    answer: "verdadero",
-    options: ["Falso", "Verdadero", "Parcialmente verdadero", "No se sabe"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-13 | Moneda oficial:",
-    answer: "euro",
-    options: ["Dólar", "Euro", "Marco alemán", "Libra"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-14 | Clima:",
-    answer: "templado continental",
-    options: [
-      "Frío Oceánico",
-      "Templado continental",
-      "Templado húmedo",
-      "Tropical",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-15 | Después de la 2º Guerra Mundial, Alemania fue:",
-    answer: "separada en dos estados",
-    options: [
-      "Separada en dos Estados",
-      "Unificada en un solo Estado",
-      "Reunificada en una República",
-      "Convertida en monarquía",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-16 | Capital:",
-    answer: "berlín",
-    options: ["Berlín", "Bonn", "Hamburgo", "Frankfurt"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-17 | Es reconocida como un país líder en:",
-    answer: "sector científico y tecnológico",
-    options: [
-      "Sector científico y tecnológico",
-      "Sector Turismo y Ecología",
-      "Sector Gastronómico y Agrario",
-      "Sector Petrolero",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-18 | Hitler, llamado “El Führer”, en la Alemania Nazi fue:",
-    answer: "jefe de estado",
-    options: ["Presidente", "Emperador", "Jefe de Estado", "Canciller Real"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-19 | Actual canciller:",
-    answer: "angela merkel",
-    options: ["Angela Merkel", "Mary Donalsson", "Paola Düssel", "Olaf Scholz"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-20 | Principales ciudades, después de su capital:",
-    answer: "münich y düsselddorf",
-    options: [
-      "Münich y Düsselddorf",
-      "Oslo y Helsinky",
-      "Berna y Estocolmo",
-      "París y Viena",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-21 | El Muro de Berlín se derrumbó en:",
-    answer: "1989",
-    options: ["1995", "1989", "1990", "1980"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-22 | Ríos más importantes:",
-    answer: "rhin, elba y danubio",
-    options: [
-      "Rhin, Elba y Danubio",
-      "Don, Trent y Cray",
-      "Meselle, Exe y Tyne",
-      "Volga, Sena y Támesis",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-23 | Es el país europeo que tiene el más grande mercado de:",
-    answer: "periódicos",
-    options: ["Periódicos", "Televisión", "Radios", "Cine"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-24 | Religión mayoritaria:",
-    answer: "cristianos",
-    options: ["Cristianos", "Católicos romanos", "Islámicos", "Budistas"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-25 | La escuela primaria alemana dura:",
-    answer: "4 años",
-    options: ["6 años", "5 años", "4 años", "7 años"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-26 | Alemania es conocida como:",
-    answer: "la tierra de las ideas",
-    options: [
-      "El país donde no sale el sol",
-      "La tierra de las ideas",
-      "El país de los inventores",
-      "La nación del acero",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-27 | ¿Qué escribieron los Hermanos Grimm?",
-    answer: "caperucita roja y la bella durmiente",
-    options: [
-      "Caperucita Roja y La Bella Durmiente",
-      "Romeo y Julieta, Muerte en Venecia",
-      "El soldado y El Pato",
-      "La Odisea y La Ilíada",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-28 | Figuras Históricas alemanas:",
-    answer: "eistein, gütemberg y zeppelin",
-    options: [
-      "Eistein, Gütemberg y Zeppelin",
-      "Enrique VIII, Calvino y Louis I",
-      "Henry Ford, Atila y Marco Polo",
-      "Napoleón, César y Platón",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-29 | Compositores y músicos más famosos:",
-    answer: "beethoven, bach y wagner",
-    options: [
-      "Beethoven, Bach y Wagner",
-      "Vivaldi y Puccini",
-      "Aznavour, Bizet y Ravel",
-      "Mozart y Chopin",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-30 | El festival de Cine más famoso de Alemania se llama:",
-    answer: "festival de berlín",
-    options: [
-      "Festival de Edimburgo",
-      "Festival de Bonn",
-      "Festival de Berlín",
-      "Festival de Cannes",
-    ],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-31 | En general, la carne se consume en forma de:",
-    answer: "salchicha",
-    options: ["Hamburguesa", "Salchicha", "Albóndiga", "Milanesa"],
-  },
-
-  {
-    country: "Alemania",
-    question: "ALE-32 | La bebida nacional de Alemania es:",
-    answer: "cerveza",
-    options: ["Cerveza", "Whisky", "Vodka", "Vino"],
-  },
-
-  {
-    country: "Alemania",
-    question:
-      "ALE-33 | El mejor automovilista, ganador siete veces de la Fórmula 1, es:",
-    answer: "schumacher",
-    options: [
-      "Sebastian Vettel",
-      "Schumacher",
-      "Nico Rosberg",
-      "Fernando Alonso",
-    ],
-  },
+const POSITION_TEMPLATES: PositionTemplate[] = [
+  { role: "ARQ", top: 96, left: 50, dorsal: "1"  },
+  { role: "DEF", top: 85, left: 35, dorsal: "2"  },
+  { role: "DEF", top: 82, left: 65, dorsal: "6"  },
+  { role: "LAT", top: 74, left: 13, dorsal: "4"  },
+  { role: "LAT", top: 74, left: 85, dorsal: "3"  },
+  { role: "5",   top: 60, left: 50, dorsal: "5"  },
+  { role: "VOL", top: 53, left: 30, dorsal: "8"  },
+  { role: "VOL", top: 43, left: 72, dorsal: "10" },
+  { role: "EXT", top: 28, left: 23, dorsal: "7"  },
+  { role: "EXT", top: 20, left: 82, dorsal: "11" },
+  { role: "9",   top: 19, left: 50, dorsal: "9"  },
 ];
 
 export default function SoccerQuiz() {
-  const [teams, setTeams] = useState<{ blue: string; red: string } | null>(
-    null,
-  );
-  const [possession, setPossession] = useState<{
-    team: "blue" | "red";
-    role: Role;
-  }>({ team: "blue", role: "5" });
+  const [teams, setTeams] = useState<{ blue: string; red: string } | null>(null);
+  const [possession, setPossession] = useState<{ team: "blue" | "red"; role: Role }>({ team: "blue", role: "5" });
   const [score, setScore] = useState({ blue: 0, red: 0 });
   const [feedback, setFeedback] = useState("");
-  const [currentQ, setCurrentQ] = useState(QUESTIONS_DB[0]);
+  const [currentQ, setCurrentQ] = useState<any>(null);
   const [timeLeft, setTimeLeft] = useState(30);
   const [isShowingOptions, setIsShowingOptions] = useState(false);
+  
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [isWaitingTransition, setIsWaitingTransition] = useState(false);
+  const [transitionCountdown, setTransitionCountdown] = useState(0);
 
+  // Reloj de la trivia
   useEffect(() => {
-    if (!teams?.red || feedback !== "" || timeLeft === 0) {
-      if (timeLeft === 0 && feedback === "") handleManualError();
+    if (!teams?.red || feedback !== "" || !isTimerRunning || isWaitingTransition) return;
+    
+    if (timeLeft === 0) {
+      setIsTimerRunning(false);
+      handleManualError();
       return;
     }
+
     const timer = setInterval(() => setTimeLeft((prev) => prev - 1), 1000);
     return () => clearInterval(timer);
-  }, [timeLeft, teams, feedback]);
+  }, [timeLeft, teams, feedback, isTimerRunning, isWaitingTransition]);
 
-  const activePlayerId = useMemo(() => {
-    const playersInRole = formation.filter((p) => p.role === possession.role);
-    return playersInRole.length > 0
-      ? playersInRole[Math.floor(Math.random() * playersInRole.length)].id
-      : null;
-  }, [possession.role, possession.team]);
+  // Transición obligatoria de 5 segundos
+  useEffect(() => {
+    if (!isWaitingTransition || transitionCountdown <= 0) return;
+
+    const transitionTimer = setInterval(() => {
+      setTransitionCountdown((prev) => {
+        if (prev <= 1) {
+          setIsWaitingTransition(false);
+          pickQuestion(teams!.blue, teams!.red);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(transitionTimer);
+  }, [isWaitingTransition, transitionCountdown, teams]);
 
   const playSfx = (audioArray: string[]) => {
-    const randomAudio =
-      audioArray[Math.floor(Math.random() * audioArray.length)];
+    const randomAudio = audioArray[Math.floor(Math.random() * audioArray.length)];
     const audio = new Audio(randomAudio);
     audio.play().catch((e) => console.log("Audio play blocked", e));
   };
 
   const selectTeam = (name: string) => {
-    if (!teams) setTeams({ blue: name, red: "" });
-    else if (!teams.red) {
+    if (!teams) {
+      // El primero que se elige es el Azul
+      setTeams({ blue: name, red: "" });
+    } else if (!teams.red) {
+      // El segundo que se elige es el Rojo
       setTeams({ ...teams, red: name });
-      pickQuestion(teams.blue, name);
+      
+      // La tenencia inicial fija siempre la tiene el primero elegido (Blue) desde el círculo central (5)
+      setPossession({ team: "blue", role: "5" });
+
+      const pool = QUESTIONS_DB.filter((q) => [name, teams.blue, "Argentina"].includes(q.country));
+      const finalPool = pool.length > 0 ? pool : QUESTIONS_DB;
+      setCurrentQ(finalPool[Math.floor(Math.random() * finalPool.length)]);
+      setTimeLeft(30);
+      setIsTimerRunning(false);
     }
   };
 
   const pickQuestion = (teamBlue: string, teamRed: string) => {
-    const pool = QUESTIONS_DB.filter((q) =>
-      [teamBlue, teamRed, "Argentina"].includes(q.country),
-    );
+    const pool = QUESTIONS_DB.filter((q) => [teamBlue, teamRed, "Argentina"].includes(q.country));
     const finalPool = pool.length > 0 ? pool : QUESTIONS_DB;
     setCurrentQ(finalPool[Math.floor(Math.random() * finalPool.length)]);
     setTimeLeft(30);
     setIsShowingOptions(false);
+    setIsTimerRunning(false); 
   };
 
+  const handleForceChangeQuestion = () => {
+    if (!teams) return;
+    pickQuestion(teams.blue, teams.red);
+    setFeedback("🔄 Siguiente pregunta cargada. Presiona Play.");
+    setTimeout(() => setFeedback(""), 2000);
+  };
+
+  const triggerTransitionMode = () => {
+    setIsTimerRunning(false);
+    setIsWaitingTransition(true);
+    setTransitionCountdown(5);
+  };
+
+  // Botones de las opciones de la DB de preguntas
+  const handleSelectOptionTrivia = (selectedOption: string) => {
+    const isCorrect = selectedOption.toLowerCase() === currentQ?.answer?.toLowerCase();
+    
+    if (isCorrect) {
+      if (possession.role === "9") {
+        handleGoal();
+      } else {
+        handleManualAction("corto");
+      }
+    } else {
+      handleManualError();
+    }
+  };
+
+  // Control estricto de pases y saltos tácticos
   const handleManualAction = (mode: "corto" | "largo") => {
     const currentTeam = possession.team;
     let nextRole: Role = possession.role;
 
-    if (possession.role === "DEF") nextRole = mode === "corto" ? "LAT" : "5";
-    else if (possession.role === "LAT")
-      nextRole = mode === "corto" ? "5" : "VOL";
-    else if (possession.role === "5")
-      nextRole = mode === "corto" ? "VOL" : "EXT";
-    else if (possession.role === "VOL")
-      nextRole = mode === "corto" ? "EXT" : "9";
-    else if (possession.role === "EXT") {
-      if (mode === "largo") {
+    if (mode === "corto") {
+      if (possession.role === "DEF") nextRole = "LAT";
+      else if (possession.role === "LAT") nextRole = "5";
+      else if (possession.role === "5") nextRole = "VOL";
+      else if (possession.role === "VOL") nextRole = "EXT";
+      else if (possession.role === "EXT") nextRole = "9";
+      else if (possession.role === "9") {
         handleGoal();
         return;
       }
-      nextRole = "9";
-    } else if (possession.role === "9") {
-      handleGoal();
-      return;
+    } else {
+      if (possession.role === "DEF") nextRole = "5";
+      else if (possession.role === "LAT") nextRole = "VOL";
+      else if (possession.role === "5") nextRole = "EXT";
+      else if (possession.role === "VOL") nextRole = "9";
+      else if (possession.role === "EXT" || possession.role === "9") {
+        handleGoal();
+        return;
+      }
     }
 
     playSfx(mode === "corto" ? SOUNDS.SHORT_PASS : SOUNDS.LONG_PASS);
     setPossession({ team: currentTeam, role: nextRole });
-    setFeedback(
-      mode === "corto"
-        ? "¡Pase corto completado! ✅"
-        : "¡Pase largo exitoso! 🚀",
-    );
-    setTimeout(() => {
-      setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 1500);
+    triggerTransitionMode();
   };
 
+  // Lógica exacta de recuperaciones / pérdidas sin tocar al ARQ
   const handleManualError = () => {
     playSfx(SOUNDS.INCORRECT);
     const otherTeam = possession.team === "blue" ? "red" : "blue";
-    let recoveryRole: Role = "5";
+    let recoveryRole: Role = "5"; 
 
     if (possession.role === "DEF") recoveryRole = "9";
     else if (possession.role === "LAT") recoveryRole = "EXT";
@@ -820,265 +257,234 @@ export default function SoccerQuiz() {
     else if (possession.role === "VOL") recoveryRole = "5";
     else if (possession.role === "EXT") recoveryRole = "LAT";
     else if (possession.role === "9") recoveryRole = "DEF";
-
+    
     setPossession({ team: otherTeam, role: recoveryRole });
-    setFeedback("¡Pérdida de balón! ❌");
-    setTimeout(() => {
-      setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 1500);
+    triggerTransitionMode();
   };
 
   const handleGoal = () => {
     playSfx(SOUNDS.GOAL);
-    setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
     setScore((prev) => ({
       ...prev,
       [possession.team]: prev[possession.team] + 1,
     }));
+    
+    setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
     setTimeout(() => {
       setPossession({
         team: possession.team === "blue" ? "red" : "blue",
         role: "5",
       });
       setFeedback("");
-      pickQuestion(teams!.blue, teams!.red);
-    }, 3500);
+      triggerTransitionMode();
+    }, 3000);
   };
 
   if (!teams || !teams.red) {
     return (
-      <div className="flex flex-col items-center justify-start min-h-screen bg-zinc-950 text-white p-6 md:p-12 text-center overflow-y-auto">
-        <div className="max-w-6xl w-full">
-          <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">
-            SELECCIONAR EQUIPO <br />
-            <span className={!teams ? "text-blue-500" : "text-red-500"}>
-              {!teams ? "AZUL" : "ROJO"}
-            </span>
-          </h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mt-8">
-            {Object.entries(BANDERAS).map(([name, flag]) => (
-              <button
-                key={name}
-                onClick={() => selectTeam(name)}
-                className="group relative flex flex-col items-center justify-center p-8 bg-zinc-900/50 rounded-2xl hover:bg-zinc-800 transition-all border-2 border-zinc-800 hover:border-zinc-500 active:scale-95 overflow-hidden"
-              >
-                <span className="text-7xl md:text-8xl mb-4 transform group-hover:scale-110 transition-transform">
-                  {flag}
-                </span>
-                <p className="text-xs font-black uppercase tracking-widest text-zinc-400 group-hover:text-white">
-                  {name}
-                </p>
-              </button>
-            ))}
-          </div>
+      <div className={`flex flex-col items-center justify-center min-h-screen p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
+        <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-8 px-6 py-3 rounded-xl font-bold transition-colors shadow-md ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
+          {isDarkTheme ? "☀️ Tema Claro" : "🌙 Tema Oscuro"}
+        </button>
+        <h1 className="text-4xl font-black mb-8 italic uppercase tracking-tighter">
+          {!teams ? "Seleccionar Primer Equipo (Tendrá la Pelota)" : "Seleccionar Segundo Equipo Rival"}
+        </h1>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 max-w-5xl w-full">
+          {Object.entries(BANDERAS).map(([name, flag]) => (
+            <button key={name} onClick={() => selectTeam(name)} className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`} disabled={teams?.blue === name}>
+              <span className="text-5xl md:text-6xl drop-shadow-sm">{flag}</span>
+              <p className="text-[10px] font-black mt-3 uppercase tracking-wider text-center">{name}</p>
+            </button>
+          ))}
         </div>
       </div>
     );
   }
 
-  // Optimizamos las constantes de rol
-  const isStriker = possession.role === "9";
-  const isWinger = possession.role === "EXT";
-  const isShootingRole = isStriker || isWinger;
+  const currentTeamName = teams[possession.team];
+  const blueBallOwnerIndex = possession.team === "blue" && !isWaitingTransition ? POSITION_TEMPLATES.findIndex((p) => p.role === possession.role) : -1;
+  const redBallOwnerIndex = possession.team === "red" && !isWaitingTransition ? POSITION_TEMPLATES.findIndex((p) => p.role === possession.role) : -1;
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-zinc-50 dark:bg-zinc-950 font-sans overflow-hidden">
-      <div className="flex-[1.2] p-4 md:p-8 flex flex-col relative">
-        {/* Barra de Tiempo */}
-        <div className="absolute top-0 left-0 w-full h-1.5 bg-zinc-800">
-          <div
-            className={`h-full transition-all duration-1000 ${timeLeft < 10 ? "bg-red-500" : "bg-blue-500"}`}
-            style={{ width: `${(timeLeft / 30) * 100}%` }}
-          />
-        </div>
+    <div className={`flex flex-col lg:flex-row min-h-screen font-sans overflow-hidden transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
+      
+      {/* PANEL IZQUIERDO DE CONTROLES - SECTOR DE PREGUNTAS MÁS GRANDE (flex-[1.5]) */}
+      <div className={`flex-[1.5] p-6 flex flex-col h-full justify-between ${isDarkTheme ? "border-r border-zinc-800" : "border-r border-slate-300"}`}>
+        <div>
+          <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-4 px-3 py-1 rounded text-sm font-bold transition-colors self-start ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
+            {isDarkTheme ? "☀️" : "🌙"}
+          </button>
 
-        {/* Marcador */}
-        <div className="flex items-center justify-between bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-2xl shadow-xl mb-10 mt-2 border-2 border-zinc-200 dark:border-zinc-800">
-          {/* Equipo Azul */}
-          <div className="flex items-center gap-4 md:gap-6">
-            <span className="text-5xl md:text-6xl drop-shadow-sm">
-              {BANDERAS[teams.blue]}
-            </span>
-            <span className="text-4xl md:text-6xl font-black text-blue-600 tabular-nums">
-              {score.blue}
-            </span>
-          </div>
-
-          {/* Cronómetro Central */}
-          <div className="flex flex-col items-center">
-            <div className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 mb-1">
-              Tiempo
+          {/* Marcador */}
+          <div className={`grid grid-cols-2 gap-4 mb-6 p-4 rounded-3xl border transition-colors ${isDarkTheme ? "bg-zinc-900/50 border-zinc-800" : "bg-slate-200/50 border-slate-400"}`}>
+            <div className={`flex flex-col items-center transition-all duration-500 relative ${possession.team === "blue" ? "scale-110 opacity-100" : "scale-90 opacity-40"}`}>
+              <span className="text-4xl mb-1">{BANDERAS[teams.blue]}</span>
+              <div className="text-[10px] font-black uppercase truncate max-w-[120px] text-center text-blue-500">{teams.blue}</div>
+              <div className="text-4xl font-black tabular-nums tracking-tighter">{score.blue}</div>
+              {possession.team === "blue" && <div className="absolute -top-2 w-full flex justify-center"><div className={`w-8 h-1 rounded-full ${isDarkTheme ? "bg-blue-500" : "bg-blue-400"} animate-pulse`} /></div>}
             </div>
-            <div
-              className={`px-6 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-3xl md:text-4xl font-mono font-black shadow-inner border border-zinc-200 dark:border-zinc-700 ${
-                timeLeft < 10
-                  ? "text-red-500 animate-pulse"
-                  : "text-zinc-700 dark:text-zinc-200"
-              }`}
-            >
-              0:{timeLeft.toString().padStart(2, "0")}
-            </div>
-          </div>
 
-          {/* Equipo Rojo */}
-          <div className="flex items-center gap-4 md:gap-6">
-            <span className="text-4xl md:text-6xl font-black text-red-600 tabular-nums">
-              {score.red}
-            </span>
-            <span className="text-5xl md:text-6xl drop-shadow-sm">
-              {BANDERAS[teams.red]}
-            </span>
+            <div className={`flex flex-col items-center transition-all duration-500 relative ${possession.team === "red" ? "scale-110 opacity-100" : "scale-90 opacity-40"}`}>
+              <span className="text-4xl mb-1">{BANDERAS[teams.red]}</span>
+              <div className="text-[10px] font-black uppercase truncate max-w-[120px] text-center text-red-500">{teams.red}</div>
+              <div className="text-4xl font-black tabular-nums tracking-tighter">{score.red}</div>
+              {possession.team === "red" && <div className="absolute -top-2 w-full flex justify-center"><div className={`w-8 h-1 rounded-full ${isDarkTheme ? "bg-red-500" : "bg-red-400"} animate-pulse`} /></div>}
+            </div>
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col justify-center max-w-2xl mx-auto w-full">
-          <div className="mb-6">
-            <p
-              className={`inline-block px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded mb-4 ${possession.team === "blue" ? "bg-blue-600 text-white" : "bg-red-600 text-white"}`}
-            >
-              POSESIÓN: {possession.team === "blue" ? teams.blue : teams.red} (
-              {possession.role})
-            </p>
-            <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter leading-none dark:text-white">
-              {currentQ.question}
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {!isShowingOptions ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <button
-                  onClick={() => handleManualAction("largo")}
-                  className={`p-10 text-2xl font-black uppercase italic transition-all active:scale-95 shadow-xl ${isShootingRole ? "bg-green-600 text-white" : "bg-zinc-900 dark:bg-white text-white dark:text-black"}`}
-                >
-                  {/* El 9 fusila, el Extremo remata, los demás pasan largo */}
-                  {isStriker
-                    ? "Rematar Fuerte 🚀"
-                    : isWinger
-                      ? "Rematar 🚀"
-                      : "Pase Largo 🚀"}
-                </button>
-                <button
-                  onClick={() => setIsShowingOptions(true)}
-                  className="p-10 text-2xl font-black uppercase italic border-4 border-zinc-900 dark:border-white dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95"
-                >
-                  {/* El 9 elige colocarla, el resto hace pase corto */}
-                  {isStriker ? "Tirar a colocar ⚽" : "Pase Corto 🙋‍♂️"}
-                </button>
+        {/* Panel Central Dinámico */}
+        <div className="flex-1 flex flex-col justify-center w-full">
+          {isWaitingTransition ? (
+            <div className="flex flex-col items-center justify-center py-12 text-center animate-pulse">
+              <div className="text-6xl mb-4">📢</div>
+              <h3 className="text-2xl font-black uppercase italic tracking-tight mb-2">Preparando la siguiente jugada...</h3>
+              <p className="text-sm opacity-70 mb-6">Moviendo las líneas del equipo</p>
+              <div className={`text-5xl font-black px-6 py-3 rounded-2xl ${isDarkTheme ? "bg-zinc-900 border border-zinc-800" : "bg-white border border-slate-200"} shadow-md text-yellow-500`}>
+                {transitionCountdown}s
               </div>
-            ) : (
-              <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-300">
-                <div className="grid grid-cols-2 gap-2">
-                  {currentQ.options.map((opt, i) => (
-                    <div
-                      key={i}
-                      className="p-4 bg-zinc-100 dark:bg-zinc-800 rounded border border-zinc-200 dark:border-zinc-700 text-sm font-bold uppercase dark:text-zinc-300"
-                    >
-                      {opt}
+            </div>
+          ) : (
+            <div>
+              <div className="mb-2 flex items-center gap-2">
+                <span className={`px-3 py-1 border rounded-full text-[10px] font-black uppercase tracking-[0.2em] flex items-center gap-2 transition-colors ${possession.team === "blue" ? "bg-blue-600/20 border-blue-500/50 text-blue-400" : "bg-red-600/20 border-red-500/50 text-red-400"}`}>
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
+                  </span>
+                  En posesión: {BANDERAS[currentTeamName]} {currentTeamName} ({possession.role})
+                </span>
+              </div>
+
+              {/* Botonera de Flujo */}
+              <div className="mb-4 flex flex-wrap items-center gap-3 bg-black/5 dark:bg-white/5 p-3 rounded-2xl border border-slate-300 dark:border-zinc-800 w-full justify-between sm:w-fit">
+                <div className={`text-3xl font-black tabular-nums ${timeLeft <= 10 ? "text-red-500 animate-pulse" : ""}`}>⏱️ {timeLeft}s</div>
+                <div className="flex flex-wrap gap-1.5">
+                  <button onClick={() => setIsTimerRunning(true)} className={`px-2.5 py-1.5 rounded-lg text-xs font-black uppercase tracking-wider transition-all active:scale-95 ${isTimerRunning ? "bg-green-600 text-white opacity-40 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700 shadow-md"}`} disabled={isTimerRunning}>▶️ Play</button>
+                  <button onClick={() => setIsTimerRunning(false)} className={`px-2.5 py-1.5 rounded-lg text-xs font-black uppercase tracking-wider transition-all active:scale-95 ${!isTimerRunning ? "bg-amber-500 text-white opacity-40 cursor-not-allowed" : "bg-amber-500 text-white hover:bg-amber-600 shadow-md"}`} disabled={!isTimerRunning}>⏸️ Pausa</button>
+                  <button onClick={handleForceChangeQuestion} className="px-2.5 py-1.5 rounded-lg text-xs font-black uppercase tracking-wider transition-all active:scale-95 bg-indigo-600 text-white hover:bg-indigo-700 shadow-md border-b-2 border-indigo-800">🔄 Cambiar</button>
+                </div>
+              </div>
+
+              <div className={`mb-2 text-xs font-black tracking-widest uppercase italic ${isDarkTheme ? "text-zinc-500" : "text-slate-600"}`}>Pregunta de {currentQ?.country || "Fútbol"}</div>
+              <h2 className="text-2xl md:text-3xl font-black mb-8 leading-tight uppercase tracking-tight">{currentQ?.question}</h2>
+
+              {/* Acciones de Trivia */}
+              <div className="space-y-3">
+                {!isShowingOptions ? (
+                  <div>
+                    {possession.role === "9" || possession.role === "EXT" ? (
+                      <div className="space-y-3">
+                        <button onClick={() => handleManualAction("largo")} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-orange-600 text-white border-orange-600 hover:bg-orange-700">🚀 FUSILAR AL ARCO (Pase Largo)</button>
+                        <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">{possession.role === "9" ? "🎯 Definición colocada (Ver Opciones)" : "🎯 Pase Corto al 9 (Ver Opciones)"}</button>
+                        <button onClick={handleManualError} className={`w-full p-4 font-black rounded-lg transition-all text-base uppercase border-2 ${isDarkTheme ? "bg-red-900/20 border-red-800 text-red-400 hover:bg-red-900/40" : "bg-red-50 border-red-300 text-red-600 hover:bg-red-100"}`}>❌ Tirarla afuera</button>
+                      </div>
+                    ) : (
+                      <div className="space-y-3">
+                        <button onClick={() => handleManualAction("largo")} className={`w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 ${isDarkTheme ? "bg-white text-black border-white hover:bg-zinc-100" : "bg-slate-800 text-white border-slate-800 hover:bg-slate-700"}`}>🔫 Pase Largo (Salta 2 posiciones)</button>
+                        <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">🎯 Pase Corto (Ver Opciones)</button>
+                        <button onClick={handleManualError} className={`w-full p-4 font-black rounded-lg transition-all text-base uppercase border-2 ${isDarkTheme ? "bg-red-900/20 border-red-800 text-red-400 hover:bg-red-900/40" : "bg-red-50 border-red-300 text-red-600 hover:bg-red-100"}`}>❌ Pelota perdida</button>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    <div className={`text-sm font-black tracking-widest uppercase ${possession.team === "blue" ? "text-blue-500" : "text-red-500"}`}>{possession.role === "9" ? "Opciones para definir Colocado:" : "Opciones para descargar Pase Corto:"}</div>
+                    <div className="grid grid-cols-1 gap-2">
+                      {currentQ?.options.map((opt: string) => (
+                        <button 
+                          key={opt} 
+                          onClick={() => handleSelectOptionTrivia(opt)}
+                          className={`w-full p-4 font-bold rounded-lg text-base text-left uppercase border transition-all cursor-pointer transform hover:translate-x-1 active:scale-[0.99] ${isDarkTheme ? "bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800" : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"}`}
+                        >
+                          • {opt}
+                        </button>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <button
-                    onClick={() => handleManualAction("corto")}
-                    className="p-8 bg-green-500 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
-                  >
-                    {/* Feedback visual de éxito */}
-                    {isStriker ? "¡GOOOOL! ✅" : "Pase correcto ✅"}
-                  </button>
-                  <button
-                    onClick={handleManualError}
-                    className="p-8 bg-red-600 text-white text-2xl font-black uppercase italic shadow-lg active:scale-95"
-                  >
-                    {/* Feedback visual de fallo */}
-                    {isStriker ? "¡La tiró afuera! ❌" : "Pase incorrecto ❌"}
-                  </button>
-                </div>
+                    {/* Botones manuales de testing */}
+                    <div className="grid grid-cols-2 gap-3 pt-2">
+                      <button onClick={() => handleManualAction("corto")} className="p-5 font-black rounded-xl transition-all text-lg uppercase bg-green-600 text-white hover:bg-green-700 active:scale-95 shadow-md">{possession.role === "9" ? "⚽ ¡GOL!" : "✅ Pase Exitoso"}</button>
+                      <button onClick={handleManualError} className="p-5 font-black rounded-xl transition-all text-lg uppercase bg-red-600 text-white hover:bg-red-700 active:scale-95 shadow-md">{possession.role === "9" ? "❌ Tiro Errado" : "❌ Pase Cortado"}</button>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-
-            <button
-              onClick={handleManualError}
-              className={`w-full p-4 mt-4 bg-zinc-200 dark:bg-zinc-800 text-zinc-500 font-black uppercase text-sm rounded hover:bg-red-100 hover:text-red-600 transition-all ${isShowingOptions ? "hidden" : ""}`}
-            >
-              {isShootingRole ? "Perderla 🏳️" : "Perder la pelota!!!!🏳️"}
-            </button>
-          </div>
-
-          {feedback && (
-            <div className="mt-8 p-4 bg-yellow-400 text-black font-black uppercase italic text-center animate-bounce rounded shadow-xl border-2 border-black">
-              {feedback}
             </div>
           )}
         </div>
+
+        {/* Feedback exclusivo para festejos de Gol */}
+        {feedback && (
+          <div className="mt-4 p-4 bg-yellow-400 border-2 border-black text-black font-black uppercase italic text-center animate-bounce rounded-xl shadow-xl w-full">
+            {feedback}
+          </div>
+        )}
       </div>
 
-      {/* --- CONTENEDOR DE LA CANCHA --- */}
-      <div className="flex-1 bg-zinc-900 relative border-l-4 border-zinc-800 hidden lg:flex items-center justify-center p-8">
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: "url('/bombonera.webp')",
-            backgroundSize: "120%",
-            backgroundPosition: "center",
-          }}
-        ></div>
+      {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL AJUSTADA (flex-[1.5] y max-w controlado) */}
+      <div className={`flex-[1.5] relative flex items-center justify-center px-2 py-4 min-h-[75vh] lg:min-h-screen ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
+        <div 
+          className="relative w-full max-w-[520px] aspect-[100/145] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
+          style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
+        >
+          {/* Líneas de Marcación */}
+          <div className="absolute top-1/2 w-full h-[3px] bg-white/40 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
+          
+          {/* Áreas */}
+          <div className="absolute top-0 left-1/2 w-[62%] h-[14%] border-b-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
+          <div className="absolute top-0 left-1/2 w-[32%] h-[5%] border-b-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
+          <div className="absolute bottom-0 left-1/2 w-[62%] h-[14%] border-t-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
+          <div className="absolute bottom-0 left-1/2 w-[32%] h-[5%] border-t-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
 
-        <div className="relative left-20 w-full max-w-[370px] aspect-[2.6/3.8] border-4 border-white/20 rounded">
-          <div className="absolute top-1/2 w-full h-0.5 bg-white/20 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-20 h-20 border-2 border-white/20 rounded-full -translate-x-1/2 -translate-y-1/2" />
+          {/* EQUIPO AZUL */}
+          {POSITION_TEMPLATES.map((p, index) => {
+            const topPos = p.top;
+            const isBallOwner = index === blueBallOwnerIndex;
 
-          {/* JUGADORES EQUIPO AZUL */}
-          {formation.map((p) => (
-            <PlayerMarker
-              key={`blue-${p.id}`}
-              pos={p}
-              color="bg-blue-600"
-              hasPossession={
-                possession.team === "blue" && p.id === activePlayerId
-              }
-            />
-          ))}
+            return (
+              <div
+                key={`blue-${index}`}
+                className={`absolute w-10 h-10 rounded-full border-2 bg-blue-600 transition-all duration-500 shadow-lg flex items-center justify-center font-black text-xs text-white border-white/80
+                  ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""}
+                  ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_30px_rgba(250,204,21,1)]" : ""}
+                `}
+                style={{
+                  top: `${topPos}%`,
+                  left: `${p.left}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                {isBallOwner ? <span className="animate-pulse text-sm">⚽</span> : p.dorsal}
+              </div>
+            );
+          })}
 
-          {/* JUGADORES EQUIPO ROJO */}
-          {formation.map((p) => (
-            <PlayerMarker
-              key={`red-${p.id}`}
-              pos={{ ...p, top: 100 - p.top }}
-              color="bg-red-600"
-              hasPossession={
-                possession.team === "red" && p.id === activePlayerId
-              }
-            />
-          ))}
+          {/* EQUIPO ROJO */}
+          {POSITION_TEMPLATES.map((p, index) => {
+            const topPos = 100 - p.top;
+            const isBallOwner = index === redBallOwnerIndex;
+
+            return (
+              <div
+                key={`red-${index}`}
+                className={`absolute w-10 h-10 rounded-full border-2 bg-red-600 transition-all duration-500 shadow-lg flex items-center justify-center font-black text-xs text-white border-white/80
+                  ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""}
+                  ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_30px_rgba(250,204,21,1)]" : ""}
+                `}
+                style={{
+                  top: `${topPos}%`,
+                  left: `${p.left}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                {isBallOwner ? <span className="animate-pulse text-sm">⚽</span> : p.dorsal}
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
-  );
-}
-
-function PlayerMarker({
-  pos,
-  color,
-  hasPossession,
-}: {
-  pos: Player;
-  color: string;
-  hasPossession: boolean;
-}) {
-  return (
-    <div
-      className={`absolute w-8 h-8 ${color} rounded-full border-2 border-white transition-all duration-700 flex items-center justify-center ${hasPossession ? "scale-[2.2] z-30 ring-4 ring-yellow-400 shadow-[0_0_30px_rgba(253,224,71,0.6)]" : "opacity-80"}`}
-      style={{
-        top: `${pos.top}%`,
-        left: `${pos.left}%`,
-        transform: "translate(-50%, -50%)",
-      }}
-    >
-      {hasPossession && (
-        <div className="w-2 h-2 bg-white rounded-full animate-ping" />
-      )}
     </div>
   );
 }
