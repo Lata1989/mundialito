@@ -287,18 +287,42 @@ export default function SoccerQuiz() {
     }, 3000);
   };
 
+  // --- RENDEREADO DE LA PANTALLA DE SELECCIÓN DE EQUIPOS REESTRUCTURADA ---
   if (!teams || !teams.red) {
     return (
-      <div className={`flex flex-col items-center justify-center min-h-screen p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
-        <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-8 px-6 py-3 rounded-xl font-bold transition-colors shadow-md ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
+      <div className={`relative flex flex-col items-center justify-center min-h-screen p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
+        
+        {/* BOTÓN CLARO/OSCURO FLOTANTE ARRIBA A LA DERECHA */}
+        <button 
+          onClick={() => setIsDarkTheme(!isDarkTheme)} 
+          className={`absolute top-6 right-6 px-4 py-2 rounded-xl font-bold transition-colors shadow-md text-sm ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
+        >
           {isDarkTheme ? "☀️ Tema Claro" : "🌙 Tema Oscuro"}
         </button>
-        <h1 className="text-4xl font-black mb-8 italic uppercase tracking-tighter">
+
+        {/* LOGO TRINI CENTRADO EN LA PARTE SUPERIOR */}
+        <div className="mb-4 h-72 aspect-square flex items-center justify-center rounded-2xl overflow-hidden filter drop-shadow-md">
+          <img 
+            src="/TRINI.png" 
+            alt="Logo TRINI" 
+            className="h-full w-full object-contain" 
+          />
+        </div>
+
+        {/* MENSAJE O TÍTULO ABAJO DEL LOGO */}
+        <h1 className="text-3xl md:text-4xl font-black mb-10 italic uppercase tracking-tighter max-w-3xl">
           {!teams ? "Seleccionar Primer Equipo (Tendrá la Pelota)" : "Seleccionar Segundo Equipo Rival"}
         </h1>
+
+        {/* GRILLA DE BANDERAS */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 max-w-5xl w-full">
           {Object.entries(BANDERAS).map(([name, flag]) => (
-            <button key={name} onClick={() => selectTeam(name)} className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`} disabled={teams?.blue === name}>
+            <button 
+              key={name} 
+              onClick={() => selectTeam(name)} 
+              className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`} 
+              disabled={teams?.blue === name}
+            >
               <span className="text-5xl md:text-6xl drop-shadow-sm">{flag}</span>
               <p className="text-[10px] font-black mt-3 uppercase tracking-wider text-center">{name}</p>
             </button>
@@ -315,14 +339,14 @@ export default function SoccerQuiz() {
   return (
     <div className={`flex flex-col lg:flex-row min-h-screen font-sans overflow-hidden transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
       
-      {/* PANEL IZQUIERDO DE CONTROLES - AHORA MÁS ANCHO (flex-[1.4]) */}
+      {/* PANEL IZQUIERDO DE CONTROLES */}
       <div className={`flex-[1.4] p-6 flex flex-col h-full justify-between lg:max-h-screen overflow-y-auto ${isDarkTheme ? "border-r border-zinc-800" : "border-r border-slate-300"}`}>
         <div>
           <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-4 px-3 py-1 rounded text-sm font-bold transition-colors self-start ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
             {isDarkTheme ? "☀️" : "🌙"}
           </button>
 
-          {/* MARCADOR REESTRUCTURADO EN BLOQUES INDEPENDIENTES HORIZONTALES */}
+          {/* MARCADOR REESTRUCTURADO */}
           <div className="flex items-center justify-center p-1 mb-8 select-none font-mono tracking-tight w-full">
             <div className="flex items-center bg-black text-white rounded-full px-4 sm:px-6 shadow-2xl border border-zinc-800 w-full max-w-4xl min-h-[5.5rem] py-2 md:py-4">
               
@@ -340,7 +364,7 @@ export default function SoccerQuiz() {
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-black tabular-nums">{score.blue}</span>
                 </div>
 
-                {/* Bloque Físico del Logo TRINI (Con bordes redondeados) */}
+                {/* Bloque Físico del Logo TRINI (Más grande, transparente y redondeado) */}
                 <div className="p-0 h-16 sm:h-20 lg:h-24 aspect-square flex items-center justify-center z-10 rounded-xl overflow-hidden">
                   <img 
                     src="/TRINI.png" 
@@ -454,7 +478,7 @@ export default function SoccerQuiz() {
         )}
       </div>
 
-      {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL AGRANDADA Y MEJORADA (flex-[1.8] y max-w-[700px]) */}
+      {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL AGRANDADA Y MEJORADA */}
       <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
         <div 
           className="relative w-full max-w-[700px] aspect-[100/135] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
