@@ -375,13 +375,13 @@ export default function SoccerQuiz() {
                   <div>
                     {possession.role === "9" || possession.role === "EXT" ? (
                       <div className="space-y-3">
-                        <button onClick={() => handleManualAction("largo")} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-orange-600 text-white border-orange-600 hover:bg-orange-700">🚀 FUSILAR AL ARCO (Pase Largo)</button>
-                        <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">{possession.role === "9" ? "🎯 Definición colocada (Ver Opciones)" : "🎯 Pase Corto al 9 (Ver Opciones)"}</button>
+                        <button onClick={() => handleManualAction("largo")} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-orange-600 text-white border-orange-600 hover:bg-orange-700">🚀 FUSILAR AL ARCO</button>
+                        <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">{possession.role === "9" ? "🎯 Definir a colocar (Ver Opciones)" : "🎯 Pase corto al 9 (Ver Opciones)"}</button>
                         <button onClick={handleManualError} className={`w-full p-4 font-black rounded-lg transition-all text-base uppercase border-2 ${isDarkTheme ? "bg-red-900/20 border-red-800 text-red-400 hover:bg-red-900/40" : "bg-red-50 border-red-300 text-red-600 hover:bg-red-100"}`}>❌ Tirarla afuera</button>
                       </div>
                     ) : (
                       <div className="space-y-3">
-                        <button onClick={() => handleManualAction("largo")} className={`w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 ${isDarkTheme ? "bg-white text-black border-white hover:bg-zinc-100" : "bg-slate-800 text-white border-slate-800 hover:bg-slate-700"}`}>🔫 Pase Largo (Salta 2 posiciones)</button>
+                        <button onClick={() => handleManualAction("largo")} className={`w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 ${isDarkTheme ? "bg-white text-black border-white hover:bg-zinc-100" : "bg-slate-800 text-white border-slate-800 hover:bg-slate-700"}`}>🔫 Pase largo</button>
                         <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-lg transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">🎯 Pase Corto (Ver Opciones)</button>
                         <button onClick={handleManualError} className={`w-full p-4 font-black rounded-lg transition-all text-base uppercase border-2 ${isDarkTheme ? "bg-red-900/20 border-red-800 text-red-400 hover:bg-red-900/40" : "bg-red-50 border-red-300 text-red-600 hover:bg-red-100"}`}>❌ Pelota perdida</button>
                       </div>
