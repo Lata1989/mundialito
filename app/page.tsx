@@ -70,23 +70,23 @@ type Role = "ARQ" | "DEF" | "LAT" | "5" | "VOL" | "EXT" | "9";
 
 interface PositionTemplate {
   role: Role;
-  top: number;    
-  left: number;   
+  top: number;
+  left: number;
   dorsal: string;
 }
 
 const POSITION_TEMPLATES: PositionTemplate[] = [
-  { role: "ARQ", top: 96, left: 50, dorsal: "1"  },
-  { role: "DEF", top: 85, left: 35, dorsal: "2"  },
-  { role: "DEF", top: 82, left: 65, dorsal: "6"  },
-  { role: "LAT", top: 74, left: 13, dorsal: "4"  },
-  { role: "LAT", top: 74, left: 85, dorsal: "3"  },
-  { role: "5",   top: 60, left: 50, dorsal: "5"  },
-  { role: "VOL", top: 53, left: 30, dorsal: "8"  },
+  { role: "ARQ", top: 96, left: 50, dorsal: "1" },
+  { role: "DEF", top: 85, left: 35, dorsal: "2" },
+  { role: "DEF", top: 82, left: 65, dorsal: "6" },
+  { role: "LAT", top: 74, left: 13, dorsal: "4" },
+  { role: "LAT", top: 74, left: 85, dorsal: "3" },
+  { role: "5", top: 60, left: 50, dorsal: "5" },
+  { role: "VOL", top: 53, left: 30, dorsal: "8" },
   { role: "VOL", top: 43, left: 72, dorsal: "10" },
-  { role: "EXT", top: 28, left: 23, dorsal: "7"  },
+  { role: "EXT", top: 28, left: 23, dorsal: "7" },
   { role: "EXT", top: 20, left: 82, dorsal: "11" },
-  { role: "9",   top: 19, left: 50, dorsal: "9"  },
+  { role: "9", top: 19, left: 50, dorsal: "9" },
 ];
 
 export default function SoccerQuiz() {
@@ -97,7 +97,7 @@ export default function SoccerQuiz() {
   const [currentQ, setCurrentQ] = useState<any>(null);
   const [timeLeft, setTimeLeft] = useState(30);
   const [isShowingOptions, setIsShowingOptions] = useState(false);
-  
+
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [isWaitingTransition, setIsWaitingTransition] = useState(false);
@@ -108,7 +108,7 @@ export default function SoccerQuiz() {
   // Reloj de la trivia
   useEffect(() => {
     if (!teams?.red || feedback !== "" || !isTimerRunning || isWaitingTransition) return;
-    
+
     if (timeLeft === 0) {
       setIsTimerRunning(false);
       handleManualError();
@@ -151,7 +151,7 @@ export default function SoccerQuiz() {
   const initializeQuestionPool = (teamBlue: string, teamRed: string) => {
     const pool = QUESTIONS_DB.filter((q) => [teamBlue, teamRed, "Argentina"].includes(q.country));
     const finalPool = pool.length > 0 ? pool : QUESTIONS_DB;
-    
+
     const shuffled = [...finalPool];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -170,7 +170,7 @@ export default function SoccerQuiz() {
 
       const newPool = initializeQuestionPool(teams.blue, name);
       const firstQuestion = newPool[0];
-      
+
       setCurrentQ(firstQuestion);
       setRemainingQuestions(newPool.slice(1));
       setTimeLeft(30);
@@ -193,7 +193,7 @@ export default function SoccerQuiz() {
 
     setTimeLeft(30);
     setIsShowingOptions(false);
-    setIsTimerRunning(false); 
+    setIsTimerRunning(false);
   };
 
   const handleForceChangeQuestion = () => {
@@ -211,7 +211,7 @@ export default function SoccerQuiz() {
 
   const handleSelectOptionTrivia = (selectedOption: string) => {
     const isCorrect = selectedOption.toLowerCase() === currentQ?.answer?.toLowerCase();
-    
+
     if (isCorrect) {
       if (possession.role === "9") {
         handleGoal();
@@ -256,7 +256,7 @@ export default function SoccerQuiz() {
   const handleManualError = () => {
     playSfx(SOUNDS.INCORRECT);
     const otherTeam = possession.team === "blue" ? "red" : "blue";
-    let recoveryRole: Role = "5"; 
+    let recoveryRole: Role = "5";
 
     if (possession.role === "DEF") recoveryRole = "9";
     else if (possession.role === "LAT") recoveryRole = "EXT";
@@ -264,7 +264,7 @@ export default function SoccerQuiz() {
     else if (possession.role === "VOL") recoveryRole = "5";
     else if (possession.role === "EXT") recoveryRole = "LAT";
     else if (possession.role === "9") recoveryRole = "DEF";
-    
+
     setPossession({ team: otherTeam, role: recoveryRole });
     triggerTransitionMode();
   };
@@ -275,7 +275,7 @@ export default function SoccerQuiz() {
       ...prev,
       [possession.team]: prev[possession.team] + 1,
     }));
-    
+
     setFeedback("¡GOOOOOOOL! ⚽🔥🔥🔥");
     setTimeout(() => {
       setPossession({
@@ -291,21 +291,21 @@ export default function SoccerQuiz() {
   if (!teams || !teams.red) {
     return (
       <div className={`relative flex flex-col items-center justify-center min-h-screen p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
-        
+
         {/* BOTÓN CLARO/OSCURO FLOTANTE ARRIBA A LA DERECHA */}
-        <button 
-          onClick={() => setIsDarkTheme(!isDarkTheme)} 
+        <button
+          onClick={() => setIsDarkTheme(!isDarkTheme)}
           className={`absolute top-6 right-6 px-4 py-2 rounded-xl font-bold transition-colors shadow-md text-sm ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
         >
           {isDarkTheme ? "☀️ Tema Claro" : "🌙 Tema Oscuro"}
         </button>
 
-        {/* LOGO TRINI CENTRADO EN LA PARTE SUPERIOR */}
-        <div className="mb-4 h-72 aspect-square flex items-center justify-center rounded-2xl overflow-hidden filter drop-shadow-md">
-          <img 
-            src="/TRINI.png" 
-            alt="Logo TRINI" 
-            className="h-full w-full object-contain" 
+        {/* LOGO TRINI CENTRADO EN LA PARTE SUPERIOR (Con fondo negro y bordes redondeados) */}
+        <div className="mb-4 h-72 aspect-square flex items-center justify-center bg-black rounded-[3rem] p-6 shadow-2xl filter drop-shadow-md">
+          <img
+            src="/TRINI.png"
+            alt="Logo TRINI"
+            className="h-full w-full object-contain"
           />
         </div>
 
@@ -317,10 +317,10 @@ export default function SoccerQuiz() {
         {/* GRILLA DE BANDERAS */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 max-w-5xl w-full">
           {Object.entries(BANDERAS).map(([name, flag]) => (
-            <button 
-              key={name} 
-              onClick={() => selectTeam(name)} 
-              className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`} 
+            <button
+              key={name}
+              onClick={() => selectTeam(name)}
+              className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`}
               disabled={teams?.blue === name}
             >
               <span className="text-5xl md:text-6xl drop-shadow-sm">{flag}</span>
@@ -338,7 +338,7 @@ export default function SoccerQuiz() {
 
   return (
     <div className={`flex flex-col lg:flex-row min-h-screen font-sans overflow-hidden transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
-      
+
       {/* PANEL IZQUIERDO DE CONTROLES */}
       <div className={`flex-[1.4] p-6 flex flex-col h-full justify-between lg:max-h-screen overflow-y-auto ${isDarkTheme ? "border-r border-zinc-800" : "border-r border-slate-300"}`}>
         <div>
@@ -349,7 +349,7 @@ export default function SoccerQuiz() {
           {/* MARCADOR REESTRUCTURADO */}
           <div className="flex items-center justify-center p-1 mb-8 select-none font-mono tracking-tight w-full">
             <div className="flex items-center bg-black text-white rounded-full px-4 sm:px-6 shadow-2xl border border-zinc-800 w-full max-w-4xl min-h-[5.5rem] py-2 md:py-4">
-              
+
               {/* BLOQUE 1: LOCAL (IZQUIERDA) */}
               <div className={`flex items-center justify-end gap-2 sm:gap-3 flex-1 transition-opacity duration-300 ${possession.team === "blue" ? "opacity-100" : "opacity-60"}`}>
                 <span className="text-3xl sm:text-4xl lg:text-5xl drop-shadow-md">{BANDERAS[teams.blue]}</span>
@@ -366,10 +366,10 @@ export default function SoccerQuiz() {
 
                 {/* Bloque Físico del Logo TRINI (Más grande, transparente y redondeado) */}
                 <div className="p-0 h-16 sm:h-20 lg:h-24 aspect-square flex items-center justify-center z-10 rounded-xl overflow-hidden">
-                  <img 
-                    src="/TRINI.png" 
-                    alt="Logo TRINI" 
-                    className="h-full w-full object-contain filter drop-shadow-[0_1px_4px_rgba(255,255,255,0.15)]" 
+                  <img
+                    src="/TRINI.png"
+                    alt="Logo TRINI"
+                    className="h-full w-full object-contain filter drop-shadow-[0_1px_4px_rgba(255,255,255,0.15)]"
                   />
                 </div>
 
@@ -449,8 +449,8 @@ export default function SoccerQuiz() {
                     <div className={`text-sm font-black tracking-widest uppercase ${possession.team === "blue" ? "text-blue-500" : "text-red-500"}`}>{possession.role === "9" ? "Opciones para definir Colocado:" : "Opciones para descargar Pase Corto:"}</div>
                     <div className="grid grid-cols-1 gap-2">
                       {currentQ?.options.map((opt: string) => (
-                        <button 
-                          key={opt} 
+                        <button
+                          key={opt}
                           onClick={() => handleSelectOptionTrivia(opt)}
                           className={`w-full p-4 font-bold rounded-lg text-base text-left uppercase border transition-all cursor-pointer transform hover:translate-x-1 active:scale-[0.99] ${isDarkTheme ? "bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800" : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"}`}
                         >
@@ -480,7 +480,7 @@ export default function SoccerQuiz() {
 
       {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL AGRANDADA Y MEJORADA */}
       <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
-        <div 
+        <div
           className="relative w-full max-w-[700px] aspect-[100/135] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
           style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
         >
@@ -488,7 +488,7 @@ export default function SoccerQuiz() {
           <div className="absolute top-1/2 w-full h-[3px] bg-white/40 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
-          
+
           {/* Áreas */}
           <div className="absolute top-0 left-1/2 w-[62%] h-[14%] border-b-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
           <div className="absolute top-0 left-1/2 w-[32%] h-[5%] border-b-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
