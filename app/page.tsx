@@ -341,7 +341,7 @@ export default function SoccerQuiz() {
                 </div>
 
                 {/* Bloque Físico del Logo TRINI (Con bordes redondeados) */}
-                <div className="bg-white p-1.5 sm:p-2 border-y-2 border-x border-zinc-800 shadow-xl h-14 sm:h-16 lg:h-20 aspect-square flex items-center justify-center z-10 rounded-xl">
+                <div className="p-0 h-16 sm:h-20 lg:h-24 aspect-square flex items-center justify-center z-10 rounded-xl overflow-hidden">
                   <img 
                     src="/TRINI.png" 
                     alt="Logo TRINI" 
