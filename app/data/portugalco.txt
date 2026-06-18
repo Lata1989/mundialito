@@ -1,0 +1,288 @@
+{
+    "country": "Portugal",
+    "question": "POR-1 | ¿Cuál es la capital de Portugal?",
+    "answer": "Lisboa",
+    "options": ["Porto", "Lisboa", "Faro"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-2 | ¿Qué famoso navegante portugués llegó a la India por vía marítima?",
+    "answer": "Vasco da Gama",
+    "options": ["Cristóbal Colón", "Vasco da Gama", "Américo Vespucio"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-3 | ¿Qué explorador portugués lideró la primera vuelta al mundo?",
+    "answer": "Fernando de Magallanes",
+    "options": ["Hernán Cortés", "Fernando de Magallanes", "Vasco da Gama"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-4 | ¿Cuál fue uno de los mayores imperios marítimos de la historia?",
+    "answer": "Portugal",
+    "options": ["Portugal", "Suiza", "Austria"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-5 | ¿Qué colonia portuguesa en Sudamérica se independizó en 1822?",
+    "answer": "Brasil",
+    "options": ["Perú", "Brasil", "Colombia"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-6 | ¿Qué archipiélago portugués está en el océano Atlántico?",
+    "answer": "Madeira",
+    "options": ["Canarias", "Madeira", "Baleares"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-7 | ¿Qué famoso estilo musical tradicional pertenece a Portugal?",
+    "answer": "Fado",
+    "options": ["Tango", "Fado", "Flamenco"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-8 | ¿Qué ciudad portuguesa es conocida por sus tranvías amarillos?",
+    "answer": "Lisboa",
+    "options": ["Lisboa", "Braga", "Coimbra"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-9 | ¿Qué dictador gobernó Portugal durante gran parte del siglo XX?",
+    "answer": "Salazar",
+    "options": ["Franco Souza", "Salzar", "Mussolini Ighola"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-10 | ¿Qué revolución terminó con la dictadura portuguesa en 1974?",
+    "answer": "Revolución de los Claveles",
+    "options": ["Revolución Industrial", "Revolución de los Claveles", "Revolución Liberal"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-11 | ¿Qué famoso pastel típico es originario de Lisboa?",
+    "answer": "Pastel de nata",
+    "options": ["Croissant", "Pastel de nata", "Churro"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-12 | ¿En qué año Portugal debutó en un Mundial masculino?",
+    "answer": "1966",
+    "options": ["1958", "1966", "1970"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-13 | ¿Qué puesto logró Portugal en su primer Mundial?",
+    "answer": "Tercer puesto",
+    "options": ["Campeón", "Tercer puesto", "Subcampeón"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-14 | ¿Qué selección derrotó Portugal para quedarse con el tercer puesto en 1966?",
+    "answer": "Unión Soviética",
+    "options": ["Unión Soviética", "Marruecos", "Hungría"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-15 | ¿Qué selección remontó un 0-3 y perdió 5-3 ante Portugal en el Mundial 1966?",
+    "answer": "Corea del Norte",
+    "options": ["Austria", "Corea del Norte", "México"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-16 | ¿En qué Mundial Cristiano Ronaldo jugó por primera vez?",
+    "answer": "2006",
+    "options": ["2002", "2006", "2010"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-17 | ¿Qué puesto obtuvo Portugal en Alemania 2006?",
+    "answer": "Cuarto puesto",
+    "options": ["Tercer puesto", "Cuarto puesto", "Subcampeón"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-18 | ¿Qué selección eliminó a Portugal en semifinales del Mundial 2006?",
+    "answer": "Francia",
+    "options": ["Italia", "Francia", "Alemania"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-19 | ¿Qué selección venció a Portugal en el partido por el tercer puesto de 2006?",
+    "answer": "Alemania",
+    "options": ["Alemania", "Italia", "Brasil"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-20 | ¿Qué selección eliminó a Portugal en el Mundial 2018?",
+    "answer": "Uruguay",
+    "options": ["Uruguay", "Francia", "Croacia"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-21 | ¿Quién marcó un hat-trick para Portugal ante Suiza en 2022?",
+    "answer": "Gonçalo Ramos",
+    "options": ["Cristiano Ronaldo", "Gonçalo Ramos", "Bruno Fernandes"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-22 | ¿Contra qué selección Cristiano Ronaldo marcó un famoso hat-trick en Rusia 2018?",
+    "answer": "España",
+    "options": ["España", "Alemania", "Marruecos"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-24 | ¿Quién compuso la música del himno de Portugal?",
+    "answer": "Alfredo Keil",
+    "options": ["Fernando Pessoa", "Alfredo Keil", "José Saramago"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-25 | ¿Qué representa la esfera armilar que aparece en la bandera de Portugal?",
+    "answer": "La época de exploraciones marítimas portuguesas",
+    "options": ["El poder militar", "La época de exploraciones marítimas portuguesas", "La monarquía portuguesa"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-26 | ¿Qué simbolizan los cinco escudos azules en la bandera portuguesa?",
+    "answer": "Las cinco derrotas árabes frente a Portugal",
+    "options": ["Cinco reyes europeos", "Las cinco derrotas árabes frente a Portugal", "Cinco regiones históricas"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-27 | ¿Qué representan los castillos dorados de la bandera portuguesa?",
+    "answer": "Las fortalezas conquistadas a los musulmanes",
+    "options": ["Las fortalezas conquistadas a los musulmanes", "Los castillos reales", "Las provincias del país"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-28 | ¿Qué sistema político tiene actualmente Portugal?",
+    "answer": "República semipresidencialista",
+    "options": ["Monarquía absoluta", "República semipresidencialista", "Monarquía parlamentaria"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-29 | ¿Quién fue el histórico dictador portugués del siglo XX?",
+    "answer": "António de Oliveira Salazar",
+    "options": ["António de Oliveira Salazar", "Francisco Franco", "Marcelo Caetano"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-30 | ¿Qué famoso escritor portugués ganó el Premio Nobel de Literatura en 1998?",
+    "answer": "José Saramago",
+    "options": ["Fernando Pessoa", "José Saramago", "Eça de Queirós"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-31 | ¿Qué cantante portuguesa es considerada una de las mayores representantes del fado?",
+    "answer": "Amália Rodrigues",
+    "options": ["Amália Rodrigues", "Andrea Da Felix", "Dulce Pontes"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-32 | ¿Contra qué selección debutó Portugal en la Copa del Mundo de 1966?",
+    "answer": "Hungría",
+    "options": ["Bulgaria", "Hungría", "Brasil"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-33 | ¿Cuál fue el resultado del debut de Portugal en el Mundial 1966?",
+    "answer": "3-1",
+    "options": ["2-1", "3-1", "1-0"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-34 | ¿Quién era el director técnico de Portugal en el Mundial 1966?",
+    "answer": "Otto Glória",
+    "options": ["Otto Glória", "Fernando Santos", "José Mourinho"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-35 | ¿Quién fue el capitán de Portugal en el debut mundialista de 1966?",
+    "answer": "Mário Coluna",
+    "options": ["Eusébio", "Mário Coluna", "José Torres"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-36 | ¿En qué estadio se jugó el partido Portugal-Hungría del mundial 1966?",
+    "answer": "Old Trafford",
+    "options": ["Wembley", "Goodison Park", "Old Trafford"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-37 | ¿Quién anotó el primer gol de Portugal en su historia en los Mundiales?",
+    "answer": "José Augusto",
+    "options": ["Eusébio", "José Augusto", "José Torres"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-38 | ¿En qué minuto llegó ese primer gol mundialista de Portugal Hungria 1966?",
+    "answer": "2'",
+    "options": ["2'", "15'", "31'"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-40 | ¿Quién convirtió el tercer gol portugués ante Hungría?",
+    "answer": "José Torres",
+    "options": ["António Simões", "José Torres", "Jaime Graça"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-42 | ¿Qué dorsal utilizó Eusébio en ese partido hungria- portugal mundial 1966?",
+    "answer": "13",
+    "options": ["9", "10", "13"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-43 | ¿En qué grupo estaba Portugal en el Mundial 1966?",
+    "answer": "Grupo 3",
+    "options": ["Grupo 1", "Grupo 2", "Grupo 3"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-44 | ¿Cuál fue el gran terremoto que devastó Lisboa en 1755?",
+    "answer": "Terremoto de Lisboa",
+    "options": ["Terremoto de Oporto", "Terremoto de Lisboa", "Terremoto del Algarve"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-45 | ¿Qué poeta escribió \"Os Lusíadas\", obra épica nacional de Portugal?",
+    "answer": "Luís de Camões",
+    "options": ["Fernando Pessoa", "Luís de Camões", "José Saramago"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-46 | ¿Qué premio ganó José Saramago en 1998?",
+    "answer": "Nobel de Literatura",
+    "options": ["Premio Cervantes", "Nobel de Literatura", "Premio Príncipe de Asturias"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-47 | ¿Cuál es la segunda ciudad más poblada de Portugal?",
+    "answer": "Oporto",
+    "options": ["Coimbra", "Oporto", "Faro"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-48 | ¿Quién fue el primer rey de Portugal?",
+    "answer": "Afonso Henriques",
+    "options": ["João I", "Afonso Henriques", "Manuel I"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-49 | ¿Cuántos goles marcó Eusébio en el Mundial 1966?",
+    "answer": "9",
+    "options": ["7", "8", "9"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-50 | ¿Qué futbolista portugués es el máximo goleador histórico de la selección?",
+    "answer": "Cristiano Ronaldo",
+    "options": ["Pauleta", "Eusébio", "Cristiano Ronaldo"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-51 | ¿Cuál es la novena ciudad más poblada de Portugal?",
+    "answer": "Setúbal",
+    "options": ["Setúbal", "Évora", "Portimão"]
+  },

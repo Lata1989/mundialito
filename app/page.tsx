@@ -5,13 +5,30 @@ import { QUESTIONS_DB } from "./data/preguntas";
 
 // --- CONFIGURACIÓN DE BANDERAS ---
 const BANDERAS: Record<string, string> = {
-  Japón: "🇯🇵",
-  Colombia: "🇨🇴",
-  Francia: "🇫🇷",
-  Canadá: "🇨🇦",
-  Croacia: "🇭🇷",
-  España: "🇪🇸",
-  Ecuador: "🇪🇨",
+  // Japón: "🇯🇵",
+  // Inglaterra: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  // Colombia: "🇨🇴",
+  // Francia: "🇫🇷",
+  // Canadá: "🇨🇦",
+  // Uruguay: "🇺🇾",
+  // Brasil: "🇧🇷",
+  // Marruecos: "🇲🇦",
+  // Croacia: "🇭🇷",
+  // España: "🇪🇸",
+  // EEUU: "🇺🇸",
+  // Ecuador: "🇪🇨",
+  // Alemania: "🇩🇪",
+  Bélgica: "🇧🇪",
+  Paraguay: "🇵🇾",
+  Arabia: "🇸🇦",
+  // "Países Bajos": "🇳🇱",
+  México: "🇲🇽",
+  // Suiza: "🇨🇭",
+  Austria: "🇦🇹",
+  Egipto: "🇪🇬",
+  // Escocia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  Portugal: "🇵🇹",
+  // Noruega: "🇳🇴",
 };
 
 // --- CONFIGURACIÓN DE SONIDOS ---
@@ -287,44 +304,57 @@ export default function SoccerQuiz() {
     }, 3000);
   };
 
-  // --- RENDEREADO DE LA PANTALLA DE SELECCIÓN DE EQUIPOS REESTRUCTURADA ---
   if (!teams || !teams.red) {
     return (
-      <div className={`relative flex flex-col items-center justify-center min-h-screen p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
+      <div className={`relative flex flex-col items-center justify-center min-h-screen p-4 md:p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
 
-        {/* BOTÓN CLARO/OSCURO FLOTANTE ARRIBA A LA DERECHA */}
         <button
           onClick={() => setIsDarkTheme(!isDarkTheme)}
-          className={`absolute top-6 right-6 px-4 py-2 rounded-xl font-bold transition-colors shadow-md text-sm ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
+          className={`absolute top-4 right-4 md:top-6 md:right-6 px-4 py-2 rounded-xl font-bold transition-colors shadow-md text-sm z-50 ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
         >
           {isDarkTheme ? "☀️ Tema Claro" : "🌙 Tema Oscuro"}
         </button>
 
-        {/* LOGO TRINI CENTRADO EN LA PARTE SUPERIOR (Con fondo negro y bordes redondeados) */}
-        <div className="mb-4 h-72 aspect-square flex items-center justify-center bg-black rounded-[3rem] p-6 shadow-2xl filter drop-shadow-md">
-          <img
-            src="/TRINI.png"
-            alt="Logo TRINI"
-            className="h-full w-full object-contain"
-          />
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-12 mb-6 max-w-7xl w-full px-4">
+          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center bg-white rounded-3xl p-3 md:p-4 shadow-xl border border-slate-200 transform hover:scale-102 transition-transform">
+            <img
+              src="/logofunesil.jpeg"
+              alt="Logo Funesil"
+              className="h-full w-full object-contain rounded-2xl"
+            />
+          </div>
+
+          <div className="h-64 sm:h-76 md:h-96 aspect-square flex items-center justify-center bg-black rounded-[2.5rem] md:rounded-[4rem] p-6 md:p-8 shadow-2xl filter drop-shadow-lg transform hover:scale-102 transition-transform">
+            <img
+              src="/TRINI.png"
+              alt="Logo TRINI"
+              className="h-full w-full object-contain"
+            />
+          </div>
+
+          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center bg-white rounded-3xl p-3 md:p-4 shadow-xl border border-slate-200 transform hover:scale-102 transition-transform">
+            <img
+              src="/logosfunesil.jpeg"
+              alt="Logos Funesil"
+              className="h-full w-full object-contain rounded-2xl"
+            />
+          </div>
         </div>
 
-        {/* MENSAJE O TÍTULO ABAJO DEL LOGO */}
-        <h1 className="text-3xl md:text-4xl font-black mb-10 italic uppercase tracking-tighter max-w-3xl">
+        <h1 className="text-xl sm:text-2xl md:text-4xl font-black mb-6 md:mb-10 italic uppercase tracking-tighter max-w-3xl px-2">
           {!teams ? "Seleccionar Primer Equipo (Tendrá la Pelota)" : "Seleccionar Segundo Equipo Rival"}
         </h1>
 
-        {/* GRILLA DE BANDERAS */}
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 max-w-5xl w-full">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 md:gap-5 max-w-5xl w-full px-2">
           {Object.entries(BANDERAS).map(([name, flag]) => (
             <button
               key={name}
               onClick={() => selectTeam(name)}
-              className={`p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`}
+              className={`p-3 sm:p-5 rounded-2xl border-2 transition-all flex flex-col items-center transform hover:scale-105 active:scale-95 shadow-md ${isDarkTheme ? "bg-zinc-900 border-zinc-800 hover:border-blue-500" : "bg-white border-slate-200 hover:border-blue-500"} ${teams?.blue === name ? "opacity-30 cursor-not-allowed border-blue-500" : ""}`}
               disabled={teams?.blue === name}
             >
-              <span className="text-5xl md:text-6xl drop-shadow-sm">{flag}</span>
-              <p className="text-[10px] font-black mt-3 uppercase tracking-wider text-center">{name}</p>
+              <span className="text-3xl sm:text-5xl md:text-6xl drop-shadow-sm">{flag}</span>
+              <p className="text-[9px] sm:text-[10px] font-black mt-2 sm:mt-3 uppercase tracking-wider text-center line-clamp-1">{name}</p>
             </button>
           ))}
         </div>
@@ -339,14 +369,14 @@ export default function SoccerQuiz() {
   return (
     <div className={`flex flex-col lg:flex-row min-h-screen font-sans overflow-hidden transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
 
-      {/* PANEL IZQUIERDO DE CONTROLES */}
-      <div className={`flex-[1.4] p-6 flex flex-col h-full justify-between lg:max-h-screen overflow-y-auto ${isDarkTheme ? "border-r border-zinc-800" : "border-r border-slate-300"}`}>
+      {/* PANEL IZQUIERDO DE CONTROLES (Borde derecho eliminado) */}
+      <div className="flex-[1.4] p-6 flex flex-col h-full justify-between lg:max-h-screen overflow-y-auto">
         <div>
           <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-4 px-3 py-1 rounded text-sm font-bold transition-colors self-start ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
             {isDarkTheme ? "☀️" : "🌙"}
           </button>
 
-          {/* MARCADOR REESTRUCTURADO */}
+          {/* MARCADOR */}
           <div className="flex items-center justify-center p-1 mb-8 select-none font-mono tracking-tight w-full">
             <div className="flex items-center bg-black text-white rounded-full px-4 sm:px-6 shadow-2xl border border-zinc-800 w-full max-w-4xl min-h-[5.5rem] py-2 md:py-4">
 
@@ -357,14 +387,12 @@ export default function SoccerQuiz() {
                 <span className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter text-white pr-2">{getTeamCode(teams.blue)}</span>
               </div>
 
-              {/* BLOQUE 2: MARCADOR CENTRAL CENTRALIZADO */}
+              {/* BLOQUE 2: MARCADOR CENTRAL */}
               <div className="flex items-center justify-center mx-1 sm:mx-3">
-                {/* Bloque Menta Goles Local */}
                 <div className="bg-[#64e3b7] text-black h-12 sm:h-14 lg:h-16 px-4 sm:px-6 rounded-l-2xl flex items-center justify-center">
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-black tabular-nums">{score.blue}</span>
                 </div>
 
-                {/* Bloque Físico del Logo TRINI (Más grande, transparente y redondeado) */}
                 <div className="p-0 h-16 sm:h-20 lg:h-24 aspect-square flex items-center justify-center z-10 rounded-xl overflow-hidden">
                   <img
                     src="/TRINI.png"
@@ -373,7 +401,6 @@ export default function SoccerQuiz() {
                   />
                 </div>
 
-                {/* Bloque Menta Goles Visitante */}
                 <div className="bg-[#64e3b7] text-black h-12 sm:h-14 lg:h-16 px-4 sm:px-6 rounded-r-2xl flex items-center justify-center">
                   <span className="text-3xl sm:text-4xl lg:text-5xl font-black tabular-nums">{score.red}</span>
                 </div>
@@ -413,7 +440,6 @@ export default function SoccerQuiz() {
                 </span>
               </div>
 
-              {/* Botonera de Flujo */}
               <div className="mb-4 flex flex-wrap items-center gap-4 bg-black/5 dark:bg-white/5 p-4 rounded-2xl border border-slate-300 dark:border-zinc-800 w-full justify-between sm:w-fit">
                 <div className={`text-4xl font-black tabular-nums ${timeLeft <= 10 ? "text-red-500 animate-pulse" : ""}`}>⏱️ {timeLeft}s</div>
                 <div className="flex flex-wrap gap-2">
@@ -426,7 +452,6 @@ export default function SoccerQuiz() {
               <div className={`mb-2 text-xs font-black tracking-widest uppercase italic ${isDarkTheme ? "text-zinc-500" : "text-slate-600"}`}>Pregunta de {currentQ?.country || "Fútbol"} • {remainingQuestions.length} restantes</div>
               <h2 className="text-3xl md:text-4xl font-black mb-8 leading-tight uppercase tracking-tight">{currentQ?.question}</h2>
 
-              {/* Acciones de Trivia */}
               <div className="space-y-3">
                 {!isShowingOptions ? (
                   <div>
@@ -458,7 +483,6 @@ export default function SoccerQuiz() {
                         </button>
                       ))}
                     </div>
-                    {/* Botones manuales de testing */}
                     <div className="grid grid-cols-2 gap-3 pt-2">
                       <button onClick={() => handleManualAction("corto")} className="p-5 font-black rounded-xl transition-all text-lg uppercase bg-green-600 text-white hover:bg-green-700 active:scale-95 shadow-md">{possession.role === "9" ? "⚽ ¡GOL!" : "✅ Pase Exitoso"}</button>
                       <button onClick={handleManualError} className="p-5 font-black rounded-xl transition-all text-lg uppercase bg-red-600 text-white hover:bg-red-700 active:scale-95 shadow-md">{possession.role === "9" ? "❌ Tiro Errado" : "❌ Pase Cortado"}</button>
@@ -470,7 +494,6 @@ export default function SoccerQuiz() {
           )}
         </div>
 
-        {/* Feedback exclusivo para festejos de Gol */}
         {feedback && (
           <div className="mt-4 p-4 bg-yellow-400 border-2 border-black text-black font-black uppercase italic text-center animate-bounce rounded-xl shadow-xl w-full">
             {feedback}
@@ -478,14 +501,13 @@ export default function SoccerQuiz() {
         )}
       </div>
 
-      {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL AGRANDADA Y MEJORADA */}
+      {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL */}
       <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
         <div
           className="relative w-full max-w-[700px] aspect-[100/135] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
           style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
         >
           {/* Líneas de Marcación */}
-          <div className="absolute top-1/2 w-full h-[3px] bg-white/40 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
