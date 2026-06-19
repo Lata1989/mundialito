@@ -7477,7 +7477,7 @@ export const QUESTIONS_DB: QuestionItem[] = [
   // ==========================================
   {
     "country": "Paraguay",
-    "question": "PAR-11 | ¿Cuál es la capital de Paraguay?",
+    "question": "PAR-1 | ¿Cuál es la capital de Paraguay?",
     "answer": "asunción",
     "options": ["Encarnación", "Asunción", "Ciudad del Este"]
   },
@@ -7525,7 +7525,7 @@ export const QUESTIONS_DB: QuestionItem[] = [
   },
   {
     "country": "Paraguay",
-    "question": "PAR-11_2 | ¿Qué instrumento musical es símbolo del folclore paraguayo?",
+    "question": "PAR-11 | ¿Qué instrumento musical es símbolo del folclore paraguayo?",
     "answer": "arpa paraguaya",
     "options": ["Bandoneón", "Arpa paraguaya", "Charango"]
   },
