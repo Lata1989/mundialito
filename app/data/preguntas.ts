@@ -6873,586 +6873,604 @@ export const QUESTIONS_DB: QuestionItem[] = [
   // ==========================================
   {
     "country": "Argentina",
-    "question": "ARG-1 | ¿Qué selección eliminó a Argentina en octavos de final del Mundial 1994?",
-    "answer": "rumania",
+    "question": "ARG-01 | ¿Qué selección eliminó a Argentina en octavos de final del Mundial 1994?",
+    "answer": "Rumania",
     "options": ["Bulgaria", "Rumania", "Suecia", "Brasil"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-2 | ¿Quién fue el árbitro de la final del Mundial 1978 entre Argentina y Países Bajos?",
-    "answer": "sergio gonella",
+    "question": "ARG-02 | ¿Quién fue el árbitro de la final del Mundial 1978 entre Argentina y Países Bajos?",
+    "answer": "Sergio Gonella",
     "options": ["Nicola Rizzoli", "Sergio Gonella", "Sandor Puhl", "Horacio Elizondo"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-3 | ¿Qué provincia argentina posee la mayor cantidad de departamentos?",
-    "answer": "córdoba",
+    "question": "ARG-03 | ¿Qué provincia argentina posee la mayor cantidad de departamentos?",
+    "answer": "Córdoba",
     "options": ["Córdoba", "Santa Fe", "Buenos Aires", "Mendoza"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-6 | ¿Quién fue el entrenador de Argentina en el Mundial de Estados Unidos 1994?",
-    "answer": "basile",
+    "question": "ARG-04 | ¿Quién fue el entrenador de Argentina en el Mundial de Estados Unidos 1994?",
+    "answer": "Basile",
     "options": ["Bilardo", "Passarella", "Basile", "Menotti"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-8 | ¿Cuál fue el rival de Argentina en su debut en el Mundial 1978?",
-    "answer": "hungría",
+    "question": "ARG-05 | ¿Cuál fue el rival de Argentina en su debut en el Mundial 1978?",
+    "answer": "Hungría",
     "options": ["Hungría", "Francia", "Italia", "Polonia"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-9 | ¿Quién es el único futbolista argentino que disputó cinco Mundiales antes de Messi?",
-    "answer": "javier mascherano",
+    "question": "ARG-06 | ¿Quién es el único futbolista argentino que disputó cinco Mundiales antes de Messi?",
+    "answer": "Javier Mascherano",
     "options": ["Javier Mascherano", "Diego Simeone", "Zanetti", "Ruggeri"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-10 | ¿Qué selección dejó afuera a Argentina en cuartos de final del Mundial 2010?",
-    "answer": "alemania",
-    "options": ["España", "Alemania", "Países Bajos", "Uruguay"]
+    "question": "ARG-07 | ¿Qué selección dejó afuera a Argentina en cuartos de final del Mundial 2010?",
+    "answer": "Alemania",
+    "options": ["España", "Alemania", "Países Bajos", "Urugu"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-11 | ¿Cuál es la capital de Chubut?",
-    "answer": "rawson",
+    "question": "ARG-08 | ¿Cuál es la capital de Chubut?",
+    "answer": "Rawson",
     "options": ["Comodoro Rivadavia", "Puerto Madryn", "Rawson", "Trelew"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-12 | ¿Qué arquero argentino mantuvo la valla invicta en la final del Mundial 1986?",
-    "answer": "pumpido",
+    "question": "ARG-09 | ¿Qué arquero argentino mantuvo la valla invicta en la final del Mundial 1986?",
+    "answer": "Pumpido",
     "options": ["Gatti", "Fillol", "Pumpido", "Islas"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-13 | ¿En qué Mundial utilizó Argentina por primera vez la camiseta azul?",
+    "question": "ARG-10 | ¿En qué Mundial utilizó Argentina por primera vez la camiseta azul?",
     "answer": "1958",
     "options": ["1958", "1978", "1986", "1990"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-14 | ¿Cuál fue el primer rival de Lionel Messi en una Copa del Mundo?",
-    "answer": "costa de marfil",
+    "question": "ARG-11 | ¿Cuál fue el primer rival de Lionel Messi en una Copa del Mundo?",
+    "answer": "Costa de Marfil",
     "options": ["Costa de Marfil", "Serbia y Montenegro", "Países Bajos", "México"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-15 | ¿Qué provincia argentina limita con más provincias?",
-    "answer": "córdoba",
+    "question": "ARG-12 | ¿Qué provincia argentina limita con más provincias?",
+    "answer": "Córdoba",
     "options": ["Córdoba", "Buenos Aires", "Santa Fe", "Mendoza"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-16 | ¿Qué jugador argentino anotó en la final del Mundial 1990?",
-    "answer": "argentina no convirtió goles",
-    "options": ["Caniggia", "Burruchaga", "Argentina no convirtió goles", "Dezotti"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-17 | ¿Qué jugador argentino fue expulsado ante Países Bajos en Francia 1998?",
-    "answer": "ortega",
+    "question": "ARG-14 | ¿Qué jugador argentino fue expulsado ante Países Bajos en Francia 1998?",
+    "answer": "Ortega",
     "options": ["Ortega", "Simeone", "Verón", "Batistuta"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-18 | ¿Cuál fue la última selección europea que Argentina derrotó en una final mundialista?",
-    "answer": "francia 2022",
+    "question": "ARG-15 | ¿Cuál fue la última selección europea que Argentina derrotó en una final mundialista?",
+    "answer": "Francia 2022",
     "options": ["Alemania 1986", "Países Bajos 1978", "Francia 2022", "Italia 1990"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-19 | ¿Qué provincia argentina tiene mayor superficie cubierta por glaciares?",
-    "answer": "santa cruz",
+    "question": "ARG-16 | ¿Qué provincia argentina tiene mayor superficie cubierta por glaciares?",
+    "answer": "Santa Cruz",
     "options": ["Neuquén", "Río Negro", "Santa Cruz", "Tierra del Fuego"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-20 | ¿Quién dio la asistencia a Di María en la final del Mundial 2022?",
-    "answer": "alexis mac allister",
+    "question": "ARG-17 | ¿Quién dio la asistencia a Di María en la final del Mundial 2022?",
+    "answer": "Alexis Mac Allister",
     "options": ["Messi", "Julián Álvarez", "Alexis Mac Allister", "Enzo Fernández"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-21 | ¿Cuál fue la primera selección africana que enfrentó Argentina en un Mundial?",
-    "answer": "camerún",
+    "question": "ARG-18 | ¿Cuál fue la primera selección africana que enfrentó Argentina en un Mundial?",
+    "answer": "Camerún",
     "options": ["Camerún", "Marruecos", "Nigeria", "Túnez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-22 | ¿Qué futbolista argentino convirtió goles en los Mundiales 1994, 1998 y 2002?",
-    "answer": "batistuta",
+    "question": "ARG-19 | ¿Qué futbolista argentino convirtió goles en los Mundiales 1994, 1998 y 2002?",
+    "answer": "Batistuta",
     "options": ["Crespo", "Batistuta", "Verón", "Ortega"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-23 | ¿Cuál es el punto más austral del territorio continental argentino?",
-    "answer": "cabo vírgenes",
+    "question": "ARG-20 | ¿Cuál es el punto más austral del territorio continental argentino?",
+    "answer": "Cabo Vírgenes",
     "options": ["Cabo Vírgenes", "Ushuaia", "Río Grande", "Puerto Deseado"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-24 | ¿Quién fue el capitán argentino en el Mundial 1978?",
-    "answer": "passarella",
+    "question": "ARG-21 | ¿Quién fue el capitán argentino en el Mundial 1978?",
+    "answer": "Passarella",
     "options": ["Ardiles", "Luque", "Passarella", "Fillol"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-25 | ¿Qué selección eliminó a Argentina del Mundial 2018?",
-    "answer": "francia",
+    "question": "ARG-22 | ¿Qué selección eliminó a Argentina del Mundial 2018?",
+    "answer": "Francia",
     "options": ["Francia", "Croacia", "Bélgica", "Brasil"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-26 | ¿Qué provincia argentina tiene más límites internacionales?",
-    "answer": "salta",
+    "question": "ARG-23 | ¿Qué provincia argentina tiene más límites internacionales?",
+    "answer": "Salta",
     "options": ["Jujuy", "Salta", "Mendoza", "Misiones"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-28 | ¿Qué selección derrotó a Argentina en el partido inaugural del Mundial 1990?",
-    "answer": "camerún",
+    "question": "ARG-24 | ¿Qué selección derrotó a Argentina en el partido inaugural del Mundial 1990?",
+    "answer": "Camerún",
     "options": ["Camerún", "Rumania", "Yugoslavia", "URSS"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-29 | ¿Cuál fue el rival de Argentina en la semifinal del Mundial 2014?",
-    "answer": "países bajos",
+    "question": "ARG-25 | ¿Cuál fue el rival de Argentina en la semifinal del Mundial 2014?",
+    "answer": "Países Bajos",
     "options": ["Bélgica", "Países Bajos", "Alemania", "Brasil"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-30 | ¿Qué jugador marcó el gol número 100 de Argentina en los Mundiales?",
-    "answer": "higuáin",
+    "question": "ARG-26 | ¿Qué jugador marcó el gol número 100 de Argentina en los Mundiales?",
+    "answer": "Higuaín",
     "options": ["Batistuta", "Messi", "Higuaín", "Tévez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-31 | En el Mundial de Qatar 2022, ¿en qué minuto convirtió Lionel Messi su gol ante México?",
+    "question": "ARG-27 | En el Mundial de Qatar 2022, ¿en qué minuto convirtió Lionel Messi su gol ante México?",
     "answer": "64'",
     "options": ["58'", "61'", "64'", "67'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-32 | ¿Quién le dio la asistencia a Javier Saviola en su único gol en los Mundiales, ante Costa de Marfil en 2006?",
-    "answer": "juan román riquelme",
+    "question": "ARG-28 | ¿Quién le dio la asistencia a Javier Saviola en su único gol en los Mundiales, ante Costa de Marfil en 2006?",
+    "answer": "Juan Román Riquelme",
     "options": ["Pablo Aimar", "Juan Pablo Sorín", "Juan Román Riquelme", "Esteban Cambiasso"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-33 | ¿Cuál fue el primer partido de Ángel Di María como titular en una Copa del Mundo?",
-    "answer": "argentina vs corea del sur (2010)",
+    "question": "ARG-29 | ¿Cuál fue el primer partido de Ángel Di María como titular en una Copa del Mundo?",
+    "answer": "Argentina vs Corea del Sur (2010)",
     "options": ["Argentina vs Corea del Sur (2010)", "Argentina vs Nigeria (2010)", "Argentina vs Grecia (2010)", "Argentina vs México (2010)"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-34 | ¿Cuántos minutos estuvo Emiliano Martínez sin recibir goles en su récord de imbatibilidad con la Selección Argentina?",
+    "question": "ARG-30 | ¿Cuántos minutos estuvo Emiliano Martínez sin recibir goles en su récord de imbatibilidad con la Selección Argentina?",
     "answer": "622",
     "options": ["606", "615", "622", "640"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-35 | ¿Quién convirtió el gol de Perú ante Argentina en las Eliminatorias rumbo a Rusia 2018 en La Bombonera?",
-    "answer": "ninguno; fue gol en contra de mercado",
+    "question": "ARG-31 | ¿Quién convirtió el gol de Perú ante Argentina en las Eliminatorias rumbo a Rusia 2018 en La Bombonera?",
+    "answer": "Ninguno; fue gol en contra de Mercado",
     "options": ["Paolo Guerrero", "Christian Cueva", "Jefferson Farfán", "Ninguno; fue gol en contra de Mercado"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-36 | En la final del Mundial 1986, ¿hacia dónde definió Jorge Burruchaga para el 3-2 ante Alemania?",
-    "answer": "cruzado al palo izquierdo del arquero",
+    "question": "ARG-32 | En la final del Mundial 1986, ¿hacia dónde definió Jorge Burruchaga para el 3-2 ante Alemania?",
+    "answer": "Cruzado al palo izquierdo del arquero",
     "options": ["Cruzado al palo izquierdo del arquero", "Al medio", "Al palo derecho", "Por arriba"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-37 | ¿Quién asistió a Messi en su gol ante México en Qatar 2022?",
-    "answer": "leandro paredes",
+    "question": "ARG-33 | ¿Quién asistió a Messi en su gol ante México en Qatar 2022?",
+    "answer": "Leandro Paredes",
     "options": ["Enzo Fernández", "Ángel Di María", "Lautaro Martínez", "Leandro Paredes"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-38 | ¿Qué jugador lanzó el centro previo al gol agónico de Martín Palermo ante Perú en 2009?",
-    "answer": "federico insúa",
+    "question": "ARG-34 | ¿Qué jugador lanzó el centro previo al gol agónico de Martín Palermo ante Perú en 2009?",
+    "answer": "Federico Insúa",
     "options": ["Messi", "Zanetti", "Di María", "Federico Insúa"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-39 | ¿En qué minuto convirtió Javier Saviola su único gol en Copas del Mundo?",
+    "question": "ARG-35 | ¿En qué minuto convirtió Javier Saviola su único gol en Copas del Mundo?",
     "answer": "38'",
     "options": ["24'", "31'", "38'", "42'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-40 | ¿Cuántos años tenía Sergio Romero cuando debutó en un Mundial?",
+    "question": "ARG-36 | ¿Cuántos años tenía Sergio Romero cuando debutó en un Mundial?",
     "answer": "23",
     "options": ["20", "21", "23", "25"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-41 | ¿Cuántos pases consecutivos realizó Argentina en el histórico gol de Cambiasso ante Serbia y Montenegro en 2006?",
+    "question": "ARG-37 | ¿Cuántos pases consecutivos realizó Argentina en el histórico gol de Cambiasso ante Serbia y Montenegro en 2006?",
     "answer": "25",
     "options": ["23", "27", "25", "28"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-42 | ¿A qué lado se arrojó Dibu Martínez para atajar el penal de Van Dijk en Qatar 2022?",
-    "answer": "a su derecha",
+    "question": "ARG-38 | ¿A qué lado se arrojó Dibu Martínez para atajar el penal de Van Dijk en Qatar 2022?",
+    "answer": "A su derecha",
     "options": ["A su derecha", "A su izquierda", "Se quedó parado", "Saltó al medio"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-43 | ¿Quién dio la asistencia para el gol de Maradona conocido como \"Barrilete Cósmico\"?",
-    "answer": "héctor enrique",
+    "question": "ARG-39 | ¿Quién dio la asistencia para el gol de Maradona conocido como \"Barrilete Cósmico\"?",
+    "answer": "Héctor Enrique",
     "options": ["Valdano", "Héctor Enrique", "Burruchaga", "Batista"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-44 | ¿Con qué pierna definió Maradona el \"Gol del Siglo\" ante Inglaterra?",
-    "answer": "izquierda",
+    "question": "ARG-40 | ¿Con qué pierna definió Maradona el \"Gol del Siglo\" ante Inglaterra?",
+    "answer": "Izquierda",
     "options": ["Derecha", "Izquierda", "Cabeza", "Rodilla"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-45 | ¿Qué número utilizó Maradona en su debut mundialista de 1982?",
+    "question": "ARG-41 | ¿Qué número utilizó Maradona en su debut mundialista de 1982?",
     "answer": "10",
     "options": ["10", "16", "19", "21"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-46 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2014?",
-    "answer": "sead kolašinac (en contra)",
+    "question": "ARG-42 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2014?",
+    "answer": "Sead Kolašinac (en contra)",
     "options": ["Messi", "Higuaín", "Sead Kolašinac (en contra)", "Di María"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-47 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2018?",
-    "answer": "sergio agüero",
+    "question": "ARG-43 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2018?",
+    "answer": "Sergio Agüero",
     "options": ["Sergio Agüero", "Messi", "Marcos Rojo", "Gabriel Mercado"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-48 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2022?",
-    "answer": "lionel messi (penal)",
+    "question": "ARG-44 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2022?",
+    "answer": "Lionel Messi (penal)",
     "options": ["Lautaro Martínez", "Lionel Messi (penal)", "Julián Álvarez", "Enzo Fernández"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-49 | ¿Quién convirtió el primer gol de Argentina en el Mundial 1990?",
-    "answer": "pedro monzón",
+    "question": "ARG-45 | ¿Quién convirtió el primer gol de Argentina en el Mundial 1990?",
+    "answer": "Pedro Monzón",
     "options": ["Claudio Caniggia", "Pedro Troglio", "Pedro Monzón", "Diego Maradona"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-50 | ¿Quién convirtió el primer gol de Argentina en el Mundial 1994?",
-    "answer": "gabriel batistuta",
+    "question": "ARG-46 | ¿Quién convirtió el primer gol de Argentina en el Mundial 1994?",
+    "answer": "Gabriel Batistuta",
     "options": ["Gabriel Batistuta", "Diego Maradona", "Claudio Caniggia", "Abel Balbo"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-51 | ¿Quién anotó el primer gol de Argentina en la historia de los Mundiales?",
-    "answer": "luis monti",
+    "question": "ARG-47 | ¿Anotó el primer gol de Argentina en la historia de los Mundiales?",
+    "answer": "Luis Monti",
     "options": ["Guillermo Stábile", "Luis Monti", "Manuel Ferreira", "Carlos Peucelle"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-53 | ¿En qué minuto reemplazó José Pekerman a Riquelme por Cambiasso ante Alemania en el Mundial 2006?",
+    "question": "ARG-48 | ¿En qué minuto reemplazó José Pekerman a Riquelme por Cambiasso ante Alemania en el Mundial 2006?",
     "answer": "74'",
     "options": ["68'", "72'", "74'", "77'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-54 | ¿Cómo convirtió Gabriel Batistuta su gol ante Nigeria en el Mundial 2002?",
-    "answer": "de cabeza",
+    "question": "ARG-49 | ¿Cómo convirtió Gabriel Batistuta su gol ante Nigeria en el Mundial 2002?",
+    "answer": "De cabeza",
     "options": ["De cabeza", "De tiro libre", "De penal", "De volea"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-55 | ¿Quién envió el centro previo al gol de Martín Palermo ante Perú en 2009?",
-    "answer": "federico insúa",
+    "question": "ARG-50 | ¿Quién envió el centro previo al gol de Martín Palermo ante Perú en 2009?",
+    "answer": "Federico Insúa",
     "options": ["Lionel Messi", "Javier Zanetti", "Federico Insúa", "Ángel Di María"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-56 | ¿Quién asistió a Maradona en el segundo gol ante Inglaterra en 1986?",
-    "answer": "héctor enrique",
-    "options": ["Burruchaga", "Valdano", "Héctor Enrique", "Giusti"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-57 | ¿Hacia qué palo pateó Maradona su penal ante Italia en la semifinal de Italia 1990?",
-    "answer": "izquierda del arquero",
+    "question": "ARG-52 | ¿Hacia qué palo pateó Maradona su penal ante Italia en la semifinal de Italia 1990?",
+    "answer": "Izquierda del arquero",
     "options": ["Derecha del arquero", "Izquierda del arquero", "Al medio", "Al travesaño"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-58 | ¿Quién tiene el récord de mayor período entre su primer y último gol con la Selección Argentina?",
-    "answer": "lionel messi",
+    "question": "ARG-53 | ¿Quién tiene el récord de mayor período entre su primer y último gol con la Selección Argentina?",
+    "answer": "Lionel Messi",
     "options": ["Lionel Messi", "Ángel Labruna", "Diego Maradona", "Batistuta"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-59 | ¿Quién asistió a Gonzalo Higuaín en su primer gol ante Corea del Sur en Sudáfrica 2010?",
-    "answer": "burdisso",
+    "question": "ARG-54 | ¿Quién asistió a Gonzalo Higuaín en su primer gol ante Corea del Sur en Sudáfrica 2010?",
+    "answer": "Burdisso",
     "options": ["Messi", "Burdisso", "Di María", "Maxi Rodríguez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-60 | ¿Quién dio la asistencia para el tercer gol de Higuaín ante Corea del Sur?",
-    "answer": "sergio agüero",
+    "question": "ARG-55 | ¿Quién dio la asistencia para el tercer gol de Higuaín ante Corea del Sur?",
+    "answer": "Sergio Agüero",
     "options": ["Carlos Tevez", "Lionel Messi", "Ángel Di María", "Sergio Agüero"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-61 | ¿Cuál es la quinta ciudad más poblada de Argentina según el Censo 2022?",
-    "answer": "salta",
+    "question": "ARG-56 | ¿Cuál es la quinta ciudad más poblada de Argentina según el Censo 2022?",
+    "answer": "Salta",
     "options": ["La Plata", "Mar del Plata", "Salta", "Santa Fe"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-62 | ¿Qué provincia argentina posee la mayor cantidad de Parques Nacionales dentro de su territorio?",
-    "answer": "santa cruz",
+    "question": "ARG-57 | ¿Qué provincia argentina posee la mayor cantidad de Parques Nacionales dentro de su territorio?",
+    "answer": "Santa Cruz",
     "options": ["Neuquén", "Santa Cruz", "Río Negro", "Chubut"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-63 | ¿Quién fue presidente de Argentina durante el Mundial de 1978?",
-    "answer": "jorge rafael videla",
+    "question": "ARG-58 | ¿Quién fue presidente de Argentina durante el Mundial de 1978?",
+    "answer": "Jorge Rafael Videla",
     "options": ["Héctor Cámpora", "Raúl Alfonsín", "Jorge Rafael Videla", "Roberto Viola"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-64 | ¿Cuál fue el primer golpe de Estado exitoso del siglo XX en Argentina?",
+    "question": "ARG-59 | ¿Cuál fue el primer golpe de Estado exitoso del siglo XX en Argentina?",
     "answer": "1930",
     "options": ["1943", "1955", "1930", "1966"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-65 | ¿Contra qué presidente se produjo el golpe de Estado de 1930?",
-    "answer": "hipólito yrigoyen",
+    "question": "ARG-60 | ¿Contra qué presidente se produjo el golpe de Estado de 1930?",
+    "answer": "Hipólito Yrigoyen",
     "options": ["Juan D. Perón", "Hipólito Yrigoyen", "Marcelo T. de Alvear", "Arturo Frondizi"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-66 | ¿Quién convirtió el primer gol de Argentina en la goleada 6-0 ante Serbia y Montenegro en 2006?",
-    "answer": "maxi rodríguez",
+    "question": "ARG-61 | ¿Quién convirtió el primer gol de Argentina en la goleada 6-0 ante Serbia y Montenegro en 2006?",
+    "answer": "Maxi Rodríguez",
     "options": ["Hernán Crespo", "Esteban Cambiasso", "Maxi Rodríguez", "Javier Saviola"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-67 | ¿Qué monumento histórico nacional fue declarado Patrimonio Mundial por la UNESCO en 1999?",
-    "answer": "cueva de las manos",
+    "question": "ARG-62 | ¿Qué monumento histórico nacional fue declarado Patrimonio Mundial por la UNESCO en 1999?",
+    "answer": "Cueva de las Manos",
     "options": ["Cabildo", "Cueva de las Manos", "Casa Rosada", "Obelisco"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-68 | ¿Cuál es la provincia argentina con mayor cantidad de habitantes según el Censo 2022?",
-    "answer": "buenos aires",
+    "question": "ARG-63 | ¿Cuál es la provincia argentina con mayor cantidad de habitantes según el Censo 2022?",
+    "answer": "Buenos Aires",
     "options": ["Córdoba", "Santa Fe", "Buenos Aires", "Mendoza"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-69 | ¿Cuál es la cuarta ciudad más poblada de Argentina?",
-    "answer": "la plata",
+    "question": "ARG-64 | ¿Cuál es la cuarta ciudad más poblada de Argentina?",
+    "answer": "La Plata",
     "options": ["Mendoza", "La Plata", "San Miguel de Tucumán", "Salta"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-70 | ¿Quién fue el presidente argentino más joven al asumir el cargo?",
-    "answer": "bernardino rivadavia",
+    "question": "ARG-65 | ¿Quién fue el presidente argentino más joven al asumir el cargo?",
+    "answer": "Bernardino Rivadavia",
     "options": ["Julio A. Roca", "Carlos Menem", "Bernardino Rivadavia", "Arturo Frondizi"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-71 | ¿Quién convirtió dos goles para Argentina en la goleada 6-0 ante Serbia y Montenegro en 2006?",
-    "answer": "maxi rodríguez",
+    "question": "ARG-66 | ¿Quién convirtió dos goles para Argentina en la goleada 6-0 ante Serbia y Montenegro en 2006?",
+    "answer": "Maxi Rodríguez",
     "options": ["Hernán Crespo", "Esteban Cambiasso", "Maxi Rodríguez", "Javier Saviola"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-72 | ¿En qué provincia se encuentra el Parque Nacional Iberá?",
-    "answer": "corrientes",
+    "question": "ARG-67 | ¿En qué provincia se encuentra el Parque Nacional Iberá?",
+    "answer": "Corrientes",
     "options": ["Entre Ríos", "Corrientes", "Misiones", "Chaco"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-73 | ¿Qué presidente fue derrocado por la Revolución Libertadora en 1955?",
-    "answer": "juan domingo perón",
+    "question": "ARG-68 | ¿Qué presidente fue derrocado por la Revolución Libertadora en 1955?",
+    "answer": "Juan Domingo Perón",
     "options": ["Arturo Frondizi", "Juan Domingo Perón", "Arturo Illia", "Héctor Cámpora"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-74 | ¿Cuál fue el último presidente de facto de Argentina?",
-    "answer": "reynaldo bignone",
+    "question": "ARG-69 | ¿Cuál fue el último presidente de facto de Argentina?",
+    "answer": "Reynaldo Bignone",
     "options": ["Roberto Viola", "Leopoldo Galtieri", "Reynaldo Bignone", "Jorge Videla"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-75 | ¿Cuál fue la primera capital de la Confederación Argentina después de la caída de Rosas?",
-    "answer": "paraná",
+    "question": "ARG-70 | ¿Cuál fue la primera capital de la Confederación Argentina después de la caída de Rosas?",
+    "answer": "Paraná",
     "options": ["Buenos Aires", "Paraná", "Córdoba", "Santa Fe"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-76 | ¿Cuál es el Parque Nacional más antiguo de Argentina?",
-    "answer": "nahuel huapi",
+    "question": "ARG-71 | ¿Cuál es el Parque Nacional más antiguo de Argentina?",
+    "answer": "Nahuel Huapi",
     "options": ["Iguazú", "Nahuel Huapi", "Lanín", "Los Glaciares"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-77 | ¿Con cuántas provincias limita Córdoba?",
+    "question": "ARG-72 | ¿Con cuántas provincias limita Córdoba?",
     "answer": "7",
     "options": ["7", "6", "8", "5"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-78 | ¿Quién fue presidente durante la Guerra de Malvinas?",
-    "answer": "leopoldo galtieri",
+    "question": "ARG-73 | ¿Quién fue presidente durante la Guerra de Malvinas?",
+    "answer": "Leopoldo Galtieri",
     "options": ["Roberto Viola", "Reynaldo Bignone", "Leopoldo Galtieri", "Videla"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-79 | ¿En qué minuto convirtió Messi su primer gol en los Mundiales?",
+    "question": "ARG-74 | ¿En qué minuto convirtió Messi su primer gol en los Mundiales?",
     "answer": "88'",
     "options": ["84'", "86'", "88'", "82'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-80 | ¿Cuál es la tercera ciudad más poblada de Argentina?",
-    "answer": "rosario",
+    "question": "ARG-75 | ¿Cuál es la tercera ciudad más poblada de Argentina?",
+    "answer": "Rosario",
     "options": ["Rosario", "Córdoba", "Mendoza", "La Plata"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-81 | ¿Qué presidente argentino ganó tres elecciones presidenciales?",
-    "answer": "juan domingo perón",
+    "question": "ARG-76 | ¿Qué presidente argentino ganó tres elecciones presidenciales?",
+    "answer": "Juan Domingo Perón",
     "options": ["Menem", "Yrigoyen", "Juan Domingo Perón", "Roca"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-82 | ¿Cuál es el monumento histórico donde se declaró la Independencia Argentina?",
-    "answer": "casa histórica de tucumán",
+    "question": "ARG-77 | ¿Cuál es el monumento histórico donde se declaró la Independencia Argentina?",
+    "answer": "Casa Histórica de Tucumán",
     "options": ["Cabildo", "Casa Histórica de Tucumán", "Manzana Jesuítica", "Palacio San José"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-83 | ¿Cuál es la segunda provincia más poblada de Argentina?",
-    "answer": "córdoba",
+    "question": "ARG-78 | ¿Cuál es la segunda provincia más poblada de Argentina?",
+    "answer": "Córdoba",
     "options": ["Córdoba", "Santa Fe", "Mendoza", "Tucumán"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-84 | ¿Qué provincia posee el glaciar Perito Moreno?",
-    "answer": "santa cruz",
+    "question": "ARG-79 | ¿Qué provincia posee el glaciar Perito Moreno?",
+    "answer": "Santa Cruz",
     "options": ["Chubut", "Santa Cruz", "Neuquén", "Tierra del Fuego"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-85 | Córdoba, al oeste limita con San Luis, La Rioja y:",
-    "answer": "catamarca",
+    "question": "ARG-80 | Córdoba, al oeste limita con San Luis, La Rioja y:",
+    "answer": "Catamarca",
     "options": ["Catamarca", "Santiago del Estero", "San Juan", "Tucumán"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-86 | ¿En qué provincia nació Alexis Mac Allister?",
-    "answer": "la pampa",
-    "options": ["Buenos Aires", "La Pampa", "Santa Fe", "Córdoba"]
+    "question": "ARG-81 | ¿En qué provincia nació Alexis Mac Allister?",
+    "answer": "La Pampa",
+    "options": ["Buenos Aires", "La Pampa", "Santa Fe"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-87 | ¿Contra qué selección convirtió Alexis Mac Allister su primer gol en los Mundiales?",
-    "answer": "polonia",
-    "options": ["México", "Australia", "Polonia", "Francia"]
+    "question": "ARG-82 | ¿Contra qué selección convirtió Alexis Mac Allister su primer gol en los Mundiales?",
+    "answer": "Polonia",
+    "options": ["México", "Australia", "Polonia"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-88 | ¿A quién asistió Alexis Mac Allister en la final del Mundial 2022?",
-    "answer": "ángel di maría",
-    "options": ["Julián Álvarez", "Ángel Di María", "Lautaro Martínez", "Lionel Messi"]
+    "question": "ARG-83 | ¿A quién asistió Alexis Mac Allister en la final del Mundial 2022?",
+    "answer": "Ángel Di María",
+    "options": ["Julián Álvarez", "Ángel Di María", "Lautaro Martínez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-89 | ¿En qué ciudad nació Nahuel Molina?",
-    "answer": "embalse",
-    "options": ["Embalse", "Río Cuarto", "Río Primero", "Córdoba"]
+    "question": "ARG-84 | ¿En qué ciudad nació Nahuel Molina?",
+    "answer": "Embalse",
+    "options": ["Embalse", "Río Cuarto", "Río Primero"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-90 | ¿Qué club hizo debutar a Nahuel Molina en Primera División?",
-    "answer": "boca juniors",
+    "question": "ARG-85 | ¿Qué club hizo debutar a Nahuel Molina en Primera División?",
+    "answer": "Boca Juniors",
     "options": ["Belgrano", "Talleres", "Boca Juniors", "Instituto"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-91 | ¿En qué ciudad nació Enzo Fernández?",
-    "answer": "san martín",
-    "options": ["Avellaneda", "San Martín", "Morón", "San Isidro"]
+    "question": "ARG-86 | ¿En qué ciudad nació Enzo Fernández?",
+    "answer": "San Martín",
+    "options": ["Avellaneda", "San Martín", "Morón"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-92 | ¿Qué premio individual ganó Enzo Fernández en el Mundial 2022?",
-    "answer": "mejor jugador joven",
-    "options": ["Balón de Oro", "Mejor Jugador Joven", "Bota de Oro", "Guante de Oro"]
+    "question": "ARG-87 | ¿Qué premio individual ganó Enzo Fernández en el Mundial 2022?",
+    "answer": "Mejor Jugador Joven",
+    "options": ["Balón de Oro", "Mejor Jugador Joven", "Bota de Oro"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-93 | ¿En qué ciudad nació Emiliano \"Dibu\" Martínez?",
-    "answer": "mar del plata",
-    "options": ["La Plata", "Mar del Plata", "Bahía Blanca", "Necochea"]
+    "question": "ARG-88 | ¿En qué ciudad nació Emiliano \"Dibu\" Martínez?",
+    "answer": "Mar del Plata",
+    "options": ["La Plata", "Mar del Plata", "Bahía Blanca"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-94 | ¿Cuál de estos jugadores nació en la provincia de Buenos Aires?",
-    "answer": "enzo fernández",
-    "options": ["Enzo Fernández", "Alexis Mac Allister", "Nahuel Molina", "Julián Álvarez"]
+    "question": "ARG-89 | ¿Cuál de estos jugadores nació en la provincia de Buenos Aires?",
+    "answer": "Enzo Fernández",
+    "options": ["Enzo Fernández", "Alexis Mac Allister", "Nahuel Molina"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-95 | ¿Qué jugador utilizó la camiseta número 24 en el Mundial 2022?",
-    "answer": "enzo fernández",
-    "options": ["Nahuel Molina", "Enzo Fernández", "Alexis Mac Allister", "Gonzalo Montiel"]
+    "question": "ARG-90 | ¿Qué jugador utilizó la camiseta número 24 en el Mundial 2022?",
+    "answer": "Enzo Fernández",
+    "options": ["Nahuel Molina", "Enzo Fernández", "Alexis Mac Allister"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-96 | ¿Contra qué selección marcó Gabriel Batistuta su primer gol en los Mundiales?",
-    "answer": "grecia",
-    "options": ["Nigeria", "Grecia", "Bulgaria", "Rumania"]
+    "question": "ARG-91 | ¿Contra qué selección marcó Gabriel Batistuta su primer gol en los Mundiales?",
+    "answer": "Grecia",
+    "options": ["Nigeria", "Grecia", "Bulgaria"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-97 | ¿En qué minuto convirtió Batistuta su primer gol ante Grecia en el Mundial 1994?",
+    "question": "ARG-92 | ¿En qué minuto convirtió Batistuta su primer gol ante Grecia en el Mundial 1994?",
     "answer": "17'",
-    "options": ["17'", "12'", "21'", "25'"]
+    "options": ["17'", "12'", "21'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-98 | ¿En qué minuto convirtió su segundo gol ante Grecia en el Mundial 1994?",
+    "question": "ARG-93 | ¿En qué minuto convirtió su segundo gol ante Grecia en el Mundial 1994?",
     "answer": "44'",
-    "options": ["32'", "44'", "56'", "61'"]
+    "options": ["32'", "44'", "56'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-99 | ¿Cómo convirtió Batistuta el tercer gol de su hat-trick ante Grecia?",
-    "answer": "de penal",
-    "options": ["De cabeza", "De tiro libre", "De penal", "De volea"]
+    "question": "ARG-94 | ¿Cómo convirtió Batistuta el tercer gol de su hat-trick ante Grecia?",
+    "answer": "De penal",
+    "options": ["De cabeza", "De tiro libre", "De penal"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-100 | ¿Cuál es el récord mundialista único de Gabriel Batistuta?",
-    "answer": "hat-trick en dos mundiales distintos",
-    "options": ["Más goles de cabeza para Argentina", "Hat-trick en dos Mundiales distintos", "Más goles de penal para Argentina", "Goles en cuatro mundiales diferentes"]
+    "question": "ARG-95 | ¿Cuál es el récord mundialista único de Gabriel Batistuta?",
+    "answer": "Hat-trick en dos Mundiales distintos",
+    "options": ["Más goles de cabeza para Argentina", "Hat-trick en dos Mundiales distintos", "Más goles de penal para Argentina"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-101 | ¿Cuántos goles convirtió Batistuta en los Mundiales?",
+    "question": "ARG-96 | ¿Cuántos goles convirtió Batistuta en los Mundiales?",
     "answer": "10",
-    "options": ["8", "10", "12", "14"]
+    "options": ["8", "10", "12"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-102 | ¿En qué dos fechas (día y mes) logró Batistuta sus dos hat-tricks mundialistas?",
+    "question": "ARG-97 | ¿En qué dos fechas (día y mes) logró Batistuta sus dos hat-tricks mundialistas?",
     "answer": "21 de junio",
-    "options": ["19 de junio", "21 de junio", "25 de junio", "28 de junio"]
+    "options": ["19 de junio", "21 de junio", "25 de junio"]
   },
+  {
+    "country": "Argentina",
+    "question": "ARG-98 | ¿Cuál es la 13.ª ciudad más poblada de Argentina?",
+    "answer": "Neuquén",
+    "options": ["Resistencia", "Neuquén", "Posadas"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-99 | ¿Qué defensor nacido en Justiniano Posse integró los planteles argentinos en los Mundiales 2010 y 2014?",
+    "answer": "Martín Demichelis",
+    "options": ["Walter Samuel", "Martín Demichelis", "Nicolás Burdisso"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-100 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2022?",
+    "answer": "Lionel Messi (penal)",
+    "options": ["Lautaro Martínez", "Lionel Messi (penal)", "Julián Álvarez", "Enzo Fernández"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-101 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2018?",
+    "answer": "Sergio Agüero",
+    "options": ["Sergio Agüero", "Messi", "Marcos Rojo", "Gabriel Mercado"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-102 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2014?",
+    "answer": "Sead Kolašinac (en contra)",
+    "options": ["Messi", "Higuaín", "Sead Kolašinac (en contra)", "Di María"]
+  }
 
   // ==========================================
   // PARAGUAY (PAR)
@@ -9008,285 +9026,291 @@ export const QUESTIONS_DB: QuestionItem[] = [
   },
   {
     "country": "Portugal",
-    "question": "POR-01 | ¿Cuál es la segunda ciudad más importante de Portugal?",
-    "answer": "Oporto (Porto)",
-    "options": ["Braga", "Coimbra", "Oporto (Porto)"]
+    "question": "POR-1 | ¿Cuál es la capital de Portugal?",
+    "answer": "Lisboa",
+    "options": ["Porto", "Lisboa", "Faro"]
   },
   {
     "country": "Portugal",
-    "question": "POR-02 | ¿Qué famoso navegante portugués llegó a la India por vía marítima?",
+    "question": "POR-2 | ¿Qué famoso navegante portugués llegó a la India por vía marítima?",
     "answer": "Vasco da Gama",
-    "options": ["Cristóbal Colón", "Vasco da Gama", "Magallanes"]
+    "options": ["Cristóbal Colón", "Vasco da Gama", "Américo Vespucio"]
   },
   {
     "country": "Portugal",
-    "question": "POR-03 | ¿Qué explorador portugués lideró la primera vuelta al mundo?",
+    "question": "POR-3 | ¿Qué explorador portugués lideró la primera vuelta al mundo?",
     "answer": "Fernando de Magallanes",
-    "options": ["Hernán Cortés", "Fernando de Magallanes", "Vasco Núñez de Balboa"]
+    "options": ["Hernán Cortés", "Fernando de Magallanes", "Vasco da Gama"]
   },
   {
     "country": "Portugal",
-    "question": "POR-04 | ¿Cuál fue uno de los mayores imperios marítimos de la historia?",
+    "question": "POR-4 | ¿Cuál fue uno de los mayores imperios marítimos de la historia?",
     "answer": "Portugal",
-    "options": ["Portugal", "Suiza", "Bélgica"]
+    "options": ["Portugal", "Suiza", "Austria"]
   },
   {
     "country": "Portugal",
-    "question": "POR-05 | ¿Qué famoso estilo musical tradicional pertenece a Portugal?",
+    "question": "POR-5 | ¿Qué colonia portuguesa en Sudamérica se independizó en 1822?",
+    "answer": "Brasil",
+    "options": ["Perú", "Brasil", "Colombia"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-6 | ¿Qué archipiélago portugués está en el océano Atlántico?",
+    "answer": "Madeira",
+    "options": ["Canarias", "Madeira", "Baleares"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-7 | ¿Qué famoso estilo musical tradicional pertenece a Portugal?",
     "answer": "Fado",
-    "options": ["Tango", "Fado", "Samba"]
+    "options": ["Tango", "Fado", "Flamenco"]
   },
   {
     "country": "Portugal",
-    "question": "POR-06 | ¿Qué dictador gobernó Portugal durante gran parte del siglo XX?",
+    "question": "POR-8 | ¿Qué ciudad portuguesa es conocida por sus tranvías amarillos?",
+    "answer": "Lisboa",
+    "options": ["Lisboa", "Braga", "Coimbra"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-9 | ¿Qué dictador gobernó Portugal durante gran parte del siglo XX?",
     "answer": "Salazar",
-    "options": ["Franco", "Salazar", "Mussolini"]
+    "options": ["Franco Souza", "Salzar", "Mussolini Ighola"]
   },
   {
     "country": "Portugal",
-    "question": "POR-07 | ¿Qué revolución terminó con la dictadura portuguesa en 1974?",
+    "question": "POR-10 | ¿Qué revolución terminó con la dictadura portuguesa en 1974?",
     "answer": "Revolución de los Claveles",
-    "options": ["Revolución Industrial", "Revolución de los Claveles", "Revolución Portuguesa"]
+    "options": ["Revolución Industrial", "Revolución de los Claveles", "Revolución Liberal"]
   },
   {
     "country": "Portugal",
-    "question": "POR-08 | ¿Qué famoso pastel típico es originario de Lisboa?",
+    "question": "POR-11 | ¿Qué famoso pastel típico es originario de Lisboa?",
     "answer": "Pastel de nata",
     "options": ["Croissant", "Pastel de nata", "Churro"]
   },
   {
     "country": "Portugal",
-    "question": "POR-09 | ¿Qué puesto logró Portugal en su primer Mundial?",
+    "question": "POR-12 | ¿En qué año Portugal debutó en un Mundial masculino?",
+    "answer": "1966",
+    "options": ["1958", "1966", "1970"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-13 | ¿Qué puesto logró Portugal en su primer Mundial?",
     "answer": "Tercer puesto",
     "options": ["Campeón", "Tercer puesto", "Subcampeón"]
   },
   {
     "country": "Portugal",
-    "question": "POR-10 | ¿Quién fue la gran figura portuguesa del Mundial 1966?",
-    "answer": "Eusébio",
-    "options": ["Cristiano Ronaldo", "Eusébio", "Vasco Dalmelin"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-11 | ¿Qué selección eliminó a Portugal en semifinales de 1966?",
-    "answer": "Inglaterra",
-    "options": ["Alemania", "Inglaterra", "Brasil"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-12 | ¿Qué selección derrotó Portugal para quedarse con el tercer puesto en 1966?",
+    "question": "POR-14 | ¿Qué selección derrotó Portugal para quedarse con el tercer puesto en 1966?",
     "answer": "Unión Soviética",
     "options": ["Unión Soviética", "Marruecos", "Hungría"]
   },
   {
     "country": "Portugal",
-    "question": "POR-13 | ¿Qué selección perdió 5-3 ante Portugal en el Mundial 1966 luego de ir ganando 3-0?",
+    "question": "POR-15 | ¿Qué selección remontó un 0-3 y perdió 5-3 ante Portugal en el Mundial 1966?",
     "answer": "Corea del Norte",
     "options": ["Austria", "Corea del Norte", "México"]
   },
   {
     "country": "Portugal",
-    "question": "POR-14 | ¿Quién es el máximo goleador histórico de Portugal en Mundiales?",
-    "answer": "Eusébio",
-    "options": ["Cristiano Ronaldo", "Eusébio", "Pauleta"]
+    "question": "POR-16 | ¿En qué Mundial Cristiano Ronaldo jugó por primera vez?",
+    "answer": "2006",
+    "options": ["2002", "2006", "2010"]
   },
   {
     "country": "Portugal",
-    "question": "POR-15 | ¿Qué selección eliminó a Portugal en semifinales del Mundial 2006?",
+    "question": "POR-17 | ¿Qué puesto obtuvo Portugal en Alemania 2006?",
+    "answer": "Cuarto puesto",
+    "options": ["Tercer puesto", "Cuarto puesto", "Subcampeón"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-18 | ¿Qué selección eliminó a Portugal en semifinales del Mundial 2006?",
     "answer": "Francia",
     "options": ["Italia", "Francia", "Alemania"]
   },
   {
     "country": "Portugal",
-    "question": "POR-16 | ¿Qué selección venció a Portugal en el partido por el tercer puesto de 2006?",
+    "question": "POR-19 | ¿Qué selección venció a Portugal en el partido por el tercer puesto de 2006?",
     "answer": "Alemania",
     "options": ["Alemania", "Italia", "Brasil"]
   },
   {
     "country": "Portugal",
-    "question": "POR-17 | ¿Contra qué selección Cristiano Ronaldo marcó un famoso hat-trick en Rusia 2018?",
+    "question": "POR-20 | ¿Qué selección eliminó a Portugal en el Mundial 2018?",
+    "answer": "Uruguay",
+    "options": ["Uruguay", "Francia", "Croacia"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-21 | ¿Quién marcó un hat-trick para Portugal ante Suiza en 2022?",
+    "answer": "Gonçalo Ramos",
+    "options": ["Cristiano Ronaldo", "Gonçalo Ramos", "Bruno Fernandes"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-22 | ¿Contra qué selección Cristiano Ronaldo marcó un famoso hat-trick en Rusia 2018?",
     "answer": "España",
-    "options": ["España", "Alemania", "Brasil"]
+    "options": ["España", "Alemania", "Marruecos"]
   },
   {
     "country": "Portugal",
-    "question": "POR-18 | ¿Qué entrenador dirigió a Portugal campeón de la Euro 2016 y en el Mundial 2018?",
-    "answer": "Fernando Santos",
-    "options": ["José Mourinho", "Fernando Santos", "André Villas-Boas"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-19 | ¿Qué selección eliminó a Portugal en octavos del Mundial 2010?",
-    "answer": "España",
-    "options": ["España", "Holanda", "Alemania"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-20 | ¿Cómo se llama el himno nacional de Portugal?",
-    "answer": "A Portuguesa",
-    "options": ["A Portuguesa", "Fado Nacional", "Viceres Portugal"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-21 | ¿En qué año se convirtió oficialmente en himno nacional “A Portuguesa”?",
-    "answer": "1911",
-    "options": ["1911", "1880", "1933"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-22 | ¿Quién compuso la música del himno de Portugal?",
+    "question": "POR-24 | ¿Quién compuso la música del himno de Portugal?",
     "answer": "Alfredo Keil",
     "options": ["Fernando Pessoa", "Alfredo Keil", "José Saramago"]
   },
   {
     "country": "Portugal",
-    "question": "POR-23 | ¿Quién escribió la letra del himno portugués?",
-    "answer": "Henrique Lopes de Mendonça",
-    "options": ["Henrique Lopes de Mendonça", "Vasco da Gama", "António Salazar"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-24 | ¿Qué representa la esfera armilar que aparece en la bandera de Portugal?",
+    "question": "POR-25 | ¿Qué representa la esfera armilar que aparece en la bandera de Portugal?",
     "answer": "La época de exploraciones marítimas portuguesas",
-    "options": ["El poder militar", "La época de exploraciones marítimas portuguesas", "Las colonias africanas"]
+    "options": ["El poder militar", "La época de exploraciones marítimas portuguesas", "La monarquía portuguesa"]
   },
   {
     "country": "Portugal",
-    "question": "POR-25 | ¿Qué simbolizan los cinco escudos azules en la bandera portuguesa?",
+    "question": "POR-26 | ¿Qué simbolizan los cinco escudos azules en la bandera portuguesa?",
     "answer": "Las cinco derrotas árabes frente a Portugal",
-    "options": ["Cinco reyes europeos", "Las cinco derrotas árabes frente a Portugal", "Cinco provincias históricas"]
+    "options": ["Cinco reyes europeos", "Las cinco derrotas árabes frente a Portugal", "Cinco regiones históricas"]
   },
   {
     "country": "Portugal",
-    "question": "POR-26 | ¿Qué representan los puntos blancos dentro de los escudos de la bandera?",
-    "answer": "Las llagas de Cristo según la tradición",
-    "options": ["Monedas antiguas", "Castillos portugueses", "Las llagas de Cristo según la tradición"]
+    "question": "POR-27 | ¿Qué representan los castillos dorados de la bandera portuguesa?",
+    "answer": "Las fortalezas conquistadas a los musulmanes",
+    "options": ["Las fortalezas conquistadas a los musulmanes", "Los castillos reales", "Las provincias del país"]
   },
   {
     "country": "Portugal",
-    "question": "POR-27 | ¿Quién fue el histórico dictador portugués del siglo XX?",
+    "question": "POR-28 | ¿Qué sistema político tiene actualmente Portugal?",
+    "answer": "República semipresidencialista",
+    "options": ["Monarquía absoluta", "República semipresidencialista", "Monarquía parlamentaria"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-29 | ¿Quién fue el histórico dictador portugués del siglo XX?",
     "answer": "António de Oliveira Salazar",
     "options": ["António de Oliveira Salazar", "Francisco Franco", "Marcelo Caetano"]
   },
   {
     "country": "Portugal",
-    "question": "POR-28 | ¿Qué famoso escritor portugués ganó el Premio Nobel de Literatura en 1998?",
+    "question": "POR-30 | ¿Qué famoso escritor portugués ganó el Premio Nobel de Literatura en 1998?",
     "answer": "José Saramago",
-    "options": ["Eduardo Pessoa", "José Saramago", "Luís de Camões"]
+    "options": ["Fernando Pessoa", "José Saramago", "Eça de Queirós"]
   },
   {
     "country": "Portugal",
-    "question": "POR-29 | ¿Qué cantante portuguesa es considerada una de las mayores representantes del fado?",
+    "question": "POR-31 | ¿Qué cantante portuguesa es considerada una de las mayores representantes del fado?",
     "answer": "Amália Rodrigues",
-    "options": ["Amália Rodrigues", "Andrea Da Felix", "Ana Do Souza"]
+    "options": ["Amália Rodrigues", "Andrea Da Felix", "Dulce Pontes"]
   },
   {
     "country": "Portugal",
-    "question": "POR-30 | ¿Cuál es la tercera ciudad más poblada de Portugal?",
-    "answer": "Braga",
-    "options": ["Braga", "Coimbra", "Faro"]
+    "question": "POR-32 | ¿Contra qué selección debutó Portugal en la Copa del Mundo de 1966?",
+    "answer": "Hungría",
+    "options": ["Bulgaria", "Hungría", "Brasil"]
   },
   {
     "country": "Portugal",
-    "question": "POR-31 | ¿Cuál es la cuarta ciudad más poblada de Portugal?",
-    "answer": "Amadora",
-    "options": ["Amadora", "Setúbal", "Aveiro"]
+    "question": "POR-33 | ¿Cuál fue el resultado del debut de Portugal en el Mundial 1966?",
+    "answer": "3-1",
+    "options": ["2-1", "3-1", "1-0"]
   },
   {
     "country": "Portugal",
-    "question": "POR-32 | ¿Cuál es la séptima ciudad más poblada de Portugal?",
-    "answer": "Almada",
-    "options": ["Almada", "Viseu", "Leiria"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-33 | ¿Cuál es la novena ciudad más poblada de Portugal?",
-    "answer": "Setúbal",
-    "options": ["Setúbal", "Évora", "Faro"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-34 | ¿Cuántos distritos tiene Portugal continental?",
-    "answer": "18",
-    "options": ["16", "18", "20"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-35 | ¿Cuál es the río más largo de Portugal?",
-    "answer": "Tajo",
-    "options": ["Duero", "Tajo", "Miño"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-36 | ¿Qué río atraviesa la ciudad de Oporto?",
-    "answer": "Duero",
-    "options": ["Tajo", "Duero", "Mondego"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-37 | ¿Cuál es la montaña más alta de Portugal?",
-    "answer": "Pico (Azores)",
-    "options": ["Serra da Estrela", "Pico (Azores)", "Monte Fóia"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-38 | ¿Quién fue el capitán de Portugal en el Mundial 1966?",
-    "answer": "Mário Coluna",
-    "options": ["Eusébio", "Mário Coluna", "José Torres"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-39 | ¿Quién era el entrenador de Portugal en el Mundial 1966?",
+    "question": "POR-34 | ¿Quién era el director técnico de Portugal en el Mundial 1966?",
     "answer": "Otto Glória",
     "options": ["Otto Glória", "Fernando Santos", "José Mourinho"]
   },
   {
     "country": "Portugal",
-    "question": "POR-40 | ¿Cuántos goles marcó Eusébio en el Mundial 1966?",
-    "answer": "9",
-    "options": ["7", "8", "9"]
+    "question": "POR-35 | ¿Quién fue el capitán de Portugal en el debut mundialista de 1966?",
+    "answer": "Mário Coluna",
+    "options": ["Eusébio", "Mário Coluna", "José Torres"]
   },
   {
     "country": "Portugal",
-    "question": "POR-41 | ¿Contra qué selección Eusébio marcó cuatro goles en el Mundial 1966?",
-    "answer": "Corea del Norte",
-    "options": ["Brasil", "Corea del Norte", "Hungría"]
+    "question": "POR-36 | ¿En qué estadio se jugó el partido Portugal-Hungría del mundial 1966?",
+    "answer": "Old Trafford",
+    "options": ["Wembley", "Goodison Park", "Old Trafford"]
   },
   {
     "country": "Portugal",
-    "question": "POR-42 | ¿En qué minuto José Augusto convirtió el primer gol de Portugal en la historia de los Mundiales?",
-    "answer": "2'",
-    "options": ["2'", "11'", "19'"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-43 | ¿Qué jugador marcó dos goles para Portugal en su debut mundialista de 1966?",
+    "question": "POR-37 | ¿Quién anotó el primer gol de Portugal en su historia en los Mundiales?",
     "answer": "José Augusto",
     "options": ["Eusébio", "José Augusto", "José Torres"]
   },
   {
     "country": "Portugal",
-    "question": "POR-44 | ¿Quién convirtió el gol de Portugal en la semifinal ante Francia en el Mundial 2006?",
+    "question": "POR-38 | ¿En qué minuto llegó ese primer gol mundialista de Portugal Hungria 1966?",
+    "answer": "2'",
+    "options": ["2'", "15'", "31'"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-40 | ¿Quién convirtió el tercer gol portugués ante Hungría?",
+    "answer": "José Torres",
+    "options": ["António Simões", "José Torres", "Jaime Graça"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-42 | ¿Qué dorsal utilizó Eusébio en ese partido hungria- portugal mundial 1966?",
+    "answer": "13",
+    "options": ["9", "10", "13"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-43 | ¿En qué grupo estaba Portugal en el Mundial 1966?",
+    "answer": "Grupo 3",
+    "options": ["Grupo 1", "Grupo 2", "Grupo 3"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-44 | ¿Cuál fue el gran terremoto que devastó Lisboa en 1755?",
+    "answer": "Terremoto de Lisboa",
+    "options": ["Terremoto de Oporto", "Terremoto de Lisboa", "Terremoto del Algarve"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-45 | ¿Qué poeta escribió \"Os Lusíadas\", obra épica nacional de Portugal?",
+    "answer": "Luís de Camões",
+    "options": ["Fernando Pessoa", "Luís de Camões", "José Saramago"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-46 | ¿Qué premio ganó José Saramago en 1998?",
+    "answer": "Nobel de Literatura",
+    "options": ["Premio Cervantes", "Nobel de Literatura", "Premio Príncipe de Asturias"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-47 | ¿Cuál es la segunda ciudad más poblada de Portugal?",
+    "answer": "Oporto",
+    "options": ["Coimbra", "Oporto", "Faro"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-48 | ¿Quién fue el primer rey de Portugal?",
+    "answer": "Afonso Henriques",
+    "options": ["João I", "Afonso Henriques", "Manuel I"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-49 | ¿Cuántos goles marcó Eusébio en el Mundial 1966?",
+    "answer": "9",
+    "options": ["7", "8", "9"]
+  },
+  {
+    "country": "Portugal",
+    "question": "POR-50 | ¿Qué futbolista portugués es el máximo goleador histórico de la selección?",
     "answer": "Cristiano Ronaldo",
-    "options": ["Cristiano Ronaldo", "Pauleta", "Deco"]
+    "options": ["Pauleta", "Eusébio", "Cristiano Ronaldo"]
   },
   {
     "country": "Portugal",
-    "question": "POR-45 | ¿De qué manera anotó Cristiano Ronaldo ese gol ante Francia en 2006?",
-    "answer": "Penal",
-    "options": ["Tiro libre", "Penal", "Cabezazo"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-46 | ¿Quién fue el capitán de Portugal en el Mundial 2006?",
-    "answer": "Luís Figo",
-    "options": ["Luís Figo", "Cristiano Ronaldo", "Ricardo Carvalho"]
-  },
-  {
-    "country": "Portugal",
-    "question": "POR-47 | ¿Qué arquero portugués atajó tres penales ante Inglaterra en los cuartos de final del Mundial 2006?",
-    "answer": "Ricardo",
-    "options": ["Rui Patrício", "Ricardo", "Vítor Baía"]
+    "question": "POR-51 | ¿Cuál es la novena ciudad más poblada de Portugal?",
+    "answer": "Setúbal",
+    "options": ["Setúbal", "Évora", "Portimão"]
   },
   {
     "country": "Egipto",
