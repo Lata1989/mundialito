@@ -7470,7 +7470,7 @@ export const QUESTIONS_DB: QuestionItem[] = [
     "question": "ARG-102 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2014?",
     "answer": "Sead Kolašinac (en contra)",
     "options": ["Messi", "Higuaín", "Sead Kolašinac (en contra)", "Di María"]
-  }
+  },
 
   // ==========================================
   // PARAGUAY (PAR)
