@@ -316,15 +316,15 @@ export default function SoccerQuiz() {
         </button>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-12 mb-6 max-w-7xl w-full px-4">
-          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center bg-white rounded-3xl p-3 md:p-4 shadow-xl border border-slate-200 transform hover:scale-102 transition-transform">
+          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center p-3 md:p-4 transform">
             <img
-              src="/logofunesil.jpeg"
+              src="/logofunesil.png"
               alt="Logo Funesil"
-              className="h-full w-full object-contain rounded-2xl"
+              className="h-full w-full object-contain"
             />
           </div>
 
-          <div className="h-64 sm:h-76 md:h-96 aspect-square flex items-center justify-center bg-black rounded-[2.5rem] md:rounded-[4rem] p-6 md:p-8 shadow-2xl filter drop-shadow-lg transform hover:scale-102 transition-transform">
+          <div className="h-64 sm:h-76 md:h-96 aspect-square flex items-center justify-center bg-black rounded-[2.5rem] md:rounded-[4rem] p-6 md:p-8 shadow-2xl filter drop-shadow-lg transform">
             <img
               src="/TRINI.png"
               alt="Logo TRINI"
@@ -332,11 +332,11 @@ export default function SoccerQuiz() {
             />
           </div>
 
-          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center bg-white rounded-3xl p-3 md:p-4 shadow-xl border border-slate-200 transform hover:scale-102 transition-transform">
+          <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center p-3 md:p-4 transform">
             <img
-              src="/logosfunesil.jpeg"
+              src="/logosfunesil.png"
               alt="Logos Funesil"
-              className="h-full w-full object-contain rounded-2xl"
+              className="h-full w-full object-contain"
             />
           </div>
         </div>
@@ -504,10 +504,11 @@ export default function SoccerQuiz() {
       {/* SECCIÓN DERECHA: CANCHA DE FÚTBOL */}
       <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
         <div
-          className="relative w-full max-w-[700px] aspect-[100/135] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
+          className="relative w-full max-w-[700px] aspect-[100/115] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
           style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
         >
           {/* Líneas de Marcación */}
+          <div className="absolute top-1/2 left-0 w-full h-[3px] bg-white/40 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
