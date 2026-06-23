@@ -474,48 +474,61 @@ export default function SoccerQuiz() {
         )}
       </div>
 
-      {/* DIBUJO DE LA CANCHA AGRANDADA (+10%) Y SIN SOMBRAS BLUR */}
-      <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
-        <div
-          className="relative w-full max-w-[616px] aspect-[100/115] border-[5px] border-white/30 rounded-2xl overflow-hidden transition-all duration-300 mx-auto"
-          style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
-        >
-          <div className="absolute top-1/2 left-0 w-full h-[3px] bg-white/40 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
+      {/* SECCIÓN DERECHA: LOGOS + CANCHA ACHICADA (-15%) */}
+      <div className={`flex-[1.8] flex flex-col items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
+        <div className="w-full max-w-[524px] flex flex-col gap-4">
 
-          <div className="absolute top-0 left-1/2 w-[62%] h-[14%] border-b-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
-          <div className="absolute top-0 left-1/2 w-[32%] h-[5%] border-b-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
-          <div className="absolute bottom-0 left-1/2 w-[62%] h-[14%] border-t-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
-          <div className="absolute bottom-0 left-1/2 w-[32%] h-[5%] border-t-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
+          {/* CONTENEDOR DE LOGOS 100% INVISIBLE Y AMPLIADO */}
+<div className="w-full flex items-center justify-center h-40 bg-transparent border-0 p-0 overflow-visible select-none mb-6">            <img
+              src="/logosfunesil.png"
+              alt="Logos Funesil"
+              className="h-full w-full object-contain scale-150 transform origin-center"
+            />
+          </div>
 
-          {POSITION_TEMPLATES.map((p, index) => {
-            const topPos = p.top;
-            const isBallOwner = index === blueBallOwnerIndex;
-            return (
-              <div
-                key={`blue-${index}`}
-                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-blue-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
-                style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
-              >
-                {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}
-              </div>
-            );
-          })}
+          {/* DIBUJO DE LA CANCHA ACHICADA A MAX-W-[524PX] */}
+          <div
+            className="relative w-full aspect-[100/115] border-[5px] border-white/30 rounded-2xl overflow-hidden transition-all duration-300"
+            style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
+          >
+            <div className="absolute top-1/2 left-0 w-full h-[3px] bg-white/40 -translate-y-1/2" />
+            <div className="absolute top-1/2 left-1/2 w-32 h-32 border-[3px] border-white/40 rounded-full -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-1/2 left-1/2 w-2.5 h-2.5 bg-white/50 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
-          {POSITION_TEMPLATES.map((p, index) => {
-            const topPos = 100 - p.top;
-            const isBallOwner = index === redBallOwnerIndex;
-            return (
-              <div
-                key={`red-${index}`}
-                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-red-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
-                style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
-              >
-                {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}
-              </div>
-            );
-          })}
+            <div className="absolute top-0 left-1/2 w-[62%] h-[14%] border-b-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
+            <div className="absolute top-0 left-1/2 w-[32%] h-[5%] border-b-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
+            <div className="absolute bottom-0 left-1/2 w-[62%] h-[14%] border-t-[3px] border-x-[3px] border-white/40 -translate-x-1/2" />
+            <div className="absolute bottom-0 left-1/2 w-[32%] h-[5%] border-t-[3px] border-x-[3px] border-white/30 -translate-x-1/2" />
+
+            {POSITION_TEMPLATES.map((p, index) => {
+              const topPos = p.top;
+              const isBallOwner = index === blueBallOwnerIndex;
+              return (
+                <div
+                  key={`blue-${index}`}
+                  className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-blue-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
+                  style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
+                >
+                  {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}
+                </div>
+              );
+            })}
+
+            {POSITION_TEMPLATES.map((p, index) => {
+              const topPos = 100 - p.top;
+              const isBallOwner = index === redBallOwnerIndex;
+              return (
+                <div
+                  key={`red-${index}`}
+                  className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-red-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
+                  style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
+                >
+                  {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}
+                </div>
+              );
+            })}
+          </div>
+
         </div>
       </div>
     </div>
