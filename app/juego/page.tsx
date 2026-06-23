@@ -12,8 +12,8 @@ const POSITION_TEMPLATES = [
   { role: "DEF", top: 82, left: 65, dorsal: "6" },
   { role: "LAT", top: 74, left: 13, dorsal: "4" },
   { role: "LAT", top: 74, left: 85, dorsal: "3" },
-  { role: "5", top: 60, left: 50, dorsal: "5" },
-  { role: "VOL", top: 53, left: 30, dorsal: "8" },
+  { role: "5", top: 68, left: 50, dorsal: "5" },
+  { role: "VOL", top: 55, left: 30, dorsal: "8" },
   { role: "VOL", top: 43, left: 72, dorsal: "10" },
   { role: "EXT", top: 28, left: 23, dorsal: "7" },
   { role: "EXT", top: 20, left: 82, dorsal: "11" },
@@ -474,9 +474,10 @@ export default function SoccerQuiz() {
         )}
       </div>
 
+      {/* DIBUJO DE LA CANCHA AGRANDADA (+10%) Y SIN SOMBRAS BLUR */}
       <div className={`flex-[1.8] relative flex items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
         <div
-          className="relative w-full max-w-[700px] aspect-[100/115] border-4 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.55)] transition-all duration-300 mx-auto"
+          className="relative w-full max-w-[616px] aspect-[100/115] border-[5px] border-white/30 rounded-2xl overflow-hidden transition-all duration-300 mx-auto"
           style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
         >
           <div className="absolute top-1/2 left-0 w-full h-[3px] bg-white/40 -translate-y-1/2" />
@@ -494,7 +495,7 @@ export default function SoccerQuiz() {
             return (
               <div
                 key={`blue-${index}`}
-                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-blue-600 transition-all duration-500 shadow-lg flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
+                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-blue-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
                 style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
               >
                 {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}
@@ -508,7 +509,7 @@ export default function SoccerQuiz() {
             return (
               <div
                 key={`red-${index}`}
-                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-red-600 transition-all duration-500 shadow-lg flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
+                className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 bg-red-600 transition-all duration-500 flex items-center justify-center font-black text-sm text-white border-white/80 ${p.role === "ARQ" ? "border-yellow-400 font-bold bg-zinc-800" : ""} ${isBallOwner ? "scale-[1.35] z-50 ring-4 ring-yellow-400 shadow-[0_0_35px_rgba(250,204,21,1)]" : ""}`}
                 style={{ top: `${topPos}%`, left: `${p.left}%`, transform: "translate(-50%, -50%)" }}
               >
                 {isBallOwner ? <span className="animate-pulse text-base">⚽</span> : p.dorsal}

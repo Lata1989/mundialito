@@ -158,7 +158,7 @@ export default function PublicScreen() {
           {/* DIBUJO DE LA CANCHA (Gigante y protagonista) */}
           <div className="w-full flex justify-center lg:justify-end px-2">
             <div
-              className="relative w-full max-w-[720px] aspect-[100/115] border-4 border-white/20 rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.45)] transition-all duration-300"
+              className="relative w-full max-w-[576px] aspect-[100/115] border-4 border-white/20 rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.45)] transition-all duration-300"
               style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
             >
               {/* Líneas de la Cancha */}
