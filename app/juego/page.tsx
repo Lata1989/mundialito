@@ -197,7 +197,7 @@ export default function SoccerQuiz() {
 
     if (remainingQuestions.length === 0) {
       const refreshedPool = initializeQuestionPool(teams.blue, teams.red);
-      setCurrentQ(refresPool[0]);
+      setCurrentQ(refreshedPool[0]); // <-- Corregido aquí (refreshedPool)
       setRemainingQuestions(refreshedPool.slice(1));
     } else {
       const [nextQ, ...rest] = remainingQuestions;
@@ -298,7 +298,7 @@ export default function SoccerQuiz() {
   if (!teams || !teams.red) {
     return (
       <div className={`relative flex flex-col items-center justify-center min-h-screen p-4 md:p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
-        
+
         {/* CABECERA ULTRA DISCRETA CON ID Y TEMA */}
         <div className="absolute top-4 left-4 right-4 md:top-6 md:left-6 md:right-6 flex justify-between items-center select-none">
           <span className="text-xs font-mono opacity-50 tracking-wider">
