@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useSocketListener } from "@/lib/socket";
 import type { GameState } from "@/lib/types";
-import { BANDERAS, ROLE_LABELS } from "@/lib/gameConstants";
+import { BANDERAS } from "@/lib/gameConstants";
 
 const POSITION_TEMPLATES = [
   { role: "ARQ", top: 96, left: 50, dorsal: "1" },
@@ -44,9 +43,56 @@ const getTeamCode = (name: string) => {
 
 export default function PublicScreen() {
   const [gameState, setGameState] = useState<GameState>(defaultState);
+  const [matchIdInput, setMatchIdInput] = useState("");
+  const [currentMatchId, setCurrentMatchId] = useState("");
+  const [connected, setConnected] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [darkMode, setDarkMode] = useState(true);
 
-  useSocketListener(setGameState);
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const matchId = searchParams.get("matchId")?.trim().toUpperCase();
+    if (matchId) {
+      setMatchIdInput(matchId);
+      setCurrentMatchId(matchId);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!currentMatchId) return;
+
+    setError(null);
+    setConnected(false);
+
+    const source = new EventSource(`/sse/${encodeURIComponent(currentMatchId)}`);
+
+    const onUpdate = (event: MessageEvent) => {
+      try {
+        const payload = JSON.parse(event.data) as GameState;
+        setGameState(payload);
+        setConnected(true);
+        setError(null);
+      } catch (err) {
+        setError("Error al procesar datos del partido.");
+      }
+    };
+
+    source.addEventListener("game:update", onUpdate as EventListener);
+    source.onerror = () => {
+      setError("No se pudo conectar. Verifica el ID y recarga.");
+      setConnected(false);
+    };
+
+    return () => {
+      source.close();
+    };
+  }, [currentMatchId]);
+
+  const connectToMatch = () => {
+    const cleaned = matchIdInput.trim().toUpperCase();
+    if (!cleaned) return;
+    setCurrentMatchId(cleaned);
+  };
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -77,6 +123,40 @@ export default function PublicScreen() {
             {darkMode ? "☀️ Claro" : "🌙 Oscuro"}
           </button>
         </header>
+
+        {/* CONTENEDOR DE CONEXIÓN (Se oculta una vez conectado de manera exitosa) */}
+        {!connected && (
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-4 text-sm text-slate-100 shadow-lg transition-all duration-300">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex-1 min-w-0">
+                <input
+                  value={matchIdInput}
+                  onChange={(event) => setMatchIdInput(event.target.value)}
+                  placeholder="Ingrese ID de partido"
+                  className="w-full rounded-2xl border border-white/15 bg-black/15 px-4 py-3 text-base text-white outline-none transition focus:border-cyan-400"
+                />
+              </div>
+              <button
+                type="button"
+                onClick={connectToMatch}
+                className="whitespace-nowrap rounded-2xl bg-cyan-500 px-5 py-3 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:bg-cyan-400"
+              >
+                Conectar
+              </button>
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-300">
+              {currentMatchId ? (
+                <>
+                  <span>ID activo: <strong>{currentMatchId}</strong></span>
+                  <span>{connected ? "🟢 Conectado" : "🟡 Esperando señales"}</span>
+                </>
+              ) : (
+                <span>Ingresa un ID de partido para mostrar el partido en esta pantalla.</span>
+              )}
+              {error ? <span className="text-rose-300">{error}</span> : null}
+            </div>
+          </div>
+        )}
 
         {/* MARCADOR ESTILO TRINI CENTRALIZADO */}
         <div className="flex items-center justify-center select-none font-mono tracking-tight w-full">

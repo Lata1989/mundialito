@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useSocketEmitter } from "@/lib/socket";
 import { BANDERAS } from "@/lib/gameConstants";
 import type { GameState, Role } from "@/lib/types";
 import { QUESTIONS_DB, type QuestionItem } from "../data/preguntas";
@@ -102,6 +101,11 @@ export default function SoccerQuiz() {
   const [isWaitingTransition, setIsWaitingTransition] = useState(false);
   const [transitionCountdown, setTransitionCountdown] = useState(0);
   const [remainingQuestions, setRemainingQuestions] = useState<QuestionItem[]>([]);
+  const [matchId, setMatchId] = useState("");
+
+  useEffect(() => {
+    setMatchId(() => Math.random().toString(36).slice(2, 8).toUpperCase());
+  }, []);
 
   const currentGameState = useMemo<GameState | null>(() => {
     if (!teams) return null;
@@ -119,7 +123,19 @@ export default function SoccerQuiz() {
     };
   }, [currentQ, teams, timeLeft, possession, score, isWaitingTransition]);
 
-  useSocketEmitter(currentGameState);
+  useEffect(() => {
+    if (!currentGameState || !teams?.red) return;
+
+    void fetch(`/api/match/${matchId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(currentGameState),
+    }).catch((error) => {
+      console.error("Failed to send match update", error);
+    });
+  }, [currentGameState, matchId, teams?.red]);
 
   useEffect(() => {
     if (!teams?.red || feedback !== "" || !isTimerRunning || isWaitingTransition) return;
@@ -181,7 +197,7 @@ export default function SoccerQuiz() {
 
     if (remainingQuestions.length === 0) {
       const refreshedPool = initializeQuestionPool(teams.blue, teams.red);
-      setCurrentQ(refreshedPool[0]);
+      setCurrentQ(refresPool[0]);
       setRemainingQuestions(refreshedPool.slice(1));
     } else {
       const [nextQ, ...rest] = remainingQuestions;
@@ -282,14 +298,21 @@ export default function SoccerQuiz() {
   if (!teams || !teams.red) {
     return (
       <div className={`relative flex flex-col items-center justify-center min-h-screen p-4 md:p-6 text-center transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
-        <button
-          onClick={() => setIsDarkTheme(!isDarkTheme)}
-          className={`absolute top-4 right-4 md:top-6 md:right-6 px-4 py-2 rounded-xl font-bold transition-colors shadow-md text-sm z-50 ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}
-        >
-          {isDarkTheme ? "☀️ Tema Claro" : "🌙 Tema Oscuro"}
-        </button>
+        
+        {/* CABECERA ULTRA DISCRETA CON ID Y TEMA */}
+        <div className="absolute top-4 left-4 right-4 md:top-6 md:left-6 md:right-6 flex justify-between items-center select-none">
+          <span className="text-xs font-mono opacity-50 tracking-wider">
+            ID PARTIDO: <strong className="font-mono text-sm tracking-widest bg-black/5 dark:bg-white/5 px-2 py-1 rounded">{matchId}</strong>
+          </span>
+          <button
+            onClick={() => setIsDarkTheme(!isDarkTheme)}
+            className={`px-3 py-1.5 rounded-xl font-bold transition-colors shadow-sm text-xs ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-white border text-slate-700 hover:bg-slate-100"}`}
+          >
+            {isDarkTheme ? "☀️ Claro" : "🌙 Oscuro"}
+          </button>
+        </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-12 mb-6 max-w-7xl w-full px-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mt-16 mb-6 max-w-7xl w-full px-4">
           <div className="h-40 sm:h-52 md:h-72 aspect-square flex items-center justify-center p-3 md:p-4 transform">
             <img src="/logofunesil.png" alt="Logo Funesil" className="h-full w-full object-contain" />
           </div>
@@ -332,9 +355,15 @@ export default function SoccerQuiz() {
     <div className={`flex flex-col lg:flex-row min-h-screen font-sans overflow-hidden transition-colors duration-300 ${isDarkTheme ? "bg-zinc-950 text-white" : "bg-slate-100 text-slate-900"}`}>
       <div className="flex-[1.4] p-6 flex flex-col h-full justify-between lg:max-h-screen overflow-y-auto">
         <div>
-          <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`mb-4 px-3 py-1 rounded text-sm font-bold transition-colors self-start ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
-            {isDarkTheme ? "☀️" : "🌙"}
-          </button>
+          {/* BARRA SUPERIOR DURANTE EL PARTIDO CON EL ID LIMPIO */}
+          <div className="flex justify-between items-center mb-4 select-none">
+            <span className="text-xs font-mono opacity-50 tracking-wider">
+              ID: <span className="font-bold tracking-widest">{matchId}</span>
+            </span>
+            <button onClick={() => setIsDarkTheme(!isDarkTheme)} className={`px-2 py-1 rounded text-sm font-bold transition-colors ${isDarkTheme ? "bg-slate-800 text-yellow-400 hover:bg-slate-700" : "bg-slate-200 text-slate-700 hover:bg-slate-300"}`}>
+              {isDarkTheme ? "☀️" : "🌙"}
+            </button>
+          </div>
 
           <div className="flex items-center justify-center p-1 mb-8 select-none font-mono tracking-tight w-full">
             <div className="flex items-center bg-black text-white rounded-full px-4 sm:px-6 shadow-2xl border border-zinc-800 w-full max-w-4xl min-h-[5.5rem] py-2 md:py-4">
@@ -474,19 +503,20 @@ export default function SoccerQuiz() {
         )}
       </div>
 
-      {/* SECCIÓN DERECHA: LOGOS + CANCHA ACHICADA (-15%) */}
+      {/* SECCIÓN DERECHA: LOGOS + CANCHA */}
       <div className={`flex-[1.8] flex flex-col items-center justify-center p-4 lg:max-h-screen my-auto overflow-hidden ${isDarkTheme ? "bg-zinc-950" : "bg-slate-100"}`}>
         <div className="w-full max-w-[524px] flex flex-col gap-4">
 
-          {/* CONTENEDOR DE LOGOS 100% INVISIBLE Y AMPLIADO */}
-<div className="w-full flex items-center justify-center h-40 bg-transparent border-0 p-0 overflow-visible select-none mb-6">            <img
+          {/* CONTENEDOR DE LOGOS */}
+          <div className="w-full flex items-center justify-center h-40 bg-transparent border-0 p-0 overflow-visible select-none mb-6">
+            <img
               src="/logosfunesil.png"
               alt="Logos Funesil"
               className="h-full w-full object-contain scale-150 transform origin-center"
             />
           </div>
 
-          {/* DIBUJO DE LA CANCHA ACHICADA A MAX-W-[524PX] */}
+          {/* DIBUJO DE LA CANCHA */}
           <div
             className="relative w-full aspect-[100/115] border-[5px] border-white/30 rounded-2xl overflow-hidden transition-all duration-300"
             style={{ background: "repeating-linear-gradient(0deg, #2e7d32, #2e7d32 8%, #388e3c 8%, #388e3c 16%)" }}
