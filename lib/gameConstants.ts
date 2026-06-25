@@ -1,14 +1,32 @@
 import type { Role } from "./types";
 
 export const BANDERAS: Record<string, string> = {
-  Bélgica: "🇧🇪",
+  // Japón: "🇯🇵",
+  // Inglaterra: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  // Colombia: "🇨🇴",
+  Francia: "🇫🇷",
+  Canadá: "🇨🇦",
+  // Uruguay: "🇺🇾",
+  // Brasil: "🇧🇷",
+  // Marruecos: "🇲🇦",
+  Croacia: "🇭🇷",
+  // España: "🇪🇸",
+  // EEUU: "🇺🇸",
+  Ecuador: "🇪🇨",
+  // Alemania: "🇩🇪",
+  // Bélgica: "🇧🇪",
   Paraguay: "🇵🇾",
-  Arabia: "🇸🇦",
+  // Arabia: "🇸🇦",
+  // "Países Bajos": "🇳🇱",
   México: "🇲🇽",
+  // Suiza: "🇨🇭",
   Austria: "🇦🇹",
   Egipto: "🇪🇬",
-  Portugal: "🇵🇹",
+  // Escocia: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  // Portugal: "🇵🇹",
+  // Noruega: "🇳🇴",
 };
+
 
 export const ROLE_LABELS: Record<Role, string> = {
   ARQ: "Arquero",
