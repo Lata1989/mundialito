@@ -400,8 +400,8 @@ export default function SoccerQuiz() {
           {isWaitingTransition ? (
             <div className="flex flex-col items-center justify-center py-12 text-center animate-pulse">
               <div className="text-6xl mb-4">📢</div>
-              <h3 className="text-2xl font-black uppercase italic tracking-tight mb-2">Preparando la siguiente jugada...</h3>
-              <p className="text-sm opacity-70 mb-6">Moviendo las líneas del equipo</p>
+              <h3 className="text-2xl font-black uppercase italic tracking-tight mb-2">Preparando la siguiente pregunta...</h3>
+              <p className="text-sm opacity-70 mb-6">Moviendo la pelota...</p>
               <div className={`text-5xl font-black px-6 py-3 rounded-2xl ${isDarkTheme ? "bg-zinc-900 border border-zinc-800" : "bg-white border border-slate-200"} shadow-md text-yellow-500`}>
                 {transitionCountdown}s
               </div>
@@ -456,7 +456,7 @@ export default function SoccerQuiz() {
                     ) : (
                       <div className="space-y-3">
                         <button onClick={() => handleManualAction("largo")} className={`w-full p-5 font-black uppercase text-xl transition-all active:scale-95 shadow-lg rounded border-2 ${isDarkTheme ? "bg-white text-black border-white hover:bg-zinc-100" : "bg-slate-800 text-white border-slate-800 hover:bg-slate-700"}`}>
-                          🔫 Pase largo
+                          ⚽ Pase largo
                         </button>
                         <button onClick={() => setIsShowingOptions(true)} className="w-full p-5 font-black uppercase text-xl transition-all active:scale-95 shadow-lg rounded border-2 bg-blue-600 text-white border-blue-600 hover:bg-blue-700">
                           🎯 Pase Corto (Ver Opciones)
