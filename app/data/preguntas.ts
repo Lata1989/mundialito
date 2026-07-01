@@ -6867,2132 +6867,876 @@ export const QUESTIONS_DB: QuestionItem[] = [
 
 
 export const QUESTIONS_DB: QuestionItem[] = [
-// ==========================================
-  // FRANCIA
-  // ==========================================
-  {
-    "country": "Francia",
-    "question": "FRA-3 | ¿Contra qué selección ganó Francia la final del Mundial 1998?",
-    "answer": "Brasil",
-    "options": ["Brasil", "Italia", "Alemania"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-4 | ¿Qué jugador marcó dos goles en la final del Mundial 1998?",
-    "answer": "Zinedine Zidane",
-    "options": ["David Trezeguet", "Zinedine Zidane", "Youri Djorkaeff"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-5 | ¿Qué jugador francés ganó el Balón de Oro en 1998?",
-    "answer": "Zinedine Zidane",
-    "options": ["Thierry Henry", "Zinedine Zidane", "Patrick Vieira"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-7 | ¿Qué selección eliminó a Francia en el Mundial 2014?",
-    "answer": "Alemania",
-    "options": ["Alemania", "Argentina", "Brasil"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-9 | ¿Cuántos Mundiales ha ganado Francia hasta 2026?",
-    "answer": "2",
-    "options": ["1", "2", "3"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-11 | ¿Qué francés ganó la Bota de Oro del Mundial 1958?",
-    "answer": "Just Fontaine",
-    "options": ["Michel Platini", "Just Fontaine", "Jean Tigana"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-13 | ¿Quién marcó un hat-trick en la final del Mundial 2022 para Francia?",
-    "answer": "Kylian Mbappé",
-    "options": ["Antoine Griezmann", "Kylian Mbappé", "Olivier Giroud"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-14 | ¿Qué torre famosa se encuentra en París?",
-    "answer": "Torre Eiffel",
-    "options": ["Torre de Pisa", "Torre Eiffel", "Big Ben"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-15 | ¿Qué río atraviesa París?",
-    "answer": "Sena",
-    "options": ["Danubio", "Sena", "Loira"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-16 | ¿Qué museo famoso alberga la Mona Lisa?",
-    "answer": "Museo del Louvre",
-    "options": ["Museo del Prado", "Museo Británico", "Museo del Louvre"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-19 | ¿Qué famoso arco se encuentra en París?",
-    "answer": "Arco del Triunfo",
-    "options": ["Arco de Tito", "Arco del Triunfo", "Puerta de Brandeburgo"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-20 | ¿Qué región francesa es famosa por su vino espumoso?",
-    "answer": "Champaña",
-    "options": ["Normandía", "Champaña", "Bretaña"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-21 | ¿Qué famosa catedral sufrió un incendio en 2019?",
-    "answer": "Notre Dame",
-    "options": ["Sagrada Familia", "Notre Dame", "Basílica del Sacré-Cœur"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-22 | ¿Cuál es el plato francés hecho con caracoles?",
-    "answer": "Escargots",
-    "options": ["Ratatouille", "Escargots", "Fondue"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-23 | ¿Qué tratado puso fin a la Primera Guerra Mundial?",
-    "answer": "Tratado de Versalles",
-    "options": ["Tratado de Roma", "Tratado de Versalles", "Tratado de París"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-24 | ¿Qué reina francesa fue ejecutada durante la Revolución Francesa?",
-    "answer": "María Antonieta",
-    "options": ["Catalina de Médici", "María Antonieta", "Josefina"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-25 | ¿Cuál es la montaña más alta de Francia y Europa Occidental?",
-    "answer": "Mont Blanc",
-    "options": ["Pirineos", "Mont Blanc", "Alpes Julianos"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-27 | ¿Quién era el presidente de Francia cuando ganó el Mundial 2018?",
-    "answer": "Emmanuel Macron",
-    "options": ["François Hollande", "Emmanuel Macron", "Nicolas Sarkozy"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-28 | ¿Cuál es la sexta ciudad más poblada de Francia?",
-    "answer": "Nantes",
-    "options": ["Nantes", "Toulouse", "Estrasburgo"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-30 | ¿Cuál es la undécima ciudad más poblada de Francia?",
-    "answer": "Rennes",
-    "options": ["Rennes", "Dijon", "Angers"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-31 | ¿En qué año Napoleón Bonaparte se proclamó emperador de Francia?",
-    "answer": "1804",
-    "options": ["1799", "1804", "1815"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-32 | ¿Qué batalla marcó la derrota definitiva de Napoleón Bonaparte?",
-    "answer": "Waterloo",
-    "options": ["Austerlitz", "Leipzig", "Waterloo"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-33 | ¿Qué pintor francés es considerado uno de los fundadores del impresionismo?",
-    "answer": "Claude Monet",
-    "options": ["Claude Monet", "Auguste Rodin", "Paul Cézanne"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-34 | ¿Cuál es el río más largo de Francia?",
-    "answer": "Loira",
-    "options": ["Sena", "Ródano", "Loira"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-37 | ¿Cuál es la isla más grande perteneciente a Francia metropolitana?",
-    "answer": "Córcega",
-    "options": ["Córcega", "Reunión", "Martinica"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-38 | ¿Qué rey francés fue ejecutado durante la Revolución Francesa?",
-    "answer": "Luis XVI",
-    "options": ["Luis XIV", "Luis XV", "Luis XVI"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-39 | ¿Quién pintó la famosa obra \"La Libertad guiando al pueblo\"?",
-    "answer": "Eugène Delacroix",
-    "options": ["Claude Monet", "Eugène Delacroix", "Edgar Degas"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-40 | ¿Qué ciudad fue la capital de Francia antes de que París se consolidara definitivamente como sede del poder real?",
-    "answer": "Tours",
-    "options": ["Reims", "Tours", "Dijon"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-41 | ¿Cuál es el departamento francés más poblado?",
-    "answer": "Norte (Nord)",
-    "options": ["Norte (Nord)", "Bocas del Ródano", "París"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-42 | ¿Qué región francesa es famosa por los desembarcos aliados del Día D en 1944?",
-    "answer": "Normandía",
-    "options": ["Bretaña", "Normandía", "Alsacia"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-43 | ¿Cuál fue el nombre del régimen francés colaboracionista con Alemania durante la Segunda Guerra Mundial?",
-    "answer": "Gobierno de Vichy",
-    "options": ["Quinta República", "Gobierno de Vichy", "Directorio Francés"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-44 | ¿Quién lideró la resistencia francesa durante la Segunda Guerra Mundial y luego fue presidente de Francia?",
-    "answer": "Charles de Gaulle",
-    "options": ["Georges Pompidou", "Charles de Gaulle", "François Mitterrand"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-45 | ¿A qué región administrativa pertenece la ciudad de París?",
-    "answer": "Île-de-France",
-    "options": ["Île-de-France", "Normandía", "Occitania"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-46 | ¿A qué región pertenece la ciudad de Lyon?",
-    "answer": "Auvernia-Ródano-Alpes",
-    "options": ["Provenza-Alpes-Costa Azul", "Auvernia-Ródano-Alpes", "Nueva Aquitania"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-47 | ¿Cuál es la segunda región más poblada de Francia después de Île-de-France?",
-    "answer": "Auvernia-Ródano-Alpes",
-    "options": ["Occitania", "Auvernia-Ródano-Alpes", "Bretaña"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-48 | ¿En qué ciudad nació Kylian Mbappé?",
-    "answer": "París",
-    "options": ["París", "Marsella", "Lyon"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-50 | ¿Contra qué selección convirtió Mbappé dos goles en los octavos de final del Mundial 2018?",
-    "answer": "Argentina",
-    "options": ["Croacia", "Argentina", "Uruguay"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-51 | ¿Quién asistió a Kylian Mbappé en su primer gol ante Argentina en Rusia 2018?",
-    "answer": "Lucas Hernández",
-    "options": ["Antoine Griezmann", "Lucas Hernández", "Paul Pogba"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-52 | ¿Qué dorsal utilizó Kylian Mbappé en los Mundiales 2018 y 2022?",
-    "answer": "10",
-    "options": ["7", "10", "11"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-53 | ¿En qué ciudad nació Antoine Griezmann?",
-    "answer": "Mâcon",
-    "options": ["Mâcon", "Lyon", "París"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-54 | ¿Cuántos goles convirtió Antoine Griezmann en el Mundial 2018?",
-    "answer": "4",
-    "options": ["3", "4", "5"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-55 | ¿Contra qué selección convirtió Griezmann de penal en la final del Mundial 2018?",
-    "answer": "Croacia",
-    "options": ["Bélgica", "Croacia", "Inglaterra"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-56 | ¿Qué delantero francés marcó el gol de oro que le dio a Francia la Eurocopa 2000?",
-    "answer": "David Trezeguet",
-    "options": ["Thierry Henry", "David Trezeguet", "Sylvain Wiltord"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-57 | ¿En qué país nació David Trezeguet?",
-    "answer": "Argentina",
-    "options": ["Francia", "Argentina", "Uruguay"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-58 | ¿En qué ciudad nació David Trezeguet?",
-    "answer": "Buenos Aires",
-    "options": ["Rosario", "Buenos Aires", "Córdoba"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-59 | ¿Cuántos goles convirtió David Trezeguet en los Mundiales con Francia?",
-    "answer": "4",
-    "options": ["3", "5", "4"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-60 | ¿Qué selección eliminó a Francia por penales en la final del Mundial 2006, donde participó David Trezeguet?",
-    "answer": "Italia",
-    "options": ["Alemania", "Italia", "Brasil"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-61 | ¿Quién fue el máximo goleador de Francia en el Mundial 2022?",
-    "answer": "Kylian Mbappé",
-    "options": ["Olivier Giroud", "Kylian Mbappé", "Antoine Griezmann"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-62 | ¿Cuántos goles marcó Mbappé en el Mundial 2022?",
-    "answer": "8",
-    "options": ["6", "7", "8"]
-  },
-  {
-    "country": "Francia",
-    "question": "FRA-63 | ¿Contra qué selección debutó Kylian Mbappé en una Copa del Mundo?",
-    "answer": "Australia",
-    "options": ["Australia", "Perú", "Dinamarca"]
-  },
-
-  // ==========================================
-  // ECUADOR
-  // ==========================================
-  {
-    "country": "Ecuador",
-    "question": "ECU-3 | ¿Cuál es el río más largo de la cuenca amazónica que nace en Ecuador?",
-    "answer": "Río Napo",
-    "options": ["Río Napo", "Río Guayas", "Río Pastaza"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-4 | ¿Cuál es el plato típico que consiste en una sopa de pescado y yuca?",
-    "answer": "Encebollado",
-    "options": ["Ceviche", "Encebollado", "Locro"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-5 | ¿Qué presidente ecuatoriano impulsó la construcción del ferrocarril trasandino?",
-    "answer": "Eloy Alfaro",
-    "options": ["Eloy Alfaro", "Gabriel García Moreno", "José María Velasco Ibarra"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-7 | ¿En qué ciudad se encuentra el monumento a la Mitad del Mundo?",
-    "answer": "Quito",
-    "options": ["Latacunga", "Quito", "Ibarra"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-8 | ¿Qué naturalista inglés visitó las Galápagos para desarrollar su teoría de la evolución?",
-    "answer": "Charles Darwin",
-    "options": ["Isaac Newton", "Charles Darwin", "Gregor Mendel"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-9 | ¿En qué año clasificó Ecuador a su primer Mundial?",
-    "answer": "Corea-Japón 2002",
-    "options": ["Francia 1998", "Corea-Japón 2002", "Alemania 2006"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-10 | ¿Quién era el DT de Ecuador en su debut mundialista?",
-    "answer": "Hernán Darío Gómez",
-    "options": ["Hernán Darío Gómez", "Luis Fernando Suárez", "Reinaldo Rueda"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-11 | ¿Contra qué selección debutó Ecuador en el Mundial 2002?",
-    "answer": "Italia",
-    "options": ["Italia", "México", "Croacia"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-12 | ¿Quién marcó el primer gol de Ecuador en un Mundial?",
-    "answer": "Agustín Delgado",
-    "options": ["Jaime Iván Kaviedes", "Agustín Delgado", "Carlos Tenorio"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-14 | ¿En qué Mundial Ecuador llegó por primera vez a Octavos de Final?",
-    "answer": "Alemania 2006",
-    "options": ["Corea-Japón 2002", "Alemania 2006", "Brasil 2014"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-15 | ¿Quién marcó el primer gol del triunfo ante Polonia en 2006?",
-    "answer": "Carlos Tenorio",
-    "options": ["Carlos Tenorio", "Enner Valencia", "Felipe Caicedo"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-16 | ¿Qué selección eliminó a Ecuador en los Octavos de Final de 2006?",
-    "answer": "Inglaterra",
-    "options": ["Alemania", "Brasil", "Inglaterra"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-17 | ¿Cuál fue el resultado del partido inaugural Qatar vs Ecuador en 2022?",
-    "answer": "0-2",
-    "options": ["0-1", "0-2", "1-2"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-18 | ¿Quién es el máximo goleador histórico de Ecuador en los Mundiales?",
-    "answer": "Agustín Delgado",
-    "options": ["Agustín Delgado", "Enner Valencia", "Édison Méndez"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-19 | ¿En qué estadio debutó Ecuador en el Mundial de Qatar 2022?",
-    "answer": "Estadio Al Bayt",
-    "options": ["Estadio Lusail", "Estadio Al Bayt", "Estadio 974"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-20 | ¿Quién era el capitán de Ecuador en el Mundial 2006?",
-    "answer": "Iván Hurtado",
-    "options": ["Iván Hurtado", "Álex Aguinaga", "Giovanny Espinoza"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-21 | ¿Cuántos puntos sumó Ecuador en la fase de grupos de Qatar 2022?",
-    "answer": "4 puntos",
-    "options": ["3 puntos", "4 puntos", "6 puntos"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-22 | ¿Quién fue el DT que llevó a Ecuador al Mundial de Qatar 2022?",
-    "answer": "Gustavo Alfaro",
-    "options": ["Jorge Célico", "Gustavo Alfaro", "Jordi Cruyff"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-23 | ¿Cuál es la segunda ciudad más poblada de Ecuador?",
-    "answer": "Guayaquil",
-    "options": ["Guayaquil", "Cuenca", "Ambato"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-24 | ¿Cuál es la tercera ciudad más poblada de Ecuador?",
-    "answer": "Cuenca",
-    "options": ["Cuenca", "Manta", "Loja"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-25 | ¿Cuál es la cuarta ciudad más poblada de Ecuador?",
-    "answer": "Santo Domingo",
-    "options": ["Santo Domingo", "Portoviejo", "Machala"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-26 | ¿Cuál es la octava ciudad más poblada de Ecuador?",
-    "answer": "Durán",
-    "options": ["Durán", "Riobamba", "Ibarra"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-27 | ¿Cuál es la provincia más poblada de Ecuador?",
-    "answer": "Guayas",
-    "options": ["Guayas", "Pichincha", "Manabí"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-30 | ¿Cuál es la segunda montaña más alta de Ecuador?",
-    "answer": "Cotopaxi",
-    "options": ["Cotopaxi", "Antisana", "Altar"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-31 | ¿Qué volcán ecuatoriano es considerado uno de los más peligrosos del mundo por su actividad?",
-    "answer": "Tungurahua",
-    "options": ["Tungurahua", "Cayambe", "Illiniza"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-32 | ¿Cuál es la capital de la provincia de Manabí?",
-    "answer": "Portoviejo",
-    "options": ["Portoviejo", "Manta", "Chone"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-33 | ¿Quién fue el presidente de Ecuador cuando la selección alcanzó por primera vez los octavos de final en Alemania 2006?",
-    "answer": "Alfredo Palacio",
-    "options": ["Alfredo Palacio", "Rafael Correa", "Lucio Gutiérrez"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-34 | ¿Qué presidente ecuatoriano gobernaba cuando Ecuador debutó en los Mundiales en 2002?",
-    "answer": "Gustavo Noboa",
-    "options": ["Gustavo Noboa", "Jamil Mahuad", "Lucio Gutiérrez"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-35 | ¿En qué ciudad nació Agustín Delgado?",
-    "answer": "Ibarra",
-    "options": ["Ibarra", "Quito", "Cuenca"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-36 | ¿Cuántos partidos mundialistas disputó Agustín Delgado con Ecuador?",
-    "answer": "8",
-    "options": ["8", "6", "5"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-37 | ¿Quién es el máximo goleador de Ecuador en los Mundiales?",
-    "answer": "Agustín Delgado",
-    "options": ["Agustín Delgado", "Enner Valencia", "Carlos Tenorio"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-38 | ¿En qué ciudad nació Enner Valencia?",
-    "answer": "Esmeraldas",
-    "options": ["Esmeraldas", "Quito", "Guayaquil"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-39 | ¿Cuántos goles marcó Enner Valencia en el Mundial de Qatar 2022?",
-    "answer": "3",
-    "options": ["3", "2", "4"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-40 | ¿En qué ciudad nació Antonio Valencia?",
-    "answer": "Lago Agrio",
-    "options": ["Lago Agrio", "Cuenca", "Ambato"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-41 | ¿Qué futbolista ecuatoriano disputó los Mundiales 2002, 2006 y 2014?",
-    "answer": "Antonio Valencia",
-    "options": ["Antonio Valencia", "Enner Valencia", "Carlos Tenorio"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-42 | ¿Qué selección eliminó a Ecuador en la fase de grupos del Mundial 2014 al empatarle en la última fecha?",
-    "answer": "Francia",
-    "options": ["Francia", "Honduras", "Suiza"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-43 | ¿Qué escritor ecuatoriano escribió la novela \"Cumandá\"?",
-    "answer": "Juan León Mera",
-    "options": ["Juan León Mera", "Jorge Icaza", "Demetrio Aguilera Malta"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-44 | ¿Qué pintor ecuatoriano es famoso por sus obras de temática indígena?",
-    "answer": "Oswaldo Guayasamín",
-    "options": ["Oswaldo Guayasamín", "Eduedardo Kingman", "Camilo Egas"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-45 | ¿En qué ciudad nació Oswaldo Guayasamín?",
-    "answer": "Quito",
-    "options": ["Quito", "Cuenca", "Loja"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-46 | ¿Cuál es el museo más importante dedicado a Guayasamín en Quito?",
-    "answer": "Capilla del Hombre",
-    "options": ["Capilla del Hombre", "Museo Nacional", "Casa de la Cultura"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-47 | ¿Qué ciudad ecuatoriana es conocida como la \"Atenas del Ecuador\"?",
-    "answer": "Cuenca",
-    "options": ["Cuenca", "Loja", "Riobamba"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-49 | ¿Cuál es el río más caudaloso de Ecuador?",
-    "answer": "Guayas",
-    "options": ["Guayas", "Napo", "Esmeraldas"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-50 | ¿Qué ciudad ecuatoriana fue declarada Patrimonio Cultural de la Humanidad por la UNESCO en 1978 junto con Cracovia?",
-    "answer": "Quito",
-    "options": ["Quito", "Cuenca", "Guayaquil"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-51 | ¿Qué país eliminó a Ecuador en las Eliminatorias para el Mundial 1998 dejándolo fuera por diferencia de gol?",
-    "answer": "Chile",
-    "options": ["Chile", "Perú", "Paraguay"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-52 | ¿Quién fue el capitán de Ecuador en el Mundial 2002?",
-    "answer": "Álex Aguinaga",
-    "options": ["Álex Aguinaga", "Iván Hurtado", "Ulises de la Cruz"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-54 | ¿Cuántos Mundiales disputó Ecuador hasta Qatar 2022?",
-    "answer": "4",
-    "options": ["4", "3", "5"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-55 | ¿Qué selección derrotó a Ecuador por 3-0 en su debut mundialista en 2002?",
-    "answer": "Italia",
-    "options": ["Italia", "México", "Croacia"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-56 | ¿Qué jugadores anotaron los goles de Ecuador en la victoria ante Polonia en Alemania 2006?",
-    "answer": "Carlos Tenorio y Agustín Delgado",
-    "options": ["Carlos Tenorio y Agustín Delgado", "Carlos Tenorio y Méndez", "Delgado y Kaviedes"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-57 | ¿Qué provincia ecuatoriana es conocida por la producción de cacao fino de aroma?",
-    "answer": "Los Ríos",
-    "options": ["Los Ríos", "Carchi", "Bolívar"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-58 | ¿Cuál es el punto más alto de Ecuador?",
-    "answer": "Chimborazo",
-    "options": ["Chimborazo", "Cotopaxi", "Cayambe"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-59 | ¿Qué ciudad es la capital de la provincia de Imbabura?",
-    "answer": "Ibarra",
-    "options": ["Ibarra", "Otavalo", "Tulcán"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-60 | ¿Cuál es el lago navegable más importante de Ecuador?",
-    "answer": "San Pablo",
-    "options": ["San Pablo", "Cuicocha", "Yahuarcocha"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-61 | ¿Qué ciudad ecuatoriana es conocida como la capital mundial del sombrero de paja toquilla?",
-    "answer": "Cuenca",
-    "options": ["Cuenca", "Loja", "Riobamba"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-62 | ¿Quién fue el primer ecuatoriano en marcar un gol en una Copa del Mundo?",
-    "answer": "Agustín Delgado",
-    "options": ["Agustín Delgado", "Carlos Tenorio", "Álex Aguinaga"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-63 | ¿En qué minuto marcó Agustín Delgado el primer gol mundialista de Ecuador ante México en 2002?",
-    "answer": "45+1'",
-    "options": ["45+1'", "45'", "5'"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-64 | ¿Contra qué selecciones marcó Enner Valencia sus tres goles en Qatar 2022?",
-    "answer": "Qatar y Países Bajos",
-    "options": ["Qatar y Países Bajos", "Senegal y Qatar", "Países Bajos y Senegal"]
-  },
-  {
-    "country": "Ecuador",
-    "question": "ECU-65 | ¿Cuál es el único país con el que Ecuador comparte frontera al sur?",
-    "answer": "Perú",
-    "options": ["Perú", "Colombia", "Brasil"]
-  },
-
-  // ==========================================
-  // MÉXICO
-  // ==========================================
-  {
-    "country": "México",
-    "question": "MEX-1 | ¿Qué civilización construyó Chichén Itzá?",
-    "answer": "Maya",
-    "options": ["Azteca", "Maya", "Inca", "Olmeca"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-2 | ¿Qué famosa pirámide se encuentra en Chichén Itzá?",
-    "answer": "Kukulkán",
-    "options": ["Pirámide del Sol", "Kukulkán", "Templo Mayor", "Teotihuacán"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-3 | ¿Qué golfo se encuentra al este de México?",
-    "answer": "Golfo de México",
-    "options": ["Golfo de Panamá", "Golfo de California", "Golfo de México", "Golfo Pérsico"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-4 | ¿Qué comida mexicana es Patrimonio Cultural de la Humanidad?",
-    "answer": "Tacos",
-    "options": ["Pizza", "Tacos", "Hamburguesa", "Sushi"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-5 | ¿Qué picante es muy usado en la gastronomía mexicana?",
-    "answer": "Chile",
-    "options": ["Wasabi", "Ají amarillo", "Chile", "Curry"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-6 | ¿Qué muralista mexicano pintó grandes obras sociales e históricas?",
-    "answer": "Diego Rivera",
-    "options": ["Picasso", "Diego Rivera", "Dalí", "Botero"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-7 | ¿Qué famoso luchador mexicano utilizaba máscara plateada?",
-    "answer": "El Santo",
-    "options": ["Blue Demon", "El Santo", "Huracán Ramírez", "Mil Máscaras"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-8 | ¿Qué arquero mexicano usaba uniformes muy coloridos en los años 90?",
-    "answer": "Campos",
-    "options": ["Ochoa", "Campos", "Carbajal", "Corona"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-9 | ¿Qué jugador mexicano anotó contra Alemania en el Mundial 2018?",
-    "answer": "Lozano",
-    "options": ["Chicharito", "Lozano", "Guardado", "Jiménez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-10 | ¿Qué delantero mexicano es apodado “Chicharito”?",
-    "answer": "Javier Hernández",
-    "options": ["Hugo Sánchez", "Javier Hernández", "Cuauhtémoc Blanco", "Rafa Márquez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-11 | ¿Qué jugador mexicano realizó un penal “a lo Panenka” famoso en Francia 1998?",
-    "answer": "Cuauhtémoc Blanco",
-    "options": ["Borgetti", "Cuauhtémoc Blanco", "Hernández", "Márquez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-12 | ¿Qué península mexicana separa el Golfo de México del Caribe?",
-    "answer": "Yucatán",
-    "options": ["Yucatán", "California", "Sonora", "Oaxaca"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-13 | ¿Qué género musical es tradicional de México?",
-    "answer": "Mariachi",
-    "options": ["Tango", "Mariachi", "Samba", "Flamenco"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-15 | ¿Qué volcán mexicano es uno de los más famosos?",
-    "answer": "Popocatépetl",
-    "options": ["Everest", "Popocatépetl", "Aconcagua", "Vesubio"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-16 | ¿Qué país limita al norte con México?",
-    "answer": "Estados Unidos",
-    "options": ["Canadá", "Guatemala", "Estados Unidos", "Belice"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-18 | ¿Qué lago rodeaba originalmente a la ciudad de Tenochtitlán?",
-    "answer": "Lago Texcoco",
-    "options": ["Lago Titicaca", "Lago Texcoco", "Lago Chapala", "Lago Atitlán"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-19 | ¿Qué pueblo indígena fue enemigo de los aztecas y ayudó a Hernán Cortés en la conquista?",
-    "answer": "Tlaxcaltecas",
-    "options": ["Mayas", "Olmecas", "Tlaxcaltecas", "Incas"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-20 | ¿Cuál es la tercera ciudad más poblada de México?",
-    "answer": "Puebla",
-    "options": ["Puebla", "Tijuana", "León"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-21 | ¿Cuál es la quinta ciudad más poblada de México?",
-    "answer": "León",
-    "options": ["Juárez", "León", "Mérida"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-22 | ¿Cuál es el estado más poblado de México?",
-    "answer": "Estado de México",
-    "options": ["Jalisco", "Estado de México", "Veracruz"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-23 | ¿Cuántos estados tiene México?",
-    "answer": "32",
-    "options": ["31", "33", "32"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-24 | ¿Cuál es el pico más alto de México?",
-    "answer": "Pico de Orizaba",
-    "options": ["Popocatépetl", "Pico de Orizaba", "Iztaccíhuatl"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-25 | ¿Qué estado mexicano tiene frontera con Belice?",
-    "answer": "Quintana Roo",
-    "options": ["Yucatán", "Quintana Roo", "Campeche"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-26 | ¿Cuál es el estado más grande de México por superficie?",
-    "answer": "Chihuahua",
-    "options": ["Sonora", "Chihuahua", "Coahuila"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-27 | ¿Quién fue el último emperador azteca?",
-    "answer": "Cuauhtémoc",
-    "options": ["Moctezuma I", "Cuauhtémoc", "Nezahualcóyotl"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-28 | ¿Quién fue el capitán de México en el Mundial 2010?",
-    "answer": "Rafael Márquez",
-    "options": ["Rafael Márquez", "Cuauhtémoc Blanco", "Guardado"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-29 | ¿Quién era el entrenador de México en el Mundial 2014?",
-    "answer": "Miguel Herrera",
-    "options": ["Javier Aguirre", "Miguel Herrera", "Ricardo La Volpe"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-30 | ¿En qué minuto anotó Hirving Lozano el gol ante Alemania en Rusia 2018?",
-    "answer": "35'",
-    "options": ["35'", "42'", "51'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-31 | ¿Qué arquero mexicano fue capitán en el Mundial 2022?",
-    "answer": "Ochoa",
-    "options": ["Ochoa", "Corona", "Talavera"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-32 | ¿Cuántos Mundiales disputó Rafael Márquez?",
-    "answer": "5",
-    "options": ["4", "5", "6"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-33 | ¿Qué jugador mexicano marcó el gol del empate ante Argentina en Alemania 2006?",
-    "answer": "Rafa Márquez",
-    "options": ["Borgetti", "Rafa Márquez", "Pardo"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-34 | ¿Qué estadio será sede de la inauguración del Mundial 2026?",
-    "answer": "Estadio Azteca",
-    "options": ["Estadio Azteca", "Akron", "BBVA"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-35 | ¿Cuál es la octava ciudad más poblada de México?",
-    "answer": "Zapopan",
-    "options": ["Zapopan", "Aguascalientes", "Mexicali"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-36 | ¿Cuál es la novena ciudad más poblada de México?",
-    "answer": "Nezahualcóyotl",
-    "options": ["Monterrey", "Nezahualcóyotl", "Querétaro"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-37 | ¿Qué marca vistió a México en el Mundial 1986?",
-    "answer": "Adidas",
-    "options": ["Adidas", "Nike", "Puma"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-39 | ¿Qué marca viste actualmente a la selección mexicana?",
-    "answer": "Adidas",
-    "options": ["Nike", "Adidas", "Puma"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-40 | ¿Qué jugador convirtió el primer gol de México en el Mundial 2018?",
-    "answer": "Hirving Lozano",
-    "options": ["Javier Hernández", "Hirving Lozano", "Carlos Vela"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-41 | ¿En qué minuto Hirving Lozano marcó el gol ante Alemania en Rusia 2018?",
-    "answer": "35'",
-    "options": ["35'", "41'", "52'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-42 | ¿En qué minuto Rafael Márquez abrió el marcador ante Argentina en 2006?",
-    "answer": "6'",
-    "options": ["6'", "12'", "19'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-43 | ¿Quién marcó el gol de México ante Países Bajos en el Mundial 2014?",
-    "answer": "Giovani dos Santos",
-    "options": ["Giovani dos Santos", "Guardado", "Chicharito"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-44 | ¿En qué minuto Giovani dos Santos anotó ante Países Bajos en Brasil 2014?",
-    "answer": "48'",
-    "options": ["48'", "58'", "67'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-45 | ¿Qué jugador mexicano convirtió el gol del triunfo ante Croacia en el Mundial 2014?",
-    "answer": "Chicharito Hernández",
-    "options": ["Rafa Márquez", "Chicharito Hernández", "Guardado"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-46 | ¿Qué jugadores convirtieron los goles de México ante Arabia Saudita en Qatar 2022?",
-    "answer": "Chávez y Martín",
-    "options": ["Chávez y Martín", "Lozano y Vega", "Martín y Jiménez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-47 | ¿Quién marcó el gol de tiro libre ante Arabia Saudita en Qatar 2022?",
-    "answer": "Luis Chávez",
-    "options": ["Alexis Vega", "Luis Chávez", "Edson Álvarez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-48 | ¿Qué jugador mexicano marcó el gol más rápido de México en los Mundiales?",
-    "answer": "Oribe Peralta",
-    "options": ["Cuauhtémoc Blanco", "Javier Hernández", "Oribe Peralta"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-49 | ¿Quién convirtió el primer gol de México en el Mundial 2026?",
-    "answer": "Edson Álvarez",
-    "options": ["Santiago Giménez", "Raúl Jiménez", "Edson Álvarez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-50 | ¿En qué minuto convirtió Edson Álvarez el primer gol de México en el Mundial 2026?",
-    "answer": "34'",
-    "options": ["22'", "28'", "34'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-51 | ¿Quién convirtió el segundo gol de México en la victoria 2-0 ante Sudáfrica?",
-    "answer": "Santiago Giménez",
-    "options": ["Santiago Giménez", "Luis Chávez", "César Huerta"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-52 | ¿Quién dio la asistencia del primer gol de México en el Mundial 2026?",
-    "answer": "Luis Chávez",
-    "options": ["Orbelín Pineda", "Luis Chávez", "Julián Quiñones"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-53 | ¿Qué resultado obtuvo México en el partido inaugural ante Sudáfrica?",
-    "answer": "2-0",
-    "options": ["1-0", "2-0", "3-1"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-54 | ¿Qué jugador convirtió el gol de la victoria ante Corea del Sur en el Mundial 2026?",
-    "answer": "Luis Romo",
-    "options": ["Raúl Jiménez", "Luis Romo", "César Huerta"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-55 | ¿En qué minuto anotó Luis Romo el gol ante Corea del Sur en el Mundial 2026?",
-    "answer": "50'",
-    "options": ["44'", "50'", "57'"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-56 | ¿Quién asistió a Luis Romo en el gol frente a Corea del Sur?",
-    "answer": "Santiago Giménez",
-    "options": ["Alexis Vega", "Roberto Alvarado", "Santiago Giménez"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-57 | ¿Cuántos goles recibió México en sus dos primeros partidos del Mundial 2026?",
-    "answer": "0",
-    "options": ["0", "1", "2"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-58 | ¿Quién es el primer asistente técnico de Javier Aguirre en la Selección de México?",
-    "answer": "Rafael Márquez",
-    "options": ["Rafael Márquez", "Pavel Pardo", "Andrés Guardado"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-59 | ¿Cuál fue el único cambio utilizado por México en los últimos minutos ante Corea del Sur en el Mundial 2026?",
-    "answer": "Orbelín Pineda por Luis Romo",
-    "options": ["César Huerta por Alexis Vega", "Raúl Jiménez por Santiago Giménez", "Orbelín Pineda por Luis Romo"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-60 | ¿Cuántos Mundiales disputó Guillermo Ochoa con México?",
-    "answer": "6",
-    "options": ["5", "6", "7"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-61 | ¿Cuántos partidos mundialistas acumula Guillermo Ochoa con la Selección de México?",
-    "answer": "20",
-    "options": ["15", "18", "20"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-62 | ¿Cuál es el séptimo estado más poblado de México?",
-    "answer": "Nuevo León",
-    "options": ["Nuevo León", "Chiapas", "Oaxaca"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-63 | ¿Cuál es el octavo estado más poblado de México?",
-    "answer": "Chiapas",
-    "options": ["Chiapas", "Oaxaca", "Michoacán"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-64 | ¿Cuál es el noveno estado más poblado de México?",
-    "answer": "Oaxaca",
-    "options": ["Oaxaca", "Michoacán", "Chihuahua"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-65 | ¿Cuál es el décimo estado más poblado de México?",
-    "answer": "Michoacán",
-    "options": ["Michoacán", "Chihuahua", "Sonora"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-66 | ¿Cuál es el undécimo estado más poblado de México?",
-    "answer": "Chihuahua",
-    "options": ["Chihuahua", "Guerrero", "Tamaulipas"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-67 | ¿Cuál es el duodécimo estado más poblado de México?",
-    "answer": "Guerrero",
-    "options": ["Guerrero", "Tamaulipas", "Baja California"]
-  },
-  {
-    "country": "México",
-    "question": "MEX-68 | ¿Cuál es la séptima ciudad más poblada de México?",
-    "answer": "Ciudad Juárez",
-    "options": ["Ciudad Juárez", "Zapopan", "Monterrey"]
-  },
-
-  // ==========================================
-  // EGIPTO
-  // ==========================================
   {
     "country": "Egipto",
-    "question": "EGI-1 | ¿Qué río atraviesa gran parte de Egipto?",
-    "answer": "Nilo",
-    "options": ["Amazonas", "Nilo", "Congo", "Níger"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-2 | ¿Cuál es la pirámide más grande de Egipto?",
+    "question": "EGY-1 | ¿Cuál es la pirámide más grande de Egipto?",
     "answer": "Gran Pirámide de Keops",
     "options": ["Pirámide Roja", "Pirámide de Micerino", "Pirámide de Kefrén", "Gran Pirámide de Keops"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-3 | ¿Cómo se llama la famosa estatua ubicada junto a las pirámides de Giza?",
+    "question": "EGY-2 | ¿Cómo se llama la famosa estatua ubicada junto a las pirámides de Giza?",
     "answer": "Esfinge de Giza",
     "options": ["Obelisco Real", "Esfinge de Giza", "León del Nilo", "Guardián Solar"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-4 | ¿Qué mar limita al norte de Egipto?",
+    "question": "EGY-3 | ¿Qué mar limita al norte de Egipto?",
     "answer": "Mar Mediterráneo",
     "options": ["Mar Rojo", "Mar Caspio", "Mar Mediterráneo", "Mar Negro"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-5 | ¿Qué canal estratégico conecta el Mediterráneo con el Mar Rojo?",
-    "answer": "Canal de Suez",
-    "options": ["Canal de Panamá", "Canal de Suez", "Canal de Corinto", "Canal de Kiel"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-6 | ¿Aproximadamente cuántos habitantes tiene Egipto según estimaciones recientes?",
-    "answer": "112 millones",
-    "options": ["45 millones", "70 millones", "112 millones", "180 millones"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-7 | ¿En qué Mundial volvió Egipto a participar después de 28 años?",
+    "question": "EGY-4 | ¿En qué Mundial volvió Egipto a participar después de 28 años?",
     "answer": "2018",
     "options": ["2010", "2014", "2018", "2022"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-8 | ¿Qué famoso delantero egipcio jugó en el Liverpool FC?",
+    "question": "EGY-5 | ¿Qué famoso delantero egipcio jugó en el Liverpool FC?",
     "answer": "Salah",
     "options": ["Aboutrika", "Hassan", "Salah", "Hossam Ghaly"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-9 | ¿Qué ciudad egipcia es famosa por albergar las pirámides?",
-    "answer": "Giza",
-    "options": ["Luxor", "Giza", "Asuán", "Port Said"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-10 | ¿Qué idioma oficial se habla en Egipto?",
-    "answer": "Árabe",
-    "options": ["Persa", "Turco", "Árabe", "Hebreo"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-11 | ¿Qué selección eliminó a Egipto del Mundial 1990?",
-    "answer": "No avanzó de fase de grupos",
-    "options": ["Países Bajos", "Inglaterra", "Irlanda", "No avanzó de fase de grupos"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-12 | ¿Qué resultado histórico consiguió Egipto ante Países Bajos en 1990?",
+    "question": "EGY-6 | ¿Qué resultado histórico consiguió Egipto ante Países Bajos en 1990?",
     "answer": "Empató 1-1",
     "options": ["Ganó 2-0", "Empató 1-1", "Ganó 1-0", "Perdió 5-0"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-13 | ¿Qué escritura utilizaban los antiguos egipcios?",
+    "question": "EGY-7 | ¿Qué escritura utilizaban los antiguos egipcios?",
     "answer": "Jeroglíficos",
     "options": ["Cuneiforme", "Jeroglíficos", "Latín antiguo", "Sánscrito"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-14 | ¿Qué mar limita al este de Egipto?",
+    "question": "EGY-8 | ¿Qué mar limita al este de Egipto?",
     "answer": "Mar Rojo",
     "options": ["Mar Rojo", "Mar Negro", "Mar Arábigo", "Mar Báltico"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-15 | ¿Cuál es la moneda oficial de Egipto?",
+    "question": "EGY-9 | ¿Cuál es la moneda oficial de Egipto?",
     "answer": "Libra egipcia",
     "options": ["Dinar", "Libra egipcia", "Peso egipcio", "Franco egipcio"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-16 | ¿Qué famoso templo se encuentra en Abu Simbel?",
-    "answer": "Ramsés II",
-    "options": ["Ramsés II", "Tutankamón", "Cleopatra", "Horus"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-17 | ¿Cuál es una de las principales ciudades portuarias egipcias sobre el Mediterráneo?",
-    "answer": "Alejandría",
-    "options": ["Alejandría", "Luxor", "Giza", "Asuán"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-18 | ¿Quién erró un penal decisivo para Egipto en la eliminación ante Senegal?",
+    "question": "EGY-10 | ¿Quién erró un penal decisivo para Egipto en la eliminación ante Senegal?",
     "answer": "Salah",
-    "options": ["Salah", "Elneny", "Treceguet", "Hegazi"]
+    "options": ["Salah", "Elneny", "Trezeguet", "Hegazi"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-19 | ¿Qué famosa reina egipcia tuvo relación política con Julio César y Marco Antonio?",
+    "question": "EGY-11 | ¿Qué famosa reina egipcia tuvo relación política con Julio César y Marco Antonio?",
     "answer": "Cleopatra",
     "options": ["Nefertiti", "Cleopatra", "Hatshepsut", "Isis"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-20 | ¿Qué famoso museo egipcio alberga tesoros de Tutankamón?",
+    "question": "EGY-12 | ¿Qué famoso museo egipcio alberga tesoros de Tutankamón?",
     "answer": "Museo Egipcio de El Cairo",
     "options": ["Museo del Louvre", "Museo Egipcio de El Cairo", "Museo Akenatón", "Museo Nubio"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-21 | ¿Qué color predomina en la bandera de Egipto junto al blanco y negro?",
-    "answer": "Rojo",
-    "options": ["Azul", "Verde", "Rojo", "Dorado"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-22 | ¿Qué país limita al noreste con Egipto?",
-    "answer": "Israel",
-    "options": ["Jordania", "Siria", "Israel", "Turquía"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-23 | ¿Qué selección venció 2-1 a Egipto en el Mundial 2018 con un gol sobre el final?",
+    "question": "EGY-13 | ¿Qué selección venció 2-1 a Egipto en el Mundial 2018 con un gol sobre el final?",
     "answer": "Arabia Saudita",
     "options": ["Arabia Saudita", "Rusia", "Uruguay", "Portugal"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-24 | ¿Qué jugador egipcio convirtió el primer gol africano en la historia de los Mundiales?",
+    "question": "EGY-14 | ¿Qué jugador egipcio convirtió el primer gol africano en la historia de los Mundiales?",
     "answer": "Abdelrahman Fawzi",
     "options": ["Mohamed Salah", "Abdelrahman Fawzi", "El Khatib", "Hossam Hassan"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-25 | ¿Cuál es la segunda ciudad más poblada de Egipto?",
-    "answer": "Alejandría",
-    "options": ["Alejandría", "Giza", "Port Said"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-26 | ¿Cuál es la ciudad más poblada de Egipto?",
+    "question": "EGY-15 | ¿Cuál es la ciudad más poblada de Egipto?",
     "answer": "El Cairo",
     "options": ["Alejandría", "El Cairo", "Giza"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-27 | ¿Qué península pertenece a Egipto y conecta África con Asia?",
+    "question": "EGY-16 | ¿Qué península pertenece a Egipto y conecta África con Asia?",
     "answer": "Sinaí",
     "options": ["Anatolia", "Sinaí", "Arábiga"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-28 | ¿Con cuántos países limita Egipto?",
-    "answer": "4",
-    "options": ["2", "3", "4"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-29 | ¿Qué país limita al sur con Egipto?",
+    "question": "EGY-17 | ¿Qué país limita al sur con Egipto?",
     "answer": "Sudán",
     "options": ["Chad", "Sudán", "Etiopía"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-30 | ¿Cuál es el punto más alto de Egipto?",
-    "answer": "Monte Catalina",
-    "options": ["Monte Catalina", "Monte Sinaí", "Jebel Musa"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-31 | ¿Cuál es el lago más grande de Egipto?",
+    "question": "EGY-18 | ¿Cuál es el lago más grande de Egipto?",
     "answer": "Lago Nasser",
     "options": ["Lago Nasser", "Lago Qarun", "Lago Mariout"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-32 | ¿Qué faraón mandó construir la Gran Pirámide de Giza?",
+    "question": "EGY-19 | ¿Qué faraón mandó construir la Gran Pirámide de Giza?",
     "answer": "Keops",
     "options": ["Keops", "Kefrén", "Micerino"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-33 | ¿Qué faraón está asociado al templo de Abu Simbel?",
+    "question": "EGY-20 | ¿Qué faraón está asociado al templo de Abu Simbel?",
     "answer": "Ramsés II",
     "options": ["Tutankamón", "Ramsés II", "Akenatón"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-34 | ¿Quién descifró los jeroglíficos egipcios?",
+    "question": "EGY-21 | ¿Quién descifró los jeroglíficos egipcios?",
     "answer": "Champollion",
     "options": ["Champollion", "Carter", "Mariette"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-35 | ¿En qué Mundial disputó Egipto su primer partido de la historia?",
-    "answer": "1934",
-    "options": ["1930", "1934", "1938"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-36 | ¿Contra qué selección debutó Egipto en los Mundiales?",
+    "question": "EGY-22 | ¿Contra qué selección debutó Egipto en los Mundiales?",
     "answer": "Hungría",
     "options": ["Hungría", "Italia", "Austria"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-37 | ¿Quién fue el capitán de Egipto en el Mundial 2018?",
-    "answer": "Essam El-Hadary",
-    "options": ["Mohamed Elneny", "Essam El-Hadary", "Mohamed Salah"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-38 | ¿Quién fue el entrenador de Egipto en el Mundial 2018?",
-    "answer": "Héctor Cúper",
-    "options": ["Héctor Cúper", "Hassan Shehata", "Carlos Queiroz"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-39 | ¿Qué arquero egipcio se convirtió en el jugador más veterano en disputar un Mundial?",
-    "answer": "El-Hadary",
-    "options": ["El Shenawy", "El-Hadary", "Ekramy"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-40 | ¿Qué edad tenía aproximadamente Essam El-Hadary cuando jugó en Rusia 2018?",
+    "question": "EGY-23 | ¿Qué edad tenía aproximadamente Essam El-Hadary cuando jugó en Rusia 2018?",
     "answer": "45 años",
     "options": ["40 años", "45 años", "48 años"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-41 | ¿Contra qué selección Mohamed Salah marcó su primer gol en una Copa del Mundo?",
+    "question": "EGY-24 | ¿Contra qué selección Mohamed Salah marcó su primer gol en una Copa del Mundo?",
     "answer": "Arabia Saudita",
     "options": ["Uruguay", "Rusia", "Arabia Saudita"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-42 | ¿En qué minuto Mohamed Salah anotó ese gol vs Arabia Saudita en Rusia 2018?",
+    "question": "EGY-25 | ¿En qué minuto Mohamed Salah anotó ese gol vs Arabia Saudita en Rusia 2018?",
     "answer": "22'",
     "options": ["22'", "37'", "61'"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-43 | ¿Cuál es la cuarta ciudad más poblada de Egipto?",
+    "question": "EGY-26 | ¿Cuál es la cuarta ciudad más poblada de Egipto?",
     "answer": "Shubra El-Kheima",
     "options": ["Shubra El-Kheima", "Luxor", "Port Said"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-44 | ¿Cuál es la quinta ciudad más poblada de Egipto?",
-    "answer": "Port Said",
-    "options": ["Alejandría", "Port Said", "Asuán"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-45 | ¿Qué faraón fue padre de Tutankamón y promovió el culto a un único dios?",
+    "question": "EGY-27 | ¿Qué faraón fue padre de Tutankamón y promovió el culto a un único dios?",
     "answer": "Akenatón",
     "options": ["Ramsés II", "Akenatón", "Keops"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-46 | ¿Cómo se llamaba la esposa de Akenatón y una de las reinas más famosas de Egipto?",
-    "answer": "Nefertiti",
-    "options": ["Cleopatra", "Nefertiti", "Hatshepsut"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-47 | ¿Qué faraona gobernó Egipto y es considerada una de las mujeres más poderosas de la Antigüedad?",
+    "question": "EGY-28 | ¿Qué faraona gobernó Egipto y es considerada una de las mujeres más poderosas de la Antigüedad?",
     "answer": "Hatshepsut",
     "options": ["Cleopatra", "Hatshepsut", "Nefertari"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-48 | ¿Quién marcó el gol de Egipto en la derrota 3-1 ante Rusia en el Mundial 2018?",
-    "answer": "Salah",
-    "options": ["Salah", "Elneny", "Treceguet"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-49 | ¿En qué minuto convirtió Mohamed Salah ese gol ante Rusia?",
-    "answer": "73'",
-    "options": ["73'", "68'", "81'"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-50 | ¿Qué selección derrotó a Egipto en la final de la Copa Africana de Naciones 2017?",
-    "answer": "Camerún",
-    "options": ["Senegal", "Camerún", "Nigeria"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-51 | ¿Cuál es la ciudad más austral de las siguientes dentro de Egipto?",
+    "question": "EGY-29 | ¿Cuál es la ciudad más austral de las siguientes dentro de Egipto?",
     "answer": "Asuán",
     "options": ["Asuán", "Alejandría", "Port Said"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-52 | ¿Qué brazo del Nilo forma el delta junto al brazo de Rosetta?",
+    "question": "EGY-30 | ¿Qué brazo del Nilo forma el delta junto al brazo de Rosetta?",
     "answer": "Damieta",
     "options": ["Damieta", "Asuán", "Luxor"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-53 | ¿Quién es el director técnico de Egipto en el Mundial 2026?",
-    "answer": "Hossam Hassan",
-    "options": ["Héctor Cúper", "Hossam Hassan", "Carlos Queiroz"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-54 | ¿Quién marcó el gol de Egipto ante Bélgica en el Mundial 2026?",
+    "question": "EGY-31 | ¿Quién marcó el gol de Egipto ante Bélgica en el Mundial 2026?",
     "answer": "Emam Ashour",
     "options": ["Mohamed Salah", "Omar Marmoush", "Emam Ashour"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-55 | ¿En qué minuto anotó Emam Ashour contra Bélgica en el Mundial 2026?",
+    "question": "EGY-32 | ¿En qué minuto anotó Emam Ashour contra Bélgica en el Mundial 2026?",
     "answer": "19'",
     "options": ["19'", "28'", "37'"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-56 | ¿Cómo fue el gol de Emam Ashour ante Bélgica en el Mundial 2026?",
+    "question": "EGY-33 | ¿Cómo fue el gol de Emam Ashour ante Bélgica en el Mundial 2026?",
     "answer": "Remate desde fuera del área",
     "options": ["De penal", "De cabeza", "Remate desde fuera del área"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-57 | ¿En qué minuto llegó el empate de Bélgica ante Egipto en el Mundial 2026?",
-    "answer": "66'",
-    "options": ["58'", "66'", "74'"]
-  },
-  {
-    "country": "Egipto",
-    "question": "EGI-58 | ¿Qué resultado obtuvo Egipto frente a Nueva Zelanda en el Mundial 2026?",
+    "question": "EGY-34 | ¿Qué resultado obtuvo Egipto frente a Nueva Zelanda en el Mundial 2026?",
     "answer": "3-1",
     "options": ["2-1", "3-1", "4-1"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-59 | ¿Quién convirtió el primer gol de Egipto ante Nueva Zelanda?",
+    "question": "EGY-35 | ¿Quién convirtió el primer gol de Egipto ante Nueva Zelanda?",
     "answer": "Mostafa Zico",
-    "options": ["Mohamed Salah", "Mostafa Zico", "Treceguet"]
+    "options": ["Mohamed Salah", "Mostafa Zico", "Trezeguet"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-60 | ¿En qué minuto empató Mostafa Zico ante Nueva Zelanda en el Mundial 2026?",
+    "question": "EGY-36 | ¿En qué minuto empató Mostafa Zico ante Nueva Zelanda en el Mundial 2026?",
     "answer": "58'",
     "options": ["58'", "63'", "67'"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-61 | ¿Quién dio la asistencia para el gol de Mostafa Zico en el Mundial 2026?",
+    "question": "EGY-37 | ¿Quién dio la asistencia para el gol de Mostafa Zico en el Mundial 2026?",
     "answer": "Mohamed Hany",
     "options": ["Mohamed Salah", "Omar Marmoush", "Mohamed Hany"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-62 | ¿Quién marcó el segundo gol de Egipto ante Nueva Zelanda en el Mundial 2026?",
+    "question": "EGY-38 | ¿Quién marcó el segundo gol de Egipto ante Nueva Zelanda en el Mundial 2026?",
     "answer": "Mohamed Salah",
-    "options": ["Omar Marmoush", "Mohamed Salah", "Treceguet"]
+    "options": ["Omar Marmoush", "Mohamed Salah", "Trezeguet"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-63 | ¿En qué minuto Mohamed Salah puso el 2-1 ante Nueva Zelanda en el Mundial 2026?",
+    "question": "EGY-39 | ¿En qué minuto Mohamed Salah puso el 2-1 ante Nueva Zelanda en el Mundial 2026?",
     "answer": "67'",
-    "options": ["64'", "67'", "72'"]
+    "options": ["64'", "67'", "71'"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-64 | ¿Con quién hizo una pared Mohamed Salah antes de marcar el 2-1 en el Mundial 2026?",
+    "question": "EGY-40 | ¿Con quién hizo una pared Mohamed Salah antes de marcar el 2-1 en el Mundial 2026?",
     "answer": "Mostafa Zico",
     "options": ["Marmoush", "Hany", "Mostafa Zico"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-65 | ¿Quién convirtió el tercer gol de Egipto ante Nueva Zelanda en el Mundial 2026?",
-    "answer": "Treceguet",
-    "options": ["Treceguet", "Salah", "Ashour"]
+    "question": "EGY-41 | ¿Quién convirtió el tercer gol de Egipto ante Nueva Zelanda en el Mundial 2026?",
+    "answer": "Trezeguet",
+    "options": ["Trezeguet", "Salah", "Ashour"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-66 | ¿Qué jugador de Egipto logró marcar y asistir en el partido ante Nueva Zelanda en el Mundial 2026?",
+    "question": "EGY-42 | ¿Qué jugador de Egipto logró marcar y asistir en el partido ante Nueva Zelanda en el Mundial 2026?",
     "answer": "Salah",
     "options": ["Ashour", "Salah", "Abdelmaguid"]
   },
   {
     "country": "Egipto",
-    "question": "EGI-67 | ¿Cuál es el canal marítimo más transitado que transcurre por Egipto?",
+    "question": "EGY-43 | ¿Cuál es el canal marítimo más transitado que transcurre por Egipto?",
     "answer": "Suez",
     "options": ["Ormuz", "Suez", "Kiel"]
   },
-
-  // ==========================================
-  // CANADÁ
-  // ==========================================
   {
-    "country": "Canadá",
-    "question": "CAN-1 | ¿Cuál es el segundo idioma oficial de Canadá?",
-    "answer": "Francés",
-    "options": ["Italiano", "Francés", "Portugués"]
+    "country": "Egipto",
+    "question": "EGY-44 | ¿En qué minuto fue reemplazado Mohamed Salah tras pedir el cambio?",
+    "answer": "57'",
+    "options": ["45'", "57'", "73'", "59'"]
   },
   {
-    "country": "Canadá",
-    "question": "CAN-2 | ¿Cuál es el animal nacional de Canadá?",
-    "answer": "Castor",
-    "options": ["Águila", "Castor", "Reno"]
+    "country": "Egipto",
+    "question": "EGY-45 | ¿Quién es el asistente técnico de Hossam Hassan en la selección de Egipto?",
+    "answer": "Mohamed Abdel Wahed",
+    "options": ["Ibrahim Hassan", "Mohamed Abdel Wahed", "Tarek Soliman"]
   },
   {
-    "country": "Canadá",
-    "question": "CAN-3 | ¿Qué famoso jarabe produce Canadá en gran cantidad?",
-    "answer": "Jarabe de arce",
-    "options": ["Chocolate", "Frutilla", "Jarabe de arce"]
+    "country": "Egipto",
+    "question": "EGY-46 | ¿Quién fue el tercer arquero de la lista definitiva de Egipto para el Mundial 2026?",
+    "answer": "Mohamed Alaa",
+    "options": ["Mostafa Shobeir", "Mohamed Alaa", "El-Mahdi Soliman", "Al-Shiry Colip"]
   },
   {
-    "country": "Canadá",
-    "question": "CAN-4 | ¿Con qué país comparte Canadá la frontera más larga del mundo?",
-    "answer": "Estados Unidos",
-    "options": ["México", "Rusia", "Estados Unidos"]
+    "country": "Francia",
+    "question": "FRA-2 | ¿Qué jugador marcó dos goles en la final del Mundial 1998?",
+    "answer": "Zinedine Zidane",
+    "options": ["Youri Djorkaeff", "David Trezeguet", "Zinedine Zidane"]
   },
   {
-    "country": "Canadá",
-    "question": "CAN-5 | ¿Quién fue el entrenador de Canadá en el Mundial de 1986?",
-    "answer": "Tony Waiters",
-    "options": ["Tony Waiters", "Stephen Hart", "John Herdman"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-6 | ¿Quién es el segundo máximo goleador histórico de la selección masculina de Canadá?",
-    "answer": "Cyle Larin",
-    "options": ["Lucas Cavallini", "Cyle Larin", "Jonathan David"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-7 | ¿Contra qué selección obtuvo Canadá su primer TRIUNFO en la historia de los Mundiales?",
-    "answer": "Qatar",
-    "options": ["Qatar", "Croacia", "Bélgica"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-8 | ¿Cuántos goles marcó Canadá en el Mundial de 2022?",
+    "country": "Francia",
+    "question": "FRA-3 | ¿Cuántos Mundiales ha ganado Francia hasta 2026?",
     "answer": "2",
-    "options": ["1", "2", "3"]
+    "options": ["2", "1", "3"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-4 | ¿Qué francés ganó la Bota de Oro del Mundial 1958?",
+    "answer": "Just Fontaine",
+    "options": ["Michel Platini", "Jean Tigana", "Just Fontaine"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-5 | ¿Quién marcó un hat-trick en la final del Mundial 2022 para Francia?",
+    "answer": "Kylian Mbappé",
+    "options": ["Kylian Mbappé", "Antoine Griezmann", "Olivier Giroud"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-6 | ¿Qué torre famosa se encuentra en París?",
+    "answer": "Torre Eiffel",
+    "options": ["Torre de Pisa", "Torre Eiffel", "Big Ben"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-7 | ¿Qué río atraviesa París?",
+    "answer": "Sena",
+    "options": ["Danubio", "Loira", "Sena"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-8 | ¿Qué museo famoso alberga la Mona Lisa?",
+    "answer": "Museo del Louvre",
+    "options": ["Museo del Louvre", "Museo Británico", "Museo del Prado"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-9 | ¿Cuál es el plato francés hecho con caracoles?",
+    "answer": "Escargots",
+    "options": ["Ratatouille", "Fondue", "Escargots"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-10 | ¿Qué tratado puso fin a la Primera Guerra Mundial?",
+    "answer": "Tratado de Versalles",
+    "options": ["Tratado de Versalles", "Tratado de Roma", "Tratado de París"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-11 | ¿Qué reina francesa fue ejecutada durante la Revolución Francesa?",
+    "answer": "María Antonieta",
+    "options": ["Josefina", "María Antonieta", "Catalina de Médici"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-12 | ¿Cuál es la montaña más alta de Francia y Europa Occidental?",
+    "answer": "Mont Blanc",
+    "options": ["Pirineos", "Alpes Julianos", "Mont Blanc"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-13 | ¿Quién era el presidente de Francia cuando ganó el Mundial 2018?",
+    "answer": "Emmanuel Macron",
+    "options": ["Emmanuel Macron", "François Hollande", "Nicolas Sarkozy"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-14 | ¿Cuál es la sexta ciudad más poblada de Francia?",
+    "answer": "Nantes",
+    "options": ["Toulouse", "Nantes", "Estrasburgo"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-15 | ¿En qué año Napoleón Bonaparte se proclamó emperador de Francia?",
+    "answer": "1804",
+    "options": ["1799", "1815", "1804"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-16 | ¿Qué batalla marcó la derrota definitiva de Napoleón Bonaparte?",
+    "answer": "Waterloo",
+    "options": ["Waterloo", "Leipzig", "Austerlitz"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-17 | ¿Qué pintor francés es considerado uno de los fundadores del impresionismo?",
+    "answer": "Claude Monet",
+    "options": ["Paul Cézanne", "Claude Monet", "Auguste Rodin"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-18 | ¿Cuál es el río más largo de Francia?",
+    "answer": "Loira",
+    "options": ["Sena", "Loira", "Ródano"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-19 | ¿Qué ciudad fue la capital de Francia antes de que París se consolidara definitivamente como sede del poder real?",
+    "answer": "Tours",
+    "options": ["Reims", "Dijon", "Tours"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-20 | ¿Qué región francesa es famosa por los desembarcos aliados del Día D en 1944?",
+    "answer": "Normandía",
+    "options": ["Normandía", "Bretaña", "Alsacia"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-21 | ¿Cuál fue el nombre del régimen francés colaboracionista con Alemania durante la Segunda Guerra Mundial?",
+    "answer": "Gobierno de Vichy",
+    "options": ["Quinta República", "Gobierno de Vichy", "Directorio Francés"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-22 | ¿Quién lideró la resistencia francesa durante la Segunda Guerra Mundial y luego fue presidente de Francia?",
+    "answer": "Charles de Gaulle",
+    "options": ["Georges Pompidou", "François Mitterrand", "Charles de Gaulle"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-23 | ¿A qué región administrativa pertenece la ciudad de París?",
+    "answer": "Île-de-France",
+    "options": ["Île-de-France", "Normandía", "Occitania"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-24 | ¿A qué región pertenece la ciudad de Lyon?",
+    "answer": "Auvernia-Ródano-Alpes",
+    "options": ["Provenza-Alpes-Costa Azul", "Nueva Aquitania", "Auvernia-Ródano-Alpes"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-25 | ¿En qué ciudad nació Kylian Mbappé?",
+    "answer": "París",
+    "options": ["Marsella", "París", "Lyon"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-26 | ¿Quién assisted a Kylian Mbappé en su primer gol ante Argentina en Rusia 2018?",
+    "answer": "Lucas Hernández",
+    "options": ["Antoine Griezmann", "Paul Pogba", "Lucas Hernández"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-27 | ¿Qué dorsal utilizó Kylian Mbappé en los Mundiales 2018 y 2022?",
+    "answer": "10",
+    "options": ["10", "7", "11"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-28 | ¿En qué ciudad nació Antoine Griezmann?",
+    "answer": "Mâcon",
+    "options": ["Lyon", "Mâcon", "París"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-29 | ¿Cuántos goles convirtió Antoine Griezmann en el Mundial 2018?",
+    "answer": "4",
+    "options": ["3", "5", "4"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-30 | ¿Contra qué selección convirtió Griezmann de penal en la final del Mundial 2018?",
+    "answer": "Croacia",
+    "options": ["Croacia", "Bélgica", "Inglaterra"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-32 | ¿En qué país nació David Trezeguet?",
+    "answer": "Argentina",
+    "options": ["Uruguay", "Francia", "Argentina"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-33 | ¿En qué ciudad nació David Trezeguet?",
+    "answer": "Buenos Aires",
+    "options": ["Buenos Aires", "Rosario", "Córdoba"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-35 | ¿Cuántos goles marcó Mbappé en el Mundial 2022?",
+    "answer": "8",
+    "options": ["8", "7", "6"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-36 | ¿Contra qué selección debutó Kylian Mbappé en una Copa del Mundo?",
+    "answer": "Australia",
+    "options": ["Perú", "Australia", "Dinamarca"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-37 | ¿Qué jugador marcó el primer gol de Francia en el Mundial 2026?",
+    "answer": "Kylian Mbappé",
+    "options": ["Ousmane Dembélé", "Michael Olise", "Kylian Mbappé"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-38 | ¿En qué minuto Bradley Barcola marcó su gol ante Senegal?",
+    "answer": "82'",
+    "options": ["82'", "74'", "89'"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-39 | ¿Qué jugador ingresó en el segundo tiempo y anotó frente a Senegal?",
+    "answer": "Bradley Barcola",
+    "options": ["Désiré Doué", "Bradley Barcola", "Manu Koné"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-40 | ¿Qué tres jugadores ingresaron como titulares ante Irak en lugar de Theo Hernández, Aurélien Tchouaméni y Désiré Doué?",
+    "answer": "Lucas Digne, Manu Koné y Bradley Barcola",
+    "options": ["Theo Hernández, Camavinga y Cherki", "Lucas Digne, Manu Koné y Bradley Barcola", "Digne, Zaïre-Emery y Thuram"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-41 | ¿Cómo fue el primer gol de Kylian Mbappé ante Irak?",
+    "answer": "Remate desde fuera del área",
+    "options": ["De cabeza", "De penal", "Remate desde fuera del área"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-42 | ¿En cuántos minutos completó Ousmane Dembélé su hat-trick frente a Noruega?",
+    "answer": "25 minutos",
+    "options": ["18 minutos", "25 minutos", "34 minutos"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-43 | ¿Quién anotó el cuarto gol de Francia ante Noruega en el Mundial 2026?",
+    "answer": "Désiré Doué",
+    "options": ["Désiré Doué", "Michael Olise", "Bradley Barcola"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-44 | ¿Cómo fue el cuarto gol de Francia frente a Noruega en el Mundial 2026?",
+    "answer": "De cabeza",
+    "options": ["Tiro libre directo", "De cabeza", "De penal"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-45 | ¿Quién dirigió a Francia desde el banco frente a Noruega en ausencia de Didier Deschamps?",
+    "answer": "Guy Stéphan",
+    "options": ["Bruno Génésio", "Franck Raviot", "Guy Stéphan"]
+  },
+  {
+    "country": "Francia",
+    "question": "FRA-46 | ¿Qué jugador será baja para Francia en el partido ante Suecia por lesión?",
+    "answer": "Marcus Thuram",
+    "options": ["Marcus Thuram", "Ousmane Dembélé", "William Saliba"]
+  },
+
+  {
+    "country": "Canadá",
+    "question": "CAN-1 | ¿Qué famoso jarabe produce Canadá en gran cantidad?",
+    "answer": "Jarabe de arce",
+    "options": ["Chocolate", "Jarabe de arce", "Frutilla"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-9 | ¿Quién fue el entrenador de Canadá en el Mundial 2022?",
+    "question": "CAN-2 | ¿Con qué país comparte Canadá la frontera terrestre más larga del mundo?",
+    "answer": "Estados Unidos",
+    "options": ["Estados Unidos", "México", "Rusia"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-3 | ¿Quién es el segundo máximo goleador histórico de la selección masculina de Canadá?",
+    "answer": "Jonathan David",
+    "options": ["Jonathan David", "Lucas Cavallini", "Cyle Larin"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-4 | ¿Contra qué selección obtuvo Canadá su primer triunfo en la historia de los Mundiales?",
+    "answer": "Qatar",
+    "options": ["Croacia", "Bélgica", "Qatar"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-5 | ¿Cuántos goles marcó Canadá en el Mundial de 2022?",
+    "answer": "2",
+    "options": ["1", "3", "2"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-6 | ¿Quién fue el entrenador de Canadá en el Mundial 2022?",
     "answer": "John Herdman",
-    "options": ["George O'Conors", "Mauro Biello", "John Herdman"]
+    "options": ["John Herdman", "Mauro Biello", "George O'Conors"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-10 | ¿Cuál es la octava ciudad más poblada de Canadá?",
-    "answer": "Mississauga",
-    "options": ["Mississauga", "Quebec", "Hamilton"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-11 | ¿Cuál es la novena ciudad más poblada de Canadá?",
+    "question": "CAN-7 | ¿Cuál es la novena ciudad más poblada de Canadá?",
     "answer": "Quebec",
-    "options": ["Quebec", "Kitchener", "Halifax"]
+    "options": ["Kitchener", "Quebec", "Halifax"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-12 | ¿Cuál es la capital de la provincia de Columbia Británica?",
+    "question": "CAN-8 | ¿Cuál es la capital de la provincia de Columbia Británica?",
     "answer": "Victoria",
     "options": ["Vancouver", "Victoria", "Kelowna"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-13 | ¿Qué provincia canadiense es la más poblada?",
+    "question": "CAN-9 | ¿Qué provincia canadiense es la más poblada?",
     "answer": "Ontario",
+    "options": ["Alberta", "Quebec", "Ontario"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-10 | ¿En qué año se creó oficialmente Canadá como país mediante la Confederación?",
+    "answer": "1867",
+    "options": ["1867", "1776", "1914"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-11 | ¿Qué potencia europea controló gran parte de Canadá antes de los británicos?",
+    "answer": "Francia",
+    "options": ["Portugal", "Francia", "España"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-12 | ¿Qué provincia canadiense tiene mayoría francófona?",
+    "answer": "Quebec",
+    "options": ["Quebec", "Ontario", "Saskatchewan"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-13 | ¿Cuál es el lago más grande ubicado completamente en Canadá?",
+    "answer": "Gran Lago del Oso",
+    "options": ["Lago Superior", "Lago Erie", "Gran Lago del Oso"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-14 | ¿Quién marcó el primer gol de Canadá en una Copa del Mundo?",
+    "answer": "Alphonso Davies",
+    "options": ["Jonathan David", "Alphonso Davies", "Cyle Larin"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-15 | ¿Contra qué selección convirtió Alphonso Davies el primer gol mundialista de Canadá?",
+    "answer": "Croacia",
+    "options": ["Croacia", "Bélgica", "Marruecos"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-16 | ¿Quién dio la asistencia para el primer gol mundialista de Canadá?",
+    "answer": "Tajon Buchanan",
+    "options": ["Stephen Eustáquio", "Tajon Buchanan", "Jonathan David"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-17 | ¿Qué selección derrotó 4-1 a Canadá en su primer partido de la historia en un Mundial, México 1986?",
+    "answer": "Francia",
+    "options": ["Hungría", "Francia", "Unión Soviética"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-18 | ¿Cuál es la sexta ciudad más poblada de Canadá?",
+    "answer": "Ottawa",
+    "options": ["Hamilton", "Halifax", "Ottawa"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-19 | ¿Cuál es la séptima ciudad más poblada de Canadá?",
+    "answer": "Winnipeg",
+    "options": ["Mississauga", "Winnipeg", "Quebec"]
+  },
+  {
+    "country": "Canadá",
+    "question": "CAN-20 | ¿Qué provincia canadiense es la más extensa por superficie?",
+    "answer": "Quebec",
     "options": ["Quebec", "Ontario", "Alberta"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-14 | ¿En qué año se creó oficialmente Canadá como país mediante la Confederación?",
-    "answer": "1867",
-    "options": ["1776", "1867", "1914"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-15 | ¿Qué primer ministro canadiense es considerado el “Padre de la Confederación”?",
-    "answer": "John A. Macdonald",
-    "options": ["Pierre Trudeau", "John A. Macdonald", "Justin Trudeau"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-16 | ¿Qué potencia europea controló gran parte de Canadá antes de los británicos?",
-    "answer": "Francia",
-    "options": ["España", "Francia", "Portugal"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-17 | ¿Qué provincia canadiense tiene mayoría francófona?",
-    "answer": "Quebec",
-    "options": ["Ontario", "Quebec", "Saskatchewan"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-18 | ¿Cuál es el lago más grande ubicado completamente en Canadá?",
-    "answer": "Gran Lago del Oso",
-    "options": ["Lago Superior", "Gran Lago del Oso", "Lago Erie"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-19 | ¿Quién marcó el primer gol de Canadá en una Copa del Mundo?",
-    "answer": "Alphonso Davies",
-    "options": ["Jonathan David", "Alphonso Davies", "Cyle Larin"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-20 | ¿Contra qué selección convirtió Alphonso Davies el primer gol mundialista de Canadá?",
-    "answer": "Croacia",
-    "options": ["Bélgica", "Croacia", "Marruecos"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-21 | ¿Quién dio la asistencia para el primer gol mundialista de Canadá?",
-    "answer": "Tajon Buchanan",
-    "options": ["Jonathan David", "Stephen Eustáquio", "Tajon Buchanan"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-22 | ¿Qué selección derrotó 4-1 a Canadá en su primer partido de la historia en un Mundial (México 1986)?",
-    "answer": "Unión Soviética",
-    "options": ["Francia", "Hungría", "Unión Soviética"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-23 | ¿Cuál es la tercera ciudad más poblada de Canadá?",
-    "answer": "Vancouver",
-    "options": ["Vancouver", "Calgary", "Ottawa"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-24 | ¿Cuál es la sexta ciudad más poblada de Canadá?",
-    "answer": "Ottawa",
-    "options": ["Ottawa", "Hamilton", "Halifax"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-25 | ¿Cuál es la séptima ciudad más poblada de Canadá?",
-    "answer": "Winnipeg",
-    "options": ["Winnipeg", "Mississauga", "Quebec"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-26 | ¿Qué provincia canadiense es la más extensa por superficie?",
-    "answer": "Quebec",
-    "options": ["Ontario", "Quebec", "Nunavut"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-27 | ¿Cuál es la segunda provincia o territorio más extenso de Canadá?",
-    "answer": "Ontario",
-    "options": ["Quebec", "Ontario", "Columbia Británica"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-28 | ¿Qué explorador francés fundó la ciudad de Quebec en 1608?",
-    "answer": "Samuel de Champlain",
-    "options": ["Jacques Cartier", "Samuel de Champlain", "Pierre Radisson"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-29 | ¿En qué año Canadá obtuvo plena autonomía legislativa del Reino Unido mediante el Estatuto de Westminster?",
+    "question": "CAN-21 | ¿En qué año Canadá obtuvo plena autonomía legislativa del Reino Unido mediante el Estatuto de Westminster?",
     "answer": "1931",
-    "options": ["1919", "1931", "1945"]
+    "options": ["1919", "1945", "1931"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-30 | ¿Quién es el jefe de Estado de Canadá actualmente?",
+    "question": "CAN-22 | ¿Quién es el jefe de Estado de Canadá actualmente?",
     "answer": "Carlos III",
-    "options": ["Justin Trudeau", "Carlos III", "Mary Simon"]
+    "options": ["Carlos III", "Justin Trudeau", "Mary Simon"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-31 | ¿Qué río atraviesa las ciudades de Montreal y Quebec?",
+    "question": "CAN-23 | ¿Qué río atraviesa las ciudades de Montreal y Quebec?",
     "answer": "San Lorenzo",
-    "options": ["Mackenzie", "Yukón", "San Lorenzo"]
+    "options": ["Mackenzie", "San Lorenzo", "Yukón"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-32 | ¿Cuál es la capital de la provincia de Quebec?",
+    "question": "CAN-24 | ¿Cuál es la capital de la provincia de Quebec?",
     "answer": "Quebec City",
-    "options": ["Montreal", "Quebec City", "Laval"]
+    "options": ["Montreal", "Laval", "Quebec City"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-33 | ¿En qué provincia se encuentra la ciudad de Winnipeg?",
-    "answer": "Manitoba",
-    "options": ["Ontario", "Manitoba", "Alberta"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-34 | ¿Qué provincia canadiense produce la mayor cantidad de petróleo?",
+    "question": "CAN-25 | ¿Qué provincia canadiense produce la mayor cantidad de petróleo?",
     "answer": "Alberta",
-    "options": ["Alberta", "Ontario", "Quebec"]
+    "options": ["Ontario", "Alberta", "Quebec"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-35 | ¿Qué jugador le marcó el primer gol a Canadá en los Mundiales?",
-    "answer": "Jean-Pierre Papin",
-    "options": ["Michel Platini", "Jean-Pierre Papin", "Jean Charbonnel"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-36 | ¿Cuántos años tenía Atiba Hutchinson durante el Mundial de Qatar 2022?",
+    "question": "CAN-26 | ¿Cuántos años tenía Atiba Hutchinson durante el Mundial de Qatar 2022?",
     "answer": "39",
-    "options": ["35", "37", "39"]
+    "options": ["39", "35", "37"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-37 | ¿Contra qué selección debutó Canadá en el Mundial 2026?",
-    "answer": "Bosnia y Herzegovina",
-    "options": ["Qatar", "Bosnia y Herzegovina", "Suiza"]
+    "question": "CAN-27 | ¿Cuál fue el resultado del debut de Canadá en el Mundial 2026?",
+    "answer": "11-11",
+    "options": ["2-1", "1-1", "0-0"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-38 | ¿Cuál fue el resultado del debut de Canadá en el Mundial 2026?",
-    "answer": "1-1",
-    "options": ["1-1", "2-1", "0-0"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-39 | ¿Qué día disputó Canadá su primer partido del Mundial 2026?",
+    "question": "CAN-28 | ¿Qué día disputó Canadá su primer partido del Mundial 2026?",
     "answer": "12 de junio",
-    "options": ["11 de junio", "12 de junio", "13 de junio"]
+    "options": ["11 de junio", "13 de junio", "12 de junio"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-40 | ¿Cuántos puntos sumó Canadá tras su primer partido del Mundial 2026?",
+    "question": "CAN-29 | ¿Cuántos puntos sumó Canadá tras su primer partido del Mundial 2026?",
     "answer": "1",
-    "options": ["0", "1", "3"]
+    "options": ["1", "0", "3"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-41 | ¿Contra qué selección juega Canadá su segundo partido del Mundial 2026?",
+    "question": "CAN-30 | ¿Contra qué selección juega Canadá su segundo partido del Mundial 2026?",
     "answer": "Qatar",
-    "options": ["Suiza", "Bosnia y Herzegovina", "Qatar"]
+    "options": ["Suiza", "Qatar", "Bosnia y Herzegovina"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-42 | ¿En qué fecha juega Canadá contra Qatar?",
+    "question": "CAN-31 | ¿En qué fecha juega Canadá contra Qatar?",
     "answer": "18 de junio",
-    "options": ["18 de junio", "19 de junio", "20 de junio"]
+    "options": ["19 de junio", "18 de junio", "20 de junio"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-43 | ¿Contra qué selección jugará Canadá su tercer partido de la fase de grupos?",
+    "question": "CAN-32 | ¿Contra qué selección jugará Canadá su tercer partido de la fase de grupos?",
     "answer": "Suiza",
-    "options": ["Bosnia y Herzegovina", "Suiza", "Qatar"]
+    "options": ["Bosnia y Herzegovina", "Qatar", "Suiza"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-44 | ¿Qué día disputará Canadá su último partido del Grupo B?",
-    "answer": "24 de junio",
-    "options": ["25 de junio", "23 de junio", "24 de junio"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-45 | ¿Quién convirtió el gol del empate 1-1 de Canadá ante Bosnia y Herzegovina en el Mundial 2026?",
-    "answer": "Cyle Larin",
-    "options": ["Jonathan David", "Alphonso Davies", "Cyle Larin"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-46 | ¿En qué minuto marcó Canadá el gol del 1-1 ante Bosnia y Herzegovina?",
+    "question": "CAN-33 | ¿En qué minuto marcó Canadá el gol del 1-1 ante Bosnia y Herzegovina?",
     "answer": "78'",
-    "options": ["61'", "74'", "78'"]
+    "options": ["78'", "61'", "74'"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-47 | ¿Quién dio la asistencia del gol canadiense ante Bosnia y Herzegovina?",
-    "answer": "Alphonso Davies",
-    "options": ["Alphonso Davies", "Tajon Buchanan", "Stephen Eustáquio"]
+    "question": "CAN-34 | ¿Quién dio la asistencia del gol canadiense ante Bosnia y Herzegovina?",
+    "answer": "Promise David",
+    "options": ["Tajon Buchanan", "Promise David", "Stephen Eustáquio"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-49 | ¿En qué estadio se disputó el empate 1-1 entre Canadá y Bosnia y Herzegovina en el Mundial 2026?",
-    "answer": "BMO Field (Toronto)",
-    "options": ["BMO Field (Toronto)", "BC Place (Vancouver)", "Estadio Akron (Guadalajara)"]
+    "question": "CAN-35 | ¿En qué estadio se disputó el empate 1-1 entre Canadá y Bosnia y Herzegovina en el Mundial 2026?",
+    "answer": "BMO Field",
+    "options": ["BC Place", "Estadio Akron", "BMO Field"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-50 | ¿Cuántos territorios tiene Canadá?",
+    "question": "CAN-36 | ¿Cuántos territorios tiene Canadá?",
     "answer": "3",
-    "options": ["2", "3", "4"]
+    "options": ["3", "2", "4"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-51 | ¿Cuál es la capital del territorio de Yukón?",
+    "question": "CAN-37 | ¿Cuál es la capital del territorio de Yukón?",
     "answer": "Whitehorse",
-    "options": ["Yellowknife", "Whitehorse", "Iqaluit"]
+    "options": ["Iqaluit", "Whitehorse", "Yellowknife"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-52 | ¿Cuál es la isla canadiense donde se encuentra la ciudad de Victoria?",
-    "answer": "Isla de Vancouver",
-    "options": ["Isla de Vancouver", "Isla del Príncipe Eduardo", "Isla de Baffin"]
+    "question": "CAN-38 | ¿Cuántas provincias tiene Canadá?",
+    "answer": "10",
+    "options": ["7", "10", "9"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-53 | ¿Qué número de camiseta usa Cyle Larin en el Mundial 2026?",
-    "answer": "9",
-    "options": ["7", "9", "11"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-54 | ¿Qué río conecta los Grandes Lagos con el océano Atlántico?",
-    "answer": "San Lorenzo",
-    "options": ["Mackenzie", "Fraser", "San Lorenzo"]
-  },
-  {
-    "country": "Canadá",
-    "question": "CAN-55 | ¿Después de cuántos años disputa un Mundial Canadá?",
+    "question": "CAN-39 | ¿Después de cuántos años volvió Canadá a disputar un Mundial?",
     "answer": "36",
-    "options": ["40", "36", "32"]
+    "options": ["40", "32", "36"]
   },
   {
     "country": "Canadá",
-    "question": "CAN-56 | ¿Qué isla canadiense es considerada la quinta más grande del mundo?",
+    "question": "CAN-40 | ¿Qué isla canadiense es considerada la quinta más grande del mundo?",
     "answer": "Isla de Baffin",
-    "options": ["Isla Victoria", "Isla de Baffin", "Isla Ellesmere"]
-  },
-
-  // ==========================================
-  // CROACIA
-  // ==========================================
-  {
-    "country": "Croacia",
-    "question": "CRO-1 | ¿Qué mar baña la costa croata?",
-    "answer": "Mar Adriático",
-    "options": ["Mar Negro", "Mar Adriático", "Mar Egeo"]
+    "options": ["Isla de Baffin", "Isla Victoria", "Isla Ellesmere"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-2 | ¿Qué jugador croata convirtió el gol en contra en la final del Mundial 2018?",
-    "answer": "Mandžukić",
-    "options": ["Lovren", "Perišić", "Mandžukić"]
+    "country": "Canadá",
+    "question": "CAN-41 | ¿Quién marcó el gol de la clasificación de Canadá ante Sudáfrica en los 16avos de final del Mundial 2026?",
+    "answer": "Stephen Eustáquio",
+    "options": ["Jonathan David", "Stephen Eustáquio", "Alphonso Davies", "Tajon Buchanan"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-3 | ¿Qué selección eliminó a Croacia en semifinales de Qatar 2022?",
-    "answer": "Argentina",
-    "options": ["Francia", "Argentina", "Marruecos"]
+    "country": "Canadá",
+    "question": "CAN-42 | ¿En qué minuto convirtió Stephen Eustáquio el gol del triunfo ante Sudáfrica?",
+    "answer": "90+2'",
+    "options": ["90+5'", "89'", "90+2'", "90+3'"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-4 | ¿Qué cordillera atraviesa parte del territorio croata?",
-    "answer": "Alpes Dináricos",
-    "options": ["Alpes Dináricos", "Andes", "Pirineos"]
+    "country": "Canadá",
+    "question": "CAN-43 | ¿Qué jugador reemplazó a Tajon Buchanan durante el segundo tiempo frente a Sudáfrica?",
+    "answer": "Alphonso Davies",
+    "options": ["Alphonso Davies", "Jonathan Osorio", "Jacob Shaffelburg", "Ali Ahmed"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-5 | ¿En qué ciudad croata se encuentra el Palacio de Diocleciano?",
-    "answer": "Split",
-    "options": ["Split", "Zagreb", "Zadar"]
+    "country": "Canadá",
+    "question": "CAN-44 | ¿Qué jugador ingresó por Tani Oluwaseyi en el segundo tiempo ante Sudáfrica?",
+    "answer": "Promise David",
+    "options": ["Jonathan Osorio", "Cyle Larin", "Promise David", "Ismaël Koné"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-6 | ¿Quién convirtió el penal decisivo ante Brasil en Qatar 2022?",
-    "answer": "Orsic",
-    "options": ["Modrić", "Petković", "Orsic"]
+    "country": "Canadá",
+    "question": "CAN-45 | ¿Quién sustituyó a Liam Millar frente a Sudáfrica?",
+    "answer": "Jacob Shaffelburg",
+    "options": ["Cyle Larin", "Jacob Shaffelburg", "Jonathan Osorio", "Alphonso Davies"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-7 | ¿Qué país compartía históricamente unión política con Croacia dentro de Yugoslavia?",
-    "answer": "Serbia",
-    "options": ["Hungría", "Serbia", "Austria"]
+    "country": "Canadá",
+    "question": "CAN-46 | ¿Qué defensor ingresó por Moïse Bombito ante Sudáfrica?",
+    "answer": "Luc De Fougerolles",
+    "options": ["Luc De Fougerolles", "Joel Waterman", "Alistair Johnston", "Derek Cornelius"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-8 | ¿Qué religión es predominante en Croacia?",
-    "answer": "Católica",
-    "options": ["Ortodoxa", "Católica", "Musulmana"]
+    "country": "Canadá",
+    "question": "CAN-47 | ¿Quién recibió la primera tarjeta amarilla de Canadá frente a Sudáfrica?",
+    "answer": "Nathan Saliba",
+    "options": ["Stephen Eustáquio", "Derek Cornelius", "Nathan Saliba", "Richie Laryea"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-9 | ¿Qué científico nacido en la actual Croacia desarrolló avances fundamentales en electricidad?",
-    "answer": "Nikola Tesla",
-    "options": ["Nikola Tesla", "Einstein", "Edison"]
+    "country": "Canadá",
+    "question": "CAN-48 | ¿Qué jugador canadiense recibió la segunda tarjeta amarilla del equipo frente a Sudáfrica?",
+    "answer": "Niko Sigur",
+    "options": ["Niko Sigur", "Jonathan David", "Alphonso Davies", "Tajon Buchanan"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-10 | ¿Qué ciudad croata es el principal puerto del país?",
-    "answer": "Rijeka",
-    "options": ["Split", "Rijeka", "Dubrovnik"]
+    "country": "Canadá",
+    "question": "CAN-49 | ¿Quién fue el capitán de Canadá ante Sudáfrica en ausencia de Alphonso Davies como titular?",
+    "answer": "Stephen Eustáquio",
+    "options": ["Jonathan David", "Derek Cornelius", "Alistair Johnston", "Stephen Eustáquio"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-11 | ¿Qué selección eliminó a Croacia en la Euro 2008 por penales?",
-    "answer": "Turquía",
-    "options": ["Turquía", "España", "Alemania"]
+    "country": "Canadá",
+    "question": "CAN-50 | ¿Contra qué selección jugará Canadá los octavos de final del Mundial 2026?",
+    "answer": "Marruecos o Países Bajos",
+    "options": ["Brasil", "Marruecos o Países Bajos", "Francia", "Alemania"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-12 | ¿Qué futbolista croata jugó en el FC Barcelona y ganó la Champions League?",
-    "answer": "Rakitić",
-    "options": ["Rakitić", "Kovačić", "Olić"]
+    "country": "Canadá",
+    "question": "CAN-51 | ¿Quién fue el preparador físico principal del cuerpo técnico de Canadá durante el Mundial 2026?",
+    "answer": "Paul Winsper",
+    "options": ["Paul Winsper", "Cameron Dunbar", "Andreas Schlumberger", "Darren Burgess"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-13 | ¿Qué famoso parque nacional croata es Patrimonio de la Humanidad por sus lagos?",
-    "answer": "Plitvice",
-    "options": ["Plitvice", "Krka", "Paklenica"]
+    "country": "Canadá",
+    "question": "CAN-52 | ¿Cuál es el territorio más pequeño de Canadá por superficie?",
+    "answer": "Yukón",
+    "options": ["Nunavut", "Territorios del Noroeste", "Yukón", "Columbia Británica"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-14 | ¿Qué científico croata destacó en astronomía y matemáticas durante el siglo XVIII?",
-    "answer": "Bošković",
-    "options": ["Bošković", "Penkala", "Tesla"]
+    "country": "Canadá",
+    "question": "CAN-53 | ¿Cuál es la provincia más pequeña de Canadá por superficie?",
+    "answer": "Isla del Príncipe Eduardo",
+    "options": ["Isla del Príncipe Eduardo", "Nueva Escocia", "Nuevo Brunswick", "Manitoba"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-15 | ¿Qué jugador croata fue capitán en los Mundiales 2018 y 2022?",
-    "answer": "Modrić",
-    "options": ["Perišić", "Modrić", "Lovren"]
+    "country": "Canadá",
+    "question": "CAN-54 | Si se cuentan provincias y territorios juntos, ¿cuál era la jurisdicción menos poblada de Canadá en el censo 2021?",
+    "answer": "Nunavut",
+    "options": ["Yukón", "Isla del Príncipe Eduardo", "Nunavut", "Territorios del Noroeste"]
   },
   {
-    "country": "Croacia",
-    "question": "CRO-16 | ¿Qué selección enfrentó Croacia en su debut mundialista de 1998?",
-    "answer": "Jamaica",
-    "options": ["Jamaica", "Argentina", "Alemania"]
+    "country": "Canadá",
+    "question": "CAN-55 | ¿Cuál es la capital de Yukón?",
+    "answer": "Whitehorse",
+    "options": ["Yellowknife", "Whitehorse", "Iqaluit", "Victoria"]
   },
-  {
-    "country": "Croacia",
-    "question": "CRO-17 | ¿Qué región costera croata es famosa por sus más de mil islas?",
-    "answer": "Dalmacia",
-    "options": ["Dalmacia", "Slavonia", "Baranja"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-18 | ¿Qué selección eliminó a Croacia en el Mundial 2014?",
-    "answer": "México",
-    "options": ["México", "Brasil", "Camerún"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-19 | ¿Cuál era la capital de Yugoslavia antes de la independencia de Croacia?",
-    "answer": "Belgrado",
-    "options": ["Zagreb", "Sarajevo", "Belgrado"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-20 | ¿En qué año ingresó Croacia a la Unión Europea?",
-    "answer": "2013",
-    "options": ["2004", "2013", "2018"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-21 | ¿Quién fue el primer presidente de Croacia independiente?",
-    "answer": "Franjo Tuđman",
-    "options": ["Stjepan Mesić", "Franjo Tuđman", "Ivo Josipović"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-22 | ¿Qué ciudad fue declarada capital de Croacia desde 1991?",
-    "answer": "Zagreb",
-    "options": ["Split", "Zagreb", "Dubrovnik"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-23 | ¿Qué región croata limita con Hungría?",
-    "answer": "Eslavonia",
-    "options": ["Dalmacia", "Eslavonia", "Istria"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-24 | ¿Cuál es la tercera ciudad más poblada de Croacia?",
-    "answer": "Rijeka",
-    "options": ["Rijeka", "Split", "Osijek"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-25 | ¿Cuál es la cuarta ciudad más poblada de Croacia?",
-    "answer": "Osijek",
-    "options": ["Dubrovnik", "Osijek", "Pula"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-26 | ¿Cuál es la quinta ciudad más poblada de Croacia?",
-    "answer": "Zadar",
-    "options": ["Zadar", "Varaždin", "Karlovac"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-27 | ¿Cuál es la montaña más alta de Croacia?",
-    "answer": "Dinara",
-    "options": ["Velebit", "Dinara", "Biokovo"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-28 | ¿Qué altura aproximada tiene el monte Dinara?",
-    "answer": "1.831 m",
-    "options": ["1.831 m", "2.215 m", "1.502 m"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-29 | ¿Qué país limita al sur con Croacia a través de una pequeña franja costera?",
-    "answer": "Bosnia y Herzegovina",
-    "options": ["Montenegro", "Bosnia y Herzegovina", "Albania"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-30 | ¿Qué operación militar croata de 1995 fue clave para recuperar territorios ocupados?",
-    "answer": "Operación Tormenta (Oluja)",
-    "options": ["Operación Tormenta (Oluja)", "Operación Relámpago", "Operación Adriático"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-31 | ¿En qué año finalizó formalmente la Guerra de Independencia Croata?",
-    "answer": "1995",
-    "options": ["1993", "1995", "1998"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-32 | ¿Cuál es la península más grande de Croacia?",
-    "answer": "Istria",
-    "options": ["Pelješac", "Istria", "Pag"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-33 | ¿Cuál fue el primer mundial de Luka Modrić?",
-    "answer": "2006",
-    "options": ["2006", "2002", "2010"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-34 | ¿Cuántas islas tiene aproximadamente Croacia?",
-    "answer": "Aproximadamente 1.244 islas",
-    "options": ["Aproximadamente 1.144 islas", "Aproximadamente 1.244 islands", "Aproximadamente 1.122 islas"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-35 | ¿Contra qué selección convirtió Luka Modrić en la fase de grupos del Mundial 2018?",
-    "answer": "Nigeria y Argentina",
-    "options": ["Nigeria y Argentina", "Islandia y Dinamarca", "Francia y Rusia"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-36 | ¿Qué futbolista croata jugó para el Real Madrid y el Barcelona?",
-    "answer": "Prosinečki",
-    "options": ["Rakitić", "Prosinečki", "Kovačić"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-37 | ¿Cuántos goles convirtió Davor Šuker en el Mundial 1998?",
-    "answer": "6",
-    "options": ["5", "6", "7"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-38 | ¿Contra qué selección anotó Šuker el gol que le dio a Croacia el tercer puesto en 1998?",
-    "answer": "Holanda",
-    "options": ["Alemania", "Holanda", "Dinamarca"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-39 | ¿Quién fue el arquero titular croata en el Mundial 1998?",
-    "answer": "Ladić",
-    "options": ["Livaković", "Ladić", "Subašić"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-40 | ¿Quién marcó el empate parcial 1-1 para Croacia en la final de 2018?",
-    "answer": "Perišić",
-    "options": ["Rakitić", "Perišić", "Rebić"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-41 | ¿Qué delantero croata marcó el gol decisivo ante Inglaterra en semifinales del Mundial 2018?",
-    "answer": "Mandžukić",
-    "options": ["Perišić", "Mandžukić", "Kramarić"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-42 | ¿En qué minuto convirtió Mandžukić el gol ante Inglaterra en el Mundial 2018?",
-    "answer": "109'",
-    "options": ["98'", "109'", "117'"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-43 | ¿En qué país nació Mateo Kovačić?",
-    "answer": "Austria",
-    "options": ["Croacia", "Austria", "Serbia"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-44 | ¿Qué isla croata está más al sur del país?",
-    "answer": "Lastovo",
-    "options": ["Brač", "Korčula", "Lastovo"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-45 | ¿Cuál es la segunda isla más grande de Croacia?",
-    "answer": "Cres",
-    "options": ["Cres", "Brač", "Hvar"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-46 | ¿Qué ciudad croata se encuentra más cerca de Italia a través del mar Adriático?",
-    "answer": "Pula",
-    "options": ["Pula", "Split", "Dubrovnik"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-47 | ¿Cuál es el parque nacional más grande de Croacia por superficie?",
-    "answer": "Plitvice",
-    "options": ["Paklenica", "Plitvice", "Brijuni"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-48 | ¿Qué región histórica croata ocupa gran parte del extremo oriental del país?",
-    "answer": "Eslavonia",
-    "options": ["Dalmacia", "Istria", "Eslavonia"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-49 | ¿Cuál es la ciudad más poblada de la península de Istria?",
-    "answer": "Pula",
-    "options": ["Rovinj", "Poreč", "Pula"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-50 | ¿Cuál fue la dupla de zagueros centrales titular que más partidos jugó junta en el Mundial 1998?",
-    "answer": "Slaven Bilić e Zvonimir Soldo",
-    "options": ["Dario Šimić e Igor Tudor", "Slaven Bilić e Zvonimir Soldo", "Zvonimir Soldo y Robert Jarni"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-51 | ¿Cuál fue el arquero con más minutos jugados en el Mundial 1998?",
-    "answer": "Dražen Ladić",
-    "options": ["Dražen Ladić", "Robert Prosinečki", "Goran Vlaović"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-52 | ¿Quién fue el lateral izquierdo titular de Croacia durante gran parte del Mundial 1998?",
-    "answer": "Robert Jarni",
-    "options": ["Robert Jarni", "Dario Šimić", "Igor Tudor"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-53 | ¿Quién fue el arquero titular en el Mundial 2018?",
-    "answer": "Danijel Subasic",
-    "options": ["Danijel Subasic", "Dario Šimić", "Igor Tudor"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-54 | ¿En qué equipo juega actualmente Livaković?",
-    "answer": "Fenerbahçe",
-    "options": ["Dinamo Zagreb", "Fenerbahçe", "Manchester United"]
-  },
-  {
-    "country": "Croacia",
-    "question": "CRO-55 | ¿En qué Mundial Modrić fue elegido mejor jugador?",
-    "answer": "2018",
-    "options": ["2006", "2014", "2018"]
-  },
-
-  // ==========================================
-  // PARAGUAY
-  // ==========================================
   {
     "country": "Paraguay",
-    "question": "PAR-1 | ¿Qué río divide Paraguay en región Oriental y Occidental?",
+    "question": "PAR-1 | ¿Qué río divide Paraguay en la Región Oriental y la Región Occidental?",
     "answer": "Paraguay",
-    "options": ["Paraná", "Paraguay", "Pilcomayo"]
+    "options": ["Paraná", "Pilcomayo", "Paraguay"]
   },
   {
     "country": "Paraguay",
@@ -9004,999 +7748,489 @@ export const QUESTIONS_DB: QuestionItem[] = [
     "country": "Paraguay",
     "question": "PAR-3 | ¿Qué instrumento musical es símbolo del folclore paraguayo?",
     "answer": "Arpa paraguaya",
-    "options": ["Bandoneón", "Charango", "Arpa paraguaya"]
+    "options": ["Charango", "Bandoneón", "Arpa paraguaya"]
   },
   {
     "country": "Paraguay",
     "question": "PAR-4 | ¿Cuál es el principal río utilizado para la navegación comercial paraguaya?",
     "answer": "Paraguay",
-    "options": ["Pilcomayo", "Paraguay", "Bermejo"]
+    "options": ["Paraguay", "Pilcomayo", "Bermejo"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-5 | ¿Qué animal típico del Chaco paraguayo es uno de los felinos más grandes de América?",
-    "answer": "Yaguareté",
-    "options": ["Yaguareté", "Puma", "Ocelote"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-6 | ¿Qué importante humedal comparte Paraguay con Brasil y Bolivia?",
-    "answer": "Pantanal",
-    "options": ["Everglades", "Esteros del Iberá", "Pantanal"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-7 | ¿Qué científico paraguayo fue pionero en bacteriología en Sudamérica?",
+    "question": "PAR-5 | ¿Qué científico paraguayo fue pionero en bacteriología en Sudamérica?",
     "answer": "Andrés Barbero",
     "options": ["Andrés Barbero", "Ramón Carrillo", "Carlos Finlay"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-8 | ¿Qué ciudad paraguaya está frente a Posadas, Argentina?",
-    "answer": "Encarnación",
-    "options": ["Pedro Juan Caballero", "Encarnación", "Pilar"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-9 | ¿Qué puente une Encarnación con Posadas?",
-    "answer": "San Roque González de Santa Cruz",
-    "options": ["Puente de la Integración", "General Belgrano", "San Roque González de Santa Cruz"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-10 | ¿Qué selección eliminó a Paraguay en octavos del Mundial 1998?",
+    "question": "PAR-6 | ¿Qué selección eliminó a Paraguay en los octavos de final del Mundial 1998?",
     "answer": "Francia",
-    "options": ["Francia", "Alemania", "Nigeria"]
+    "options": ["Alemania", "Nigeria", "Francia"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-11 | ¿Qué selección eliminó a Paraguay en el Mundial 2010?",
+    "question": "PAR-7 | ¿Qué selección eliminó a Paraguay en el Mundial 2010?",
     "answer": "España",
     "options": ["Alemania", "España", "Países Bajos"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-12 | ¿Qué selección eliminó a Paraguay en el Mundial 2002?",
+    "question": "PAR-8 | ¿Qué selección eliminó a Paraguay en el Mundial 2002?",
     "answer": "Alemania",
     "options": ["Inglaterra", "Dinamarca", "Alemania"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-13 | ¿Qué jugador paraguayo erró un penal ante España en Sudáfrica 2010?",
-    "answer": "Cardozo",
-    "options": ["Cardozo", "Santa Cruz", "Barrios"]
+    "question": "PAR-9 | ¿Qué jugador paraguayo erró un penal ante España en Sudáfrica 2010?",
+    "answer": "Óscar Cardozo",
+    "options": ["José Cardozo", "Roque Santa Cruz", "Óscar Cardozo"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-14 | ¿Con qué selecciones empató Paraguay en el Mundial 2010?",
+    "question": "PAR-10 | ¿Con qué selecciones empató Paraguay en el Mundial 2010?",
     "answer": "Italia y Nueva Zelanda",
-    "options": ["España e Italia", "Italia y Nueva Zelanda", "Alemania y Nueva Zelanda"]
+    "options": ["Alemania y Nueva Zelanda", "España e Italia", "Italia y Nueva Zelanda"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-15 | ¿Cuál es la séptima ciudad más poblada de Paraguay?",
-    "answer": "Caaguazú",
-    "options": ["Caaguazú", "Luque", "Villarrica"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-16 | ¿Cuál es la octava ciudad más poblada de Paraguay?",
-    "answer": "Villarrica",
-    "options": ["Villarrica", "San Lorenzo", "Encarnación"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-17 | ¿Quién fue el primer presidente constitucional del Paraguay independiente?",
+    "question": "PAR-11 | ¿Quién fue el primer presidente constitucional del Paraguay independiente?",
     "answer": "Carlos Antonio López",
-    "options": ["José Gaspar Rodríguez de Francia", "Carlos Antonio López", "Francisco Solano López"]
+    "options": ["Carlos Antonio López", "José Gaspar Rodríguez de Francia", "Francisco Solano López"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-18 | ¿Cómo era conocido José Gaspar Rodríguez de Francia?",
+    "question": "PAR-12 | ¿Cómo era conocido José Gaspar Rodríguez de Francia?",
     "answer": "El Supremo",
-    "options": ["El Restaurador", "El Supremo", "El Libertador"]
+    "options": ["El Libertador", "El Supremo", "El Restaurador"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-19 | ¿En qué año Paraguay declaró oficialmente su independencia?",
-    "answer": "1811",
-    "options": ["1811", "1816", "1821"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-20 | ¿Qué fortín fue clave para el inicio de la Guerra del Chaco?",
+    "question": "PAR-13 | ¿Qué fortín fue clave para el inicio de la Guerra del Chaco?",
     "answer": "Boquerón",
-    "options": ["Nanawa", "Boquerón", "Toledo"]
+    "options": ["Toledo", "Boquerón", "Nanawa"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-21 | ¿Cuál es el departamento más poblado de Paraguay?",
-    "answer": "Central",
-    "options": ["Central", "Alto Paraná", "Itapúa"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-22 | ¿Qué departamento tiene como capital a Encarnación?",
+    "question": "PAR-14 | ¿Qué departamento tiene como capital a Encarnación?",
     "answer": "Itapúa",
     "options": ["Misiones", "Ñeembucú", "Itapúa"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-23 | ¿Cuál es el pico más alto de Paraguay?",
-    "answer": "Cerro Tres Kandú",
-    "options": ["Cerro Acahay", "Cerro Tres Kandú", "Cerro León"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-24 | ¿Qué altura aproximada tiene el Cerro Tres Kandú?",
-    "answer": "748 m",
-    "options": ["842 m", "700 m", "748 m"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-25 | ¿Qué jugador paraguayo marcó el gol del triunfo ante Eslovaquia en el Mundial 2010?",
+    "question": "PAR-15 | ¿Qué jugador paraguayo marcó el gol del triunfo ante Eslovaquia en el Mundial 2010?",
     "answer": "Cristian Riveros",
-    "options": ["Enrique Vera", "Lucas Barrios", "Cristian Riveros"]
+    "options": ["Cristian Riveros", "Enrique Vera", "Lucas Barrios"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-26 | ¿Cuántos departamentos tiene Paraguay?",
+    "question": "PAR-16 | ¿Cuántos departamentos tiene Paraguay?",
     "answer": "17",
-    "options": ["15", "17", "19"]
+    "options": ["15", "19", "17"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-27 | ¿Cuál es el tercer departamento más poblado de Paraguay?",
-    "answer": "Itapúa",
-    "options": ["Itapúa", "Cordillera", "Caaguazú"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-28 | ¿Cuál es el quinto departamento más poblado de Paraguay?",
+    "question": "PAR-17 | ¿Cuál es el quinto departamento más poblado de Paraguay?",
     "answer": "Caaguazú",
     "options": ["Cordillera", "Caaguazú", "Guairá"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-29 | ¿Qué departamento paraguayo alberga las Cataratas del Iguazú?",
+    "question": "PAR-18 | ¿Qué departamento paraguayo alberga las Cataratas del Iguazú?",
     "answer": "Alto Paraná",
     "options": ["Alto Paraná", "Itapúa", "Canindeyú"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-30 | ¿En qué ciudad paraguaya se encuentran las Tres Fronteras entre Paraguay, Argentina y Brasil?",
+    "question": "PAR-19 | ¿En qué ciudad paraguaya se encuentran las Tres Fronteras entre Paraguay, Argentina y Brasil?",
     "answer": "Presidente Franco",
-    "options": ["Encarnación", "Ciudad del Este", "Presidente Franco"]
+    "options": ["Encarnación", "Presidente Franco", "Ciudad del Este"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-31 | ¿Cómo se llama el puente internacional que une Ciudad del Este con Foz do Iguaçu?",
-    "answer": "Amistad",
-    "options": ["San Roque González", "Amistad", "Integración"]
+    "question": "PAR-20 | ¿Cómo se llama el puente internacional que une Ciudad del Este con Foz do Iguaçu?",
+    "answer": "Puente de la Amistad",
+    "options": ["Integración", "San Roque González", "Puente de la Amistad"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-32 | ¿En qué año fue inaugurado el Puente de la Amistad?",
+    "question": "PAR-21 | ¿En qué año fue inaugurado el Puente de la Amistad?",
     "answer": "1965",
-    "options": ["1970", "1969", "1965"]
+    "options": ["1969", "1970", "1965"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-33 | ¿Quién es el director técnico de Paraguay en el Mundial 2026?",
-    "answer": "Gustavo Alfaro",
-    "options": ["Gustavo Alfaro", "Guillermo Barros Schelotto", "Daniel Garnero"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-34 | ¿Quién es el principal asistente técnico de Gustavo Alfaro en Paraguay?",
+    "question": "PAR-22 | ¿Quién es el principal asistente técnico de Gustavo Alfaro en Paraguay?",
     "answer": "Carlos González Parera",
-    "options": ["Carlos González", "Carlos González Parera", "Justo Villar"]
+    "options": ["Carlos González Parera", "Carlos González", "Justo Villar"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-35 | ¿Qué jugador paraguayo tiene más partidos disputados en Copas del Mundo?",
+    "question": "PAR-23 | ¿Qué jugador paraguayo tiene más partidos disputados en Copas del Mundo?",
     "answer": "Denis Caniza",
-    "options": ["Roque Santa Cruz", "Carlos Gamarra", "Denis Caniza"]
+    "options": ["Roque Santa Cruz", "Denis Caniza", "Carlos Gamarra"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-36 | ¿Cuántos partidos mundialistas disputó Denis Caniza?",
+    "question": "PAR-24 | ¿Cuántos partidos mundialistas disputó Denis Caniza?",
     "answer": "12",
-    "options": ["8", "10", "12"]
+    "options": ["10", "8", "12"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-37 | ¿Qué jugador paraguayo anotó el gol del triunfo ante Turquía en el Mundial 2002?",
+    "question": "PAR-25 | ¿Qué jugador paraguayo anotó el gol del triunfo ante Turquía en el Mundial 2002?",
     "answer": "Nelson Cuevas",
-    "options": ["Roque Santa Cruz", "Nelson Cuevas", "José Cardozo"]
+    "options": ["Nelson Cuevas", "Roque Santa Cruz", "José Cardozo"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-38 | ¿Qué jugador paraguayo marcó el gol ante España en el Mundial 1998?",
-    "answer": "Miguel Ángel Benítez",
-    "options": ["José Cardozo", "Miguel Benítez", "Miguel Ángel Benítez"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-39 | ¿Quién convirtió el gol de Paraguay ante Italia en el Mundial 2010?",
+    "question": "PAR-26 | ¿Quién convirtió el gol de Paraguay ante Italia en el Mundial 2010?",
     "answer": "Antolín Alcaraz",
-    "options": ["Roque Santa Cruz", "Antolín Alcaraz", "Cristian Riveros"]
+    "options": ["Antolín Alcaraz", "Roque Santa Cruz", "Cristian Riveros"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-40 | ¿Quién ejecutó el córner de donde nació el gol de Antolín Alcaraz ante Italia?",
+    "question": "PAR-27 | ¿Quién ejecutó el córner de donde nació el gol de Antolín Alcaraz ante Italia?",
     "answer": "Aureliano Torres",
-    "options": ["Aureliano Torres", "Edgar Barreto", "Cristian Riveros"]
+    "options": ["Edgar Barreto", "Cristian Riveros", "Aureliano Torres"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-41 | ¿Cuál es la segunda ciudad más poblada de Paraguay?",
+    "question": "PAR-28 | ¿Cuál es la segunda ciudad más poblada de Paraguay?",
     "answer": "Ciudad del Este",
     "options": ["Ciudad del Este", "Luque", "San Lorenzo"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-42 | ¿Qué departamento paraguayo limita con más países?",
-    "answer": "Boquerón",
-    "options": ["Alto Paraná", "Boquerón", "Amambay"]
-  },
-  {
-    "country": "Paraguay",
-    "question": "PAR-43 | ¿Qué defensor paraguayo completó todos los minutos de Paraguay en los Mundiales 1998 y 2002?",
+    "question": "PAR-29 | ¿Qué defensor paraguayo completó todos los minutos de Paraguay en los Mundiales 1998 y 2002?",
     "answer": "Carlos Gamarra",
-    "options": ["Carlos Gamarra", "Denis Caniza", "Francisco Arce"]
+    "options": ["Denis Caniza", "Carlos Gamarra", "Francisco Arce"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-44 | ¿Quién era el 4° suplente listado en la nómina oficial de Paraguay para el Mundial 2010?",
+    "question": "PAR-30 | ¿Quién era el cuarto suplente listado en la nómina oficial de Paraguay para el Mundial 2010?",
     "answer": "Denis Caniza",
     "options": ["Julio Cáceres", "Carlos Bonet", "Denis Caniza"]
   },
   {
     "country": "Paraguay",
-    "question": "PAR-45 | ¿Quién era el 4° suplente listado en la nómina oficial de Paraguay para el Mundial 1998?",
-    "answer": "Edgar Aguilera",
-    "options": ["Denis Caniza", "Edgar Aguilera", "Pedro Sarabi"]
-  },
-
-  // ==========================================
-  // AUSTRIA
-  // ==========================================
-  {
-    "country": "Austria",
-    "question": "AUS-1 | ¿En qué año Austria recuperó su plena independencia y soberanía tras la Segunda Guerra Mundial?",
-    "answer": "1955",
-    "options": ["1955", "1948", "1950"]
+    "question": "PAR-31 | ¿Cuál es el departamento de Paraguay con menor superficie?",
+    "answer": "Central",
+    "options": ["Guairá", "Cordillera", "Central"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-2 | ¿Con cuántos países limita Austria?",
-    "answer": "8",
-    "options": ["6", "8", "9"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-3 | ¿Con qué país comparte Austria la frontera terrestre más larga?",
-    "answer": "Alemania",
-    "options": ["Alemania", "Hungría", "Suiza"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-4 | ¿Cómo se llama la montaña más alta de Austria?",
-    "answer": "Grossglockner",
-    "options": ["Wildspitze", "Grossglockner", "Weisskugel"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-5 | ¿Cuál es la capital de Austria?",
-    "answer": "Viena",
-    "options": ["Salzburgo", "Viena", "Linz"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-6 | ¿Quién es el presidente actual de Austria?",
-    "answer": "Alexander Van der Bellen",
-    "options": ["Heinz Fischer", "Thomas Klestil", "Alexander Van der Bellen"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-7 | ¿Cuál es el idioma oficial de Austria?",
-    "answer": "Alemán estándar",
-    "options": ["Alemán estándar", "Austríaco", "Bávaro"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-8 | ¿Qué religión predomina mayoritariamente en Austria?",
-    "answer": "Cristianismo católico",
-    "options": ["Islam", "Cristianismo católico", "Ateísmo"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-9 | ¿Cuál es la flor nacional austríaca?",
-    "answer": "Edelweiss o flor de las nieves",
-    "options": ["Rosa de los Alpes", "Edelweiss o flor de las nieves", "Clirius de Altura"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-10 | ¿Qué día y en qué estadio juega Austria su primer partido del Mundial 2026?",
-    "answer": "17/06 – San Francisco Stadium",
-    "options": ["17/06 – San Francisco Stadium", "15/06 – Dallas Stadium", "16/06 – Kansas City Stadium"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-11 | ¿Quién fue el capitán de Austria en el Mundial de Francia 1998?",
-    "answer": "Andreas Herzog",
-    "options": ["Toni Polster", "Andreas Herzog", "Ivica Vastić"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-12 | ¿Contra qué selección consiguió Austria su única victoria en el Mundial 1998?",
-    "answer": "Camerún",
-    "options": ["Camerún", "Italia", "Chile"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-13 | ¿Qué delantero austríaco convirtió el gol del empate sobre la hora ante Chile en 1998?",
-    "answer": "Ivica Vastić",
-    "options": ["Toni Polster", "Andreas Herzog", "Ivica Vastić"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-14 | ¿Cuál fue la posición final de Austria en el grupo del Mundial 1998?",
-    "answer": "Tercero",
-    "options": ["Tercero", "Segundo", "Cuarto"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-15 | ¿Qué selección enfrentó Austria en su último partido de un Mundial antes de la edición 2026?",
-    "answer": "Italia",
-    "options": ["Italia", "Chile", "Camerún"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-16 | ¿Quién fue el máximo goleador de Austria en los Mundiales entre 1986 y 2026?",
-    "answer": "Toni Polster",
-    "options": ["Marko Arnautović", "Toni Polster", "Andreas Herzog"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-17 | ¿Cuál es la sexta ciudad más poblada de Austria?",
-    "answer": "Klagenfurt",
-    "options": ["Innsbruck", "Wels", "Klagenfurt"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-18 | ¿Cuál es la séptima ciudad más poblada de Austria?",
-    "answer": "Villach",
-    "options": ["Dornbirn", "Villach", "Steyr"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-19 | ¿Qué estado federado es el menos poblado de Austria?",
-    "answer": "Burgenland",
-    "options": ["Burgenland", "Vorarlberg", "Salzburgo"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-20 | ¿Cuál es el río más largo que atraviesa Austria?",
-    "answer": "Danubio",
-    "options": ["Danubio", "Inn", "Mur"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-21 | ¿Qué río pasa por Viena?",
-    "answer": "Danubio",
-    "options": ["Rin", "Elba", "Danubio"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-22 | ¿Cuál es el lago más grande de Austria?",
-    "answer": "Neusiedler See",
-    "options": ["Attersee", "Neusiedler See", "Wolfgangsee"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-23 | ¿En qué cordillera se encuentra la mayor parte del territorio austríaco?",
-    "answer": "Alpes",
-    "options": ["Alpes", "Pirineos", "Cárpatos"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-24 | ¿Cuál es la cuarta ciudad más poblada de Austria?",
-    "answer": "Salzburgo",
-    "options": ["Innsbruck", "Salzburgo", "Villach"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-25 | ¿En qué año se fundó la República de Austria moderna tras la caída del Imperio Austrohúngaro?",
-    "answer": "1918",
-    "options": ["1918", "1925", "1938"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-26 | ¿Qué imperio tenía a Viena como capital antes de 1918?",
-    "answer": "Imperio Austrohúngaro",
-    "options": ["Imperio Alemán", "Imperio Otomano", "Imperio Austrohúngaro"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-27 | ¿En qué año Austria ingresó a la Unión Europea?",
-    "answer": "1995",
-    "options": ["1986", "1995", "2001"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-28 | ¿Qué dinastía gobernó Austria durante siglos?",
-    "answer": "Habsburgo",
-    "options": ["Borbones", "Habsburgo", "Romanov"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-29 | ¿Contra qué selección empató Austria 1-1 en su primer partido del Mundial 1998?",
-    "answer": "Camerún",
-    "options": ["Camerún", "Chile", "Italia"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-30 | ¿Quién anotó el gol de la victoria austríaca ante Camerún?",
-    "answer": "Ivica Vastić",
-    "options": ["Toni Polster", "Ivica Vastić", "Andreas Herzog"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-31 | ¿Qué selección eliminó matemáticamente a Austria en Francia 1998?",
-    "answer": "Italia",
-    "options": ["Chile", "Italia", "Camerún"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-32 | ¿Quién marcó uno de los goles italianos ante Austria en 1998?",
-    "answer": "Christian Vieri",
-    "options": ["Christian Vieri", "Del Piero", "Inzaghi"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-33 | ¿Qué jugador es considerado el futbolista austríaco más destacado del siglo XXI?",
-    "answer": "David Alaba",
-    "options": ["Ivica Vastić", "David Alaba", "Andreas Herzog"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-34 | ¿Cuál fue la mejor actuación histórica de Austria en una Copa del Mundo?",
-    "answer": "Tercer puesto",
-    "options": ["Campeón", "Subcampeón", "Tercer puesto"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-35 | ¿En qué Mundial logró Austria ese tercer puesto?",
-    "answer": "1954",
-    "options": ["1954", "1934", "1978"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-36 | ¿Quién es el máximo goleador histórico de Austria en los Mundiales?",
-    "answer": "Erich Probst",
-    "options": ["Toni Polster", "David Alaba", "Erich Probst"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-37 | ¿Cuántos goles marcó Erich Probst en los Mundiales?",
-    "answer": "6",
-    "options": ["4", "6", "5"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-38 | ¿Qué selección venció a Austria en semifinales del Mundial 1954?",
-    "answer": "Alemania Federal",
-    "options": ["Hungría", "Alemania Federal", "Uruguay"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-39 | ¿Cuál fue el resultado de esa semifinal?",
-    "answer": "6-1",
-    "options": ["4-2", "3-1", "6-1"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-40 | ¿Quién fue el capitán de Austria en Francia 1998?",
-    "answer": "Andreas Herzog",
-    "options": ["Andreas Herzog", "Toni Polster", "Ivica Vastić"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-41 | ¿Quién es el director técnico de Austria en el Mundial 2026?",
-    "answer": "Ralf Rangnick",
-    "options": ["Oliver Glasner", "Franco Foda", "Ralf Rangnick"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-42 | ¿Qué nacionalidad tiene Ralf Rangnick?",
-    "answer": "Alemana",
-    "options": ["Alemana", "Austriaca", "Suiza"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-43 | ¿Qué país organiza la liga donde juega la mayoría de los convocados austríacos?",
-    "answer": "Alemania",
-    "options": ["Italia", "Alemania", "Francia"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-44 | ¿Qué arquero fue convocado por Austria al Mundial 2026?",
-    "answer": "Patrick Pentz",
-    "options": ["Patrick Pentz", "Alexander Schlager", "Heinz Lindner"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-45 | ¿Cuántos Mundiales había disputado Austria antes de 2026?",
+    "country": "Paraguay",
+    "question": "PAR-32 | ¿Cuántos departamentos de Paraguay no limitan con un río internacional (Paraguay, Paraná o Pilcomayo)?",
     "answer": "9",
-    "options": ["7", "9", "8"]
+    "options": ["10", "8", "9"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-46 | ¿Qué austríaco marcó el famoso gol que eliminó a Alemania en Argentina 1978?",
-    "answer": "Hans Krankl",
-    "options": ["Prohaska", "Polster", "Hans Krankl"]
+    "country": "Paraguay",
+    "question": "PAR-33 | ¿Cuántos habitantes tiene el 9.º departamento de Paraguay, Paraguarí?",
+    "answer": "200.472",
+    "options": ["180.245", "225.918", "200.472", "156.300"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-47 | ¿Quién es el principal ayudante de campo de Ralf Rangnick en Austria?",
-    "answer": "Lars Kornetka",
-    "options": ["Andreas Herzog", "Lars Kornetka", "Toni Polster"]
+    "country": "Paraguay",
+    "question": "PAR-34 | Según el Censo 2022, ¿cuántos habitantes tiene Ciudad del Este?",
+    "answer": "325.819",
+    "options": ["325.819", "306.521", "342.115"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-48 | ¿Qué delantero austríaco jugó en Inter de Milán?",
-    "answer": "Arnautović",
-    "options": ["Gregoritsch", "Posch", "Arnautović"]
+    "country": "Paraguay",
+    "question": "PAR-35 | Según el Censo 2022, ¿cuántos habitantes tiene Encarnación?",
+    "answer": "106.342",
+    "options": ["119.580", "98.764", "106.342"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-49 | ¿Quién marcó el primer gol de Austria ante Jordania en el Mundial 2026?",
-    "answer": "Romano Schmid",
-    "options": ["Romano Schmid", "Marko Arnautović", "Marcel Sabitzer"]
+    "country": "Paraguay",
+    "question": "PAR-36 | ¿Cuál fue el primer departamento creado oficialmente después de la reorganización territorial de Paraguay en 1906?",
+    "answer": "Concepción",
+    "options": ["Concepción", "Itapúa", "Guairá"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-50 | ¿En qué minuto anotó Romano Schmid el 1-0 para Austria en el Mundial 2026?",
-    "answer": "20'",
-    "options": ["16'", "24'", "20'"]
+    "country": "Paraguay",
+    "question": "PAR-37 | ¿Cuál es el único departamento de Paraguay que no posee frontera internacional?",
+    "answer": "Cordillera",
+    "options": ["Paraguarí", "Caaguazú", "Cordillera"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-51 | ¿Cómo fue el primer gol de Austria ante Jordania en el Mundial 2026?",
-    "answer": "Remate potente",
-    "options": ["Gol de cabeza", "Remate potente", "Tiro libre directo"]
+    "country": "Paraguay",
+    "question": "PAR-38 | ¿Qué arquero le atajó el penal a José Cardozo en los octavos de final del Mundial 2002?",
+    "answer": "Oliver Kahn",
+    "options": ["Oliver Kahn", "Jens Lehmann", "Frank Rost"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-52 | ¿Quién marcó el gol de Jordania ante Austria en el Mundial 2026?",
-    "answer": "Ali Olwan",
-    "options": ["Musa Al-Taamari", "Ali Olwan", "Nizar Al-Rashdan"]
+    "country": "Paraguay",
+    "question": "PAR-39 | ¿Cuál fue la mejor ubicación histórica de Paraguay en el Ranking FIFA?",
+    "answer": "13.º",
+    "options": ["8.º", "10.º", "13.º"]
   },
   {
-    "country": "Austria",
-    "question": "AUS-53 | ¿En qué minuto empató Jordania el partido ante Austria en el Mundial 2026?",
-    "answer": "50'",
-    "options": ["50'", "46'", "55'"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-54 | ¿En qué minuto llegó el 2-1 para Austria en el Mundial 2026?",
-    "answer": "76'",
-    "options": ["69'", "76'", "81'"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-55 | ¿Cómo fue el segundo gol de Austria ante Jordania en el Mundial 2026?",
-    "answer": "Gol en contra tras un córner",
-    "options": ["Penal", "Tiro libre", "Gol en contra tras un córner"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-56 | ¿Quién ejecutó el córner que terminó en el gol en contra de Jordania en el Mundial 2026?",
-    "answer": "Stefan Posch",
-    "options": ["Stefan Posch", "David Alaba", "Marcel Sabitzer"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-57 | ¿Quién marcó el tercer gol de Austria ante Jordania en el Mundial 2026?",
-    "answer": "Arnautović",
-    "options": ["Gregoritsch", "Arnautović", "Sabitzer"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-58 | ¿En qué minuto convirtió Arnautović el 3-1 definitivo en el Mundial 2026?",
-    "answer": "90+12'",
-    "options": ["90+12'", "90+5'", "90+8'"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-59 | ¿Cómo fue el tercer gol de Austria ante Jordania en el Mundial 2026?",
-    "answer": "De penal",
-    "options": ["De cabeza", "De tiro libre", "De penal"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-60 | ¿Qué jugador jordano cometió la mano que derivó en el penal del 3-1 en el Mundial 2026?",
-    "answer": "Saleem Obeid",
-    "options": ["Saleem Obeid", "Ali Olwan", "Yazan Al-Arab"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-61 | ¿Qué jugador austríaco había marcado un gol anulado antes del 2-1 en el Mundial 2026?",
-    "answer": "Arnautović",
-    "options": ["Schmid", "Sabitzer", "Arnautović"]
-  },
-  {
-    "country": "Austria",
-    "question": "AUS-62 | ¿Por qué fue anulado el gol de Arnautović a los 69 minutos en el Mundial 2026?",
-    "answer": "Mano previa",
-    "options": ["Mano previa", "Offside", "Falta al arquero"]
+    "country": "Paraguay",
+    "question": "PAR-40 | ¿Qué departamento paraguayo tiene la mayor superficie?",
+    "answer": "Boquerón",
+    "options": ["Presidente Hayes", "Boquerón", "Alto Paraguay"]
   },
 
-  // ==========================================
-  // ARGENTINA
-  // ==========================================
+  
   {
     "country": "Argentina",
-    "question": "ARG-1 | ¿Cuál es la octava provincia más poblada de Argentina?",
-    "answer": "Chaco",
-    "options": ["Chaco", "Corrientes", "Misiones"]
+    "question": "ARG-1 | ¿Quién marcó el gol de Jordania ante Argentina mundial 2026?",
+    "answer": "Mousa Al-Tamari",
+    "options": ["Mousa Al-Tamari", "Yazan Al-Naimat", "Ehsan Haddad"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-2 | ¿Cuál es la decimosexta provincia más poblada de Argentina?",
-    "answer": "San Luis",
-    "options": ["San Luis", "La Rioja", "Catamarca"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-3 | ¿Cuántos futbolistas nacidos en Córdoba integraron planteles argentinos en Copas del Mundo?",
-    "answer": "17",
-    "options": ["11", "14", "17"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-4 | ¿Qué inventor argentino desarrolló el sistema de huellas dactilares utilizado en gran parte del mundo?",
-    "answer": "Juan Vucetich",
-    "options": ["René Sánchez", "Juan Vucetich", "Luis Agote"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-5 | ¿En qué localidad bonaerense nació Eva Perón?",
-    "answer": "Los Toldos",
-    "options": ["Junín", "Los Toldos", "Chivilcoy"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-6 | ¿Qué estancia jesuítica cordobesa fue declarada Patrimonio de la Humanidad por la UNESCO?",
-    "answer": "Alta Gracia",
-    "options": ["Alta Gracia", "La Paz", "Villa General Belgrano"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-7 | ¿Qué universidad fundada por los jesuitas en 1613 es la más antigua del país?",
-    "answer": "Universidad Nacional de Córdoba",
-    "options": ["Universidad Nacional de Córdoba", "Universidad Nacional de La Plata", "Universidad de Buenos Aires"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-8 | ¿Qué provincia argentina posee la mayor cantidad de Parques Nacionales?",
-    "answer": "Santa Cruz",
-    "options": ["Mendoza", "Santa Cruz", "Neuquén"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-9 | ¿Cuántas presencias en partidos mundialistas tiene Gonzalo Higuaín?",
-    "answer": "14",
-    "options": ["14", "15", "16"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-10 | ¿En qué provincia nació Atahualpa Yupanqui?",
-    "answer": "Buenos Aires",
-    "options": ["Buenos Aires", "Santiago del Estero", "Tucumán"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-11 | ¿Cuántas presencias en partidos mundialistas tiene Nicolás Otamendi?",
-    "answer": "15",
-    "options": ["12", "14", "15"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-12 | ¿Cuántas presencias en partidos mundialistas tuvo Mario Alberto Kempes?",
-    "answer": "18",
-    "options": ["13", "16", "18"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-13 | ¿Qué provincia argentina alberga las Ruinas de San Ignacio, uno de los principales legados jesuíticos del país?",
-    "answer": "Misiones",
-    "options": ["Corrientes", "Misiones", "Chaco"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-14 | ¿En qué fecha se celebra el Día de la Lealtad Peronista?",
-    "answer": "17 de octubre",
-    "options": ["17 de mayo", "17 de octubre", "19 de noviembre"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-15 | ¿En qué año ocurrió el tercer golpe de Estado exitoso del siglo XX en Argentina?",
-    "answer": "1966",
-    "options": ["1955", "1962", "1966"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-16 | ¿Quién era el ministro de Economía durante los hechos de diciembre de 2001 cuando renunció Fernando de la Rúa?",
-    "answer": "Domingo Cavallo",
-    "options": ["Domingo Cavallo", "José Luis Machinea", "Roberto Lavagna"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-17 | ¿Entre qué años transcurrió el mandato presidencial de Néstor Kirchner?",
-    "answer": "2003-2007",
-    "options": ["2001-2005", "2003-2007", "2004-2008"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-18 | ¿Quién fue presidente de Argentina inmediatamente antes de Néstor Kirchner?",
-    "answer": "Eduardo Duhalde",
-    "options": ["Eduardo Duhalde", "Ramón Puerta", "Adolfo Rodríguez Saá"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-19 | ¿Qué día fue hundido el crucero ARA General Belgrano durante la Guerra de Malvinas?",
-    "answer": "2 de mayo de 1982",
-    "options": ["2 de mayo de 1982", "4 de mayo de 1982", "7 de junio de 1982"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-20 | ¿Cuántas presencias en partidos mundialistas tiene Lionel Messi?",
-    "answer": "28",
-    "options": ["23", "26", "28"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-21 | ¿Cuál fue la primera provincia argentina en sancionar el voto femenino a nivel provincial?",
-    "answer": "San Juan",
-    "options": ["Buenos Aires", "San Juan", "Córdoba"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-22 | ¿Qué provincia argentina posee el único sitio del país donde se conserva un bosque de araucarias nativas?",
-    "answer": "Neuquén",
-    "options": ["Neuquén", "Río Negro", "Chubut"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-23 | ¿En qué provincia se encuentra la Manzana Jesuítica declarada Patrimonio de la Humanidad?",
-    "answer": "Córdoba",
-    "options": ["Misiones", "Córdoba", "Santa Fe"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-24 | ¿Qué inventor argentino desarrolló la birome junto al húngaro László Bíró?",
-    "answer": "Juan Jorge Meyne",
-    "options": ["Juan Vucetich", "Raúl Pateras Pescara", "Juan Jorge Meyne"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-25 | ¿Qué provincia aportó más futbolistas campeones del mundo en Qatar 2022 después de Buenos Aires?",
-    "answer": "Santa Fe",
-    "options": ["Santa Fe", "Córdoba", "Buenos Aires"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-26 | ¿Qué cordobés disputó más Mundiales con la Selección Argentina?",
-    "answer": "Javier Zanetti",
-    "options": ["Mario Kempes", "Paulo Dybala", "Javier Zanetti"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-27 | ¿En qué ciudad argentina se realizó la primera identificación criminal mediante huellas dactilares?",
-    "answer": "La Plata",
-    "options": ["Rosario", "La Plata", "Córdoba"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-28 | ¿En qué año fue patentada la birome por Ladislao Bíró en Argentina?",
-    "answer": "1943",
-    "options": ["1938", "1943", "1951"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-29 | ¿Qué científico argentino obtuvo el Premio Nobel por sus investigaciones sobre hormonas y metabolismo?",
-    "answer": "Bernardo Houssay",
-    "options": ["César Milstein", "Bernardo Houssay", "Luis Leloir"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-30 | ¿Qué científico argentino ganó el Premio Nobel de Química en 1970?",
-    "answer": "Luis Federico Leloir",
-    "options": ["César Milstein", "Bernardo Houssay", "Luis Federico Leloir"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-31 | ¿Quién fue el Director Supremo que declaró la Independence en 1816?",
-    "answer": "Juan Martín de Pueyrredón",
-    "options": ["Juan Martín de Pueyrredón", "Manuel Belgrano", "Gervasio Posadas"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-32 | ¿Cuántos golpes de Estado exitosos tuvo Argentina durante el siglo XX?",
-    "answer": "6",
-    "options": ["5", "6", "7"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-33 | ¿Qué presidente estaba en ejercicio cuando se produjo el golpe militar de 1976?",
-    "answer": "María Estela Martínez de Perón",
-    "options": ["Juan Domingo Perón", "María Estela Martínez de Perón", "Arturo Illia"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-34 | ¿Cuál fue la primera provincia argentina en tener una Constitución provincial propia después de 1810?",
-    "answer": "Santa Fe",
-    "options": ["Santa Fe", "Buenos Aires", "Córdoba"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-35 | ¿En qué año se realizó el primer censo nacional argentino?",
-    "answer": "1869",
-    "options": ["1853", "1869", "1880"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-36 | ¿Qué inventor argentino desarrolló el \"colectivo\" moderno junto a un grupo de taxistas en Buenos Aires?",
-    "answer": "Ángel Di Césare",
-    "options": ["Ángel Di Césare", "Juan Vucetich", "Jorge Newbery"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-37 | ¿En qué año se creó la Universidad de Córdoba?",
-    "answer": "1613",
-    "options": ["1613", "1580", "1687"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-38 | ¿Qué ciudad argentina fue fundada por Jerónimo Luis de Cabrera en 1573?",
-    "answer": "Córdoba",
-    "options": ["Córdoba", "Mendoza", "Santa Fe"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-39 | ¿Qué presidente argentino creó YPF en 1922?",
-    "answer": "Hipólito Yrigoyen",
-    "options": ["Hipólito Yrigoyen", "Marcelo T. de Alvear", "Agustín P. Justo"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-40 | ¿En qué año se produjo la Reforma Universitaria de Córdoba?",
-    "answer": "1918",
-    "options": ["1925", "1922", "1918"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-41 | ¿Qué presidente argentino gobernó durante el Centenario de la Revolución de Mayo en 1910?",
-    "answer": "José Figueroa Alcorta",
-    "options": ["Julio A. Roca", "José Figueroa Alcorta", "Roque Sáenz Peña"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-42 | ¿Qué provincia argentina fue la última en incorporarse definitivamente al territorio nacional?",
-    "answer": "Tierra del Fuego",
-    "options": ["Tierra del Fuego", "La Pampa", "Neuquén"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-43 | ¿En qué provincia se realizó el primer partido de fútbol registrado en Argentina?",
-    "answer": "Buenos Aires",
-    "options": ["Buenos Aires", "Santa Fe", "Córdoba"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-44 | ¿Quién diseñó el Monumento Nacional a la Bandera?",
-    "answer": "Ángel Guido",
-    "options": ["Ángel Guido", "Ale Alejandro Bustillo", "Francisco Salamone"]
-  },
-  {
-    "country": "Argentina",
-    "question": "ARG-45 | ¿En qué minuto convirtió Diego Maradona el llamado \"Gol del Siglo\" ante Inglaterra en México 1986?",
+    "question": "ARG-2 | ¿En qué minuto convirtió Mousa Al-Tamari ante Argentina mundial 2026?",
     "answer": "55'",
-    "options": ["51'", "55'", "58'"]
+    "options": ["48'", "55'", "67'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-46 | ¿Quién asistió a Jorge Burruchaga en el gol del título mundial de 1986 ante Alemania Federal?",
-    "answer": "Diego Maradona",
-    "options": ["Ricardo Bochini", "Jorge Valdano", "Diego Maradona"]
+    "question": "ARG-3 | Entre La Rioja, San Juan y Catamarca, ¿qué provincia tiene mayor superficie?",
+    "answer": "Catamarca",
+    "options": ["Catamarca", "La Rioja", "San Juan"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-47 | ¿En qué minuto convirtió Jorge Burruchaga el gol del 3-2 en la final de México 1986?",
-    "answer": "84'",
-    "options": ["81'", "84'", "87'"]
+    "question": "ARG-4 | Entre Chubut, Santiago del Estero y Buenos Aires, ¿qué provincia tiene mayor superficie?",
+    "answer": "Buenos Aires",
+    "options": ["Chubut", "Buenos Aires", "Santiago del Estero"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-48 | ¿Quién marcó el primer gol de la final del Mundial 1986?",
-    "answer": "José Luis Brown",
-    "options": ["Jorge Valdano", "José Luis Brown", "Jorge Burruchaga"]
+    "question": "ARG-5 | ¿Cuál es el departamento más grande de Córdoba en superficie?",
+    "answer": "Río Cuarto",
+    "options": ["Río Cuarto", "San Justo", "General San Martín"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-49 | ¿Qué jugador argentino fue el primer expulsado en una final de Copa del Mundo?",
-    "answer": "Pedro Monzón",
-    "options": ["Oscar Ruggeri", "Pedro Monzón", "Sergio Batista"]
+    "question": "ARG-6 | ¿En qué minuto hizo Mario Kempes el primer gol argentino en la final de 1978?",
+    "answer": "38'",
+    "options": ["38'", "45'", "61'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-50 | ¿Quién convirtió el primer gol de Argentina en el Mundial 2010?",
-    "answer": "Gabriel Heinze",
-    "options": ["Gonzalo Higuaín", "Lionel Messi", "Gabriel Heinze"]
+    "question": "ARG-7 | ¿En qué minuto convirtió Daniel Bertoni en la final de 1978?",
+    "answer": "115'",
+    "options": ["105'", "115'", "120'"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-51 | ¿Quién asistió a Lionel Messi en su primer gol mundialista ante Serbia y Montenegro en 2006?",
+    "question": "ARG-8 | ¿Quién fue el ayudante 1º de Menotti en el Mundial 1978?",
+    "answer": "Rogelio Poncini",
+    "options": ["Rogelio Poncini", "Alejandro Cabrera", "Roberto Donetto"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-9 | ¿Quién hizo el primer gol de Argentina ante Hungría en España 1982?",
+    "answer": "Daniel Bertoni",
+    "options": ["Daniel Bertoni", "Diego Maradona", "Osvaldo Ardiles"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-10 | ¿En qué minuto hizo Maradona su primer gol mundialista ante Hungría?",
+    "answer": "29'",
+    "options": ["29'", "57'", "61'"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-11 | ¿Qué jugador argentino marcó de penal ante El Salvador en el Mundial 1982?",
+    "answer": "Daniel Passarella",
+    "options": ["Mario Kempes", "Daniel Passarella", "Ramón Díaz"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-12 | ¿Quién hizo el segundo gol argentino ante El Salvador en 1982?",
+    "answer": "Daniel Bertoni",
+    "options": ["Daniel Bertoni", "Diego Maradona", "Gabriel Calderón"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-13 | ¿Juan Sebastián Verón tiene asistencia registrada en Mundiales?",
+    "answer": "Sí, una",
+    "options": ["Sí, una", "No tuvo ninguna", "Tuvo tres"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-14 | ¿En qué Mundial registró una asistencia Juan Sebastián Verón?",
+    "answer": "Francia 1998",
+    "options": ["Francia 1998", "Corea-Japón 2002", "Sudáfrica 2010"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-15 | ¿Contra qué selección debutó Fernando Gago en una Copa del Mundo?",
+    "answer": "Costa de Marfil",
+    "options": ["Serbia y Montenegro", "Costa de Marfil", "Países Bajos", "México"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-16 | ¿En qué minuto ingresó Fernando Gago en su debut mundialista?",
+    "answer": "76'",
+    "options": ["61'", "69'", "76'", "82'"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-17 | ¿Quién salió reemplazado para el ingreso de Fernando Gago ante Costa de Marfil?",
+    "answer": "Luis González",
+    "options": ["Juan Román Riquelme", "Javier Saviola", "Esteban Cambiasso", "Luis González"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-18 | ¿Quién dio la asistencia del gol de Maxi Rodríguez ante México en el Mundial 2006?",
+    "answer": "Javier Saviola",
+    "options": ["Juan Pablo Sorín", "Javier Saviola", "Juan Román Riquelme", "Carlos Tévez"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-19 | ¿Quién asistió a Hernán Crespo en el primer gol ante Serbia y Montenegro en Alemania 2006?",
     "answer": "Carlos Tévez",
-    "options": ["Carlos Tévez", "Juan Román Riquelme", "Javier Saviola"]
+    "options": ["Juan Román Riquelme", "Javier Zanetti", "Maxi Rodríguez", "Carlos Tévez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-52 | ¿Cuántos goles marcó Diego Maradona en México 1986?",
+    "question": "ARG-20 | ¿Quién dio la asistencia del segundo gol de Hernán Crespo frente a Serbia y Montenegro?",
+    "answer": "Juan Román Riquelme",
+    "options": ["Juan Román Riquelme", "Javier Saviola", "Maxi Rodríguez", "Esteban Cambiasso"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-21 | ¿Quién asistió a Carlos Tévez en el sexto gol argentino frente a Serbia y Montenegro?",
+    "answer": "Lionel Scaloni",
+    "options": ["Lionel Messi", "Juan Román Riquelme", "Javier Saviola", "Lionel Scaloni"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-22 | ¿Quién dio la asistencia del segundo gol de Julián Álvarez frente a Croacia?",
+    "answer": "Alexis Mac Allister",
+    "options": ["Lionel Messi", "Nahuel Molina", "Enzo Fernández", "Alexis Mac Allister"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-23 | ¿Qué jugador recibió la primera tarjeta amarilla de Argentina frente a Jordania?",
+    "answer": "Marcos Senesi",
+    "options": ["Cristian Romero", "Nicolás Otamendi", "Marcos Senesi", "Leandro Paredes"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-24 | ¿En qué minuto convirtió Maradona la \"Mano de Dios\"?",
+    "answer": "51'",
+    "options": ["47'", "49'", "51'", "53'"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-25 | ¿Cómo fue el gol de Caniggia frente a Brasil en 1990?",
+    "answer": "Gambeta al arquero y definición",
+    "options": ["De cabeza", "De volea", "Gambeta al arquero y definición", "De penal"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-26 | ¿Quién asistió a Gabriel Batistuta en el tercer gol frente a Grecia mundial 1994?",
+    "answer": "Diego Maradona",
+    "options": ["Diego Maradona", "Caniggia", "Redondo", "Simeone"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-27 | ¿Quién asistió a Cambiasso en el famoso gol de los 25 pases mundial 2006?",
+    "answer": "Javier Saviola",
+    "options": ["Javier Saviola", "Riquelme", "Crespo", "Messi"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-28 | ¿Quiénes fueron los únicos dos titulares de Argentina que no tocaron la pelota en la jugada del histórico gol de los 25 pases ante Serbia y Montenegro 2006?",
+    "answer": "Roberto Abbondanzieri y Nicolás Burdisso",
+    "options": ["Roberto Abbondanzieri y Nicolás Burdisso", "Roberto Abbondanzieri y Juan Pablo Sorín", "Nicolás Burdisso y Javier Zanetti", "Roberto Abbondanzieri y Javier Mascherano"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-29 | ¿Cuántos partidos disputó Mario Kempes en Copas del Mundo?",
+    "answer": "18",
+    "options": ["16", "18", "20", "14"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-30 | ¿Cuántos partidos jugó Jorge Burruchaga en Mundiales?",
+    "answer": "14",
+    "options": ["14", "12", "16", "15"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-31 | ¿Cuántos partidos disputó Oscar Ruggeri en Copas del Mundo?",
+    "answer": "16",
+    "options": ["14", "18", "16", "15"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-32 | ¿Cuántos partidos jugó Carlos Tévez en Mundiales?",
+    "answer": "11",
+    "options": ["9", "8", "10", "11"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-33 | ¿Cuántos partidos disputó Diego Maradona en Copas del Mundo?",
+    "answer": "21",
+    "options": ["19", "21", "22", "20"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-34 | ¿Cuántos partidos jugó Gabriel Heinze en Mundiales?",
+    "answer": "12",
+    "options": ["11", "13", "12", "10"]
+  },
+  {
+    "country": "Argentina",
+    "question": "ARG-35 | ¿Cuántos partidos disputó Esteban Cambiasso en Copas del Mundo?",
     "answer": "5",
-    "options": ["4", "5", "6"]
+    "options": ["6", "4", "7", "5"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-53 | ¿Qué jugador anotó el gol de Argentina ante Uruguay en octavos de final de México 1986?",
-    "answer": "Pedro Pasculli",
-    "options": ["Diego Maradona", "Jorge Valdano", "Pedro Pasculli"]
+    "question": "ARG-36 | ¿Cuántos partidos jugó Javier Mascherano en Mundiales?",
+    "answer": "20",
+    "options": ["20", "18", "19", "21"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-54 | ¿Quién fue el único jugador argentino que ingresó como suplente en la semifinal de 1986 ante Bélgica?",
-    "answer": "Ricardo Bochini",
-    "options": ["Ricardo Bochini", "Pedro Pasculli", "Sergio Batista"]
+    "question": "ARG-37 | ¿Quién presidió la Primera Junta tras la renuncia de Cornelio Saavedra en 1811?",
+    "answer": "Feliciano Chiclana",
+    "options": ["Mariano Moreno", "Domingo Matheu", "Feliciano Chiclana", "Juan José Paso"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-55 | ¿Quién fue el primer argentino en marcar un hat-trick en una Copa del Mundo?",
-    "answer": "Guillermo Stábile",
-    "options": ["Guillermo Stábile", "Gabriel Batistuta", "Mario Kempes"]
+    "question": "ARG-38 | ¿Quién comandó las fuerzas de la Confederación Argentina en la Batalla de Pavón?",
+    "answer": "Justo José de Urquiza",
+    "options": ["Bartolomé Mitre", "Justo José de Urquiza", "Ricardo López Jordán", "Wenceslao Paunero"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-56 | ¿Entre qué peso y qué peso debe tener una pelota reglamentaria de fútbol al inicio de un partido?",
-    "answer": "Entre 410 y 450 gramos",
-    "options": ["Entre 390 y 430 gramos", "Entre 410 y 450 gramos", "Entre 430 y 470 gramos"]
+    "question": "ARG-39 | ¿Qué presidente creó el Colegio Militar de la Nación en 1869?",
+    "answer": "Domingo F. Sarmiento",
+    "options": ["Bartolomé Mitre", "Domingo F. Sarmiento", "Nicolás Avellaneda", "Julio A. Roca"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-57 | ¿Cómo se llamó la pelota oficial del Mundial Alemania 2006?",
-    "answer": "Teamgeist",
-    "options": ["Jabulani", "Teamgeist", "Brazuca"]
+    "question": "ARG-40 | ¿Quién encabezó la Revolución del Parque en 1890 junto a Leandro N. Alem?",
+    "answer": "Aristóbulo del Valle",
+    "options": ["Hipólito Yrigoyen", "Bartolomé Mitre", "Aristóbulo del Valle", "José Evaristo Uriburu"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-58 | ¿Cómo se llamó la pelota oficial del Mundial Brasil 2014?",
-    "answer": "Brazuca",
-    "options": ["Brazuca", "Jabulani", "Al Rihla"]
+    "question": "ARG-41 | ¿Quién reemplazó a José Félix Uriburu como presidente tras las elecciones de 1931?",
+    "answer": "Agustín P. Justo",
+    "options": ["Roberto M. Ortiz", "Agustín P. Justo", "Ramón Castillo", "Pedro P. Ramírez"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-59 | ¿Cómo se llamó la pelota oficial del Mundial Rusia 2018?",
-    "answer": "Telstar 18",
-    "options": ["Telstar 18", "Teamgeist", "Tango"]
+    "question": "ARG-42 | ¿Quién fue el primer jefe de Gabinete de Ministros de la historia argentina?",
+    "answer": "Jorge Rodríguez",
+    "options": ["Jorge Rodríguez", "Eduardo Bauzá", "Alberto Fernández", "Chrystian Colombo"]
   },
   {
     "country": "Argentina",
-    "question": "ARG-60 | ¿Cómo se llamó la pelota oficial del Mundial Qatar 2022?",
-    "answer": "Al Rihla",
-    "options": ["Al Hilm", "Al Rihla", "Jabulani"]
+    "question": "ARG-43 | ¿En qué año se produjo la federalización definitiva de la Ciudad de Buenos Aires?",
+    "answer": "1880",
+    "options": ["1874", "1880", "1882", "1886"]
   }
 
 ];
